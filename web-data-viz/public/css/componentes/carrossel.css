@@ -1,0 +1,103 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins";
+    }
+
+    body {
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap; /*serve para empilhar itens flexiveis em várias linhas */
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem; /* relativo ao tamanho da fonte do html */
+        background: linear-gradient(90deg, #f0f0f0, #a9d6ff);
+        
+    }
+
+    .coluna-texto {
+
+        flex: 1 1 100%; /* fica maior ou menor e pode ocupar 100% da tela se precisar */
+        max-width: 40 rem;
+        margin-bottom: 2rem; /* espaço abaixo do texto. */
+    }
+
+    .coluna-texto2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+    }
+     .coluna-texto p {
+        font-size: 1rem;
+        color: #333;
+        margin-bottom: 2rem;
+
+     }
+
+     .coluna-texto img {
+        width: 12rem;
+        margin-top: 1rem;
+     }
+
+     .carrossel-container {
+        position: relative;
+        flex: 1 1 100%; /* ocupa a linha inteira quando divide.*/
+        overflow: hidden; /*esconde as imagens que ficam fora da janela*/
+     }
+
+     .carrossel {
+        display: flex; /*para deixar os cards um ao lado do outro */
+        transition: transform 0.5s ease; /* anima o movimento dos cards */
+    
+     }
+     
+     .card {
+        flex: 0 0 18rem;
+        margin: 0 0.6rem; /*espaçamento entre cards*/
+        background: #fff;
+        border-radius: 1rem;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        text-align: center;
+        transition: transform 0.3s ease;
+     }
+
+     .card:hoover{
+        transform:  translateY(-0.6rem); /*levanta ao passar o cursor*/
+     }
+
+     .card img {
+        width: 100%;
+        height: 15rem;
+        object-fit: cover; /*corta a foto para preencher sem distorcer*/
+     }
+
+     .card h3 {
+        margin: 0.6rem 0 0.3rem; /*espaçamento acima e abaixo do nome*/
+        font-size: 1.2rem;
+        font-weight: bold; 
+     }
+
+     .card p {
+        font-size: 0.9rem;
+        color: gray;
+        margin-bottom: 0.6rem;
+     }
+
+     .redes-sociais {
+        display: flex;
+        justify-content: center;
+        gap: 0.6rem;
+        border-top: 1px solid #eee;
+     }
+
+     .redes-sociais a {
+        text-decoration: none;
+        font-size: 1.3rem;
+     }
+
+     .setas-carrossel {
+    
+        
+     }
