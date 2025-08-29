@@ -42,8 +42,19 @@
 
      .carrossel-container {
         position: relative;
-        flex: 1 1 100%; /* ocupa a linha inteira quando divide.*/
-        overflow: hidden; /*esconde as imagens que ficam fora da janela*/
+        width: 22rem;
+        height: 30rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: visible;
+        margin-left: auto; 
+     }
+
+     .carrossel-stack {
+      position: relative;
+      width: 100%;
+      height: 100%;
      }
 
      .carrossel {
@@ -53,14 +64,17 @@
      }
      
      .card {
-        flex: 0 0 18rem;
-        margin: 0 0.6rem; /*espaçamento entre cards*/
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%) scale(0.9);
+        opacity: 0.6;
         background: #fff;
         border-radius: 1rem;
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-        overflow: hidden;
+        width: 18rem;
         text-align: center;
-        transition: transform 0.3s ease;
+        transition: all 0.5s ease;
      }
 
      .card:hoover{
@@ -71,7 +85,9 @@
         width: 100%;
         height: 15rem;
         object-fit: cover; /*corta a foto para preencher sem distorcer*/
-     }
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+      }
 
      .card h3 {
         margin: 0.6rem 0 0.3rem; /*espaçamento acima e abaixo do nome*/
@@ -90,12 +106,24 @@
         justify-content: center;
         gap: 0.6rem;
         border-top: 1px solid #eee;
-     }
+        padding: 0.6rem;
+      }
 
      .redes-sociais a {
         text-decoration: none;
         font-size: 1.3rem;
+        color: #333;
      }
+
+     .card.ativo {
+
+      transform: translateX(-50%) scale(1);
+      opacity: 1;
+      z-index: 3;
+     }
+
+     .card:nth-child(1) { transform: translateX(-90%) scale(0.85); z-index: 1; }
+     .card:nth-child(3) { transform: translateX(-10%) scale(0.85); z-index: 1; }
 
      .setas-carrossel {
         position: absolute;
@@ -117,11 +145,11 @@
      }
 
      .setas.esquerda {
-      left: 0.5rem; /* deixa a seta esquerda dentro do container */
+      left: -3rem; /* deixa a seta esquerda dentro do container */
      }
 
      .setas.direita {
-      right: 0.5rem;
+      right: -3rem;
      }
 
      /* Responsividade */
