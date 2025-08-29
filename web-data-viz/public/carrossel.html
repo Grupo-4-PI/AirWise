@@ -89,5 +89,48 @@
     <button class="setas-carrossel direita" onclick="moveCarousel(1)">&#10095;</button>
  </div>
     </div>
+
+    <!-- Rodapé da página -->
+
+    <footer>
+        Quer saber mais? Estamos prontos para ouvir você
+    </footer>
+
 </body>
 </html>
+
+<script>
+
+    let index = 0;
+    const carousel = document.getElementById("carrossel");
+    const cardLargura = 19.2;
+
+    function moveCarousel(direcao){
+
+        const totalCards = carousel.children.length;
+        const telaLargura = window.innerWidth;
+
+        let cardsVisuali = 3;
+
+        if (telaLargura <= 768) cardsVisuali = 2;
+        if (telaLargura <= 480) cardsVisuali = 1;
+
+        const maxIndex = totalCards - cardsVisuali;
+
+        index += direcao;
+
+        //Lógica do loop do carrossel
+
+        if (index < 0) {
+
+            index = maxIndex; //voltou do inicio, vai para o fim
+        }
+
+        if (index > maxIndex) {
+
+            index = 0; //passou do fim, volta pro começo
+        }
+
+        carousel.style.transform = `translateX(${-index * cardLargura}rem)`;
+    }
+</script>
