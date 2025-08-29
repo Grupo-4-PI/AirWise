@@ -6,6 +6,7 @@
     }
 
     body {
+        font-family: 'Poppins';
         height: 100vh;
         display: flex;
         flex-wrap: wrap; /*serve para empilhar itens flexiveis em várias linhas */
@@ -18,26 +19,26 @@
 
     .coluna-texto {
 
-        flex: 1 1 100%; /* fica maior ou menor e pode ocupar 100% da tela se precisar */
+        /* flex: 1 1 100%; fica maior ou menor e pode ocupar 100% da tela se precisar */
         max-width: 40 rem;
-        margin-bottom: 2rem; /* espaço abaixo do texto. */
+        /* margin-bottom: 2rem; espaço abaixo do texto. */
     }
 
-    .coluna-texto2 {
+    .coluna-texto h2 {
         font-size: 2rem;
         margin-bottom: 1rem;
-        font-weight: bold;
+        /* font-weight: bold; */
     }
      .coluna-texto p {
         font-size: 1rem;
-        color: #333;
+        /* color: #333; */
         margin-bottom: 2rem;
 
      }
 
      .coluna-texto img {
         width: 12rem;
-        margin-top: 1rem;
+        /* margin-top: 1rem; */
      }
 
      .carrossel-container {
@@ -45,9 +46,9 @@
         width: 22rem;
         height: 30rem;
         display: flex;
-        align-items: center;
+        /* align-items: center;
         justify-content: center;
-        overflow: visible;
+        overflow: visible; */
         margin-left: auto; 
      }
 
@@ -77,7 +78,23 @@
         transition: all 0.5s ease;
      }
 
-     .card:hoover{
+     .card.ativo {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+        z-index: 3;
+     }
+
+     .card:nth-child(1) {
+    transform: translateX(-90%) scale(0.85);
+    z-index: 2;
+    }
+
+    .card:nth-child(3) {
+    transform: translateX(-10%) scale(0.85);
+    z-index: 2;
+    }
+
+     .card:hover{
         transform:  translateY(-0.6rem); /*levanta ao passar o cursor*/
      }
 

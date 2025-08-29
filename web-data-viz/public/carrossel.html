@@ -1,137 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>carrossel</title>
-<link rel="stylesheet" href="./css/componentes/carrossel.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrossel Empilhado</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../Documents/teste2.css">
 </head>
 <body>
 
-    <div class="conteudo">
-<!-- Bloco do texto da lateral esquerda -->
- <div class="coluna-texto">
-    <h2>Nosso Team</h2>
-    <p>
-      Por trás da AirWise está um time comprometido em desenvolver soluções
-     que ajudam companhias aéreas a enxergar melhor seus desafios e oportunidades.  
-    </p>
-     <img src="https://cdn-icons-png.flaticon.com/512/2965/2965879.png" alt="Avião">
- </div>
+  <main class="conteudo">
+    <!-- ESQUERDA -->
+    <section class="coluna-texto">
+      <h2>Nosso Team</h2>
+      <p>
+        Por trás da AirWise está um time comprometido em desenvolver soluções
+        que ajudam companhias aéreas a enxergar melhor seus desafios e oportunidades.
+      </p>
+      <img src="https://cdn-icons-png.flaticon.com/512/2965/2965879.png" alt="Avião">
+    </section>
 
- <!-- Sessão do Carrossel -->
+    <!-- DIREITA - CARROSSEL -->
+    <section class="carrossel-container">
+      <button class="setas-carrossel esquerda" aria-label="Anterior">&#10094;</button>
 
- <div class="carrossel-container">
-    <button class="setas-carrossel esquerda" onclick="moveCarousel(-1)">&#10094;</button>
+      <div class="carrossel-stack" id="stack">
+        <article class="card">
+          <img src="https://picsum.photos/420/620?random=1" alt="Guilherme Toledo">
+          <h3>Guilherme Toledo</h3>
+          <p>Developer P.O</p>
+          <div class="redes-sociais"><a href="#">in</a><a href="#">@</a></div>
+        </article>
 
-    <div class="carrossel" id="carrossel">
+        <article class="card">
+          <img src="https://picsum.photos/420/620?random=2" alt="João Victor Alves">
+          <h3>João Victor Alves</h3>
+          <p>Developer Back-End</p>
+          <div class="redes-sociais"><a href="#">in</a><a href="#">@</a></div>
+        </article>
 
-        <div class="card">
-           <img src="https://picsum.photos/300/200?random=1" alt="toledo">
-           <h3>Guilherme Toledo</h3>
-           <p>Developer P.O</p>
-           <div class="redes-sociais">
-            <a href="#">in</a>
-            <a href="#">@</a>
-           </div> 
-        </div>
+        <article class="card">
+          <img src="https://picsum.photos/420/620?random=3" alt="João Victor Carlos">
+          <h3>João Victor Carlos</h3>
+          <p>Developer Back-End</p>
+          <div class="redes-sociais"><a href="#">in</a><a href="#">@</a></div>
+        </article>
 
-         <div class="card">
-           <img src="https://picsum.photos/300/200?random=1" alt="alves">
-           <h3>João Victor Alves</h3>
-           <p>Developer Back-End</p>
-           <div class="redes-sociais">
-            <a href="#">in</a>
-            <a href="#">@</a>
-           </div> 
-        </div>
+        <article class="card">
+          <img src="https://picsum.photos/420/620?random=4" alt="Vinicius Ventura">
+          <h3>Vinicius Ventura</h3>
+          <p>Developer Back-End</p>
+          <div class="redes-sociais"><a href="#">in</a><a href="#">@</a></div>
+        </article>
 
-         <div class="card">
-           <img src="https://picsum.photos/300/200?random=1" alt="joao">
-           <h3>João Victor Carlos</h3>
-           <p>Developer Back-End</p>
-           <div class="redes-sociais">
-            <a href="#">in</a>
-            <a href="#">@</a>
-           </div> 
-        </div>
+        <article class="card">
+          <img src="https://picsum.photos/420/620?random=5" alt="Rayssa Casagrande">
+          <h3>Rayssa Casagrande</h3>
+          <p>Developer Front-End</p>
+          <div class="redes-sociais"><a href="#">in</a><a href="#">@</a></div>
+        </article>
 
-         <div class="card">
-           <img src="https://picsum.photos/300/200?random=1" alt="vini">
-           <h3>Vinicius Ventura</h3>
-           <p>Developer Back-End</p>
-           <div class="redes-sociais">
-            <a href="#">in</a>
-            <a href="#">@</a>
-           </div> 
-        </div>
+        <article class="card">
+          <img src="https://picsum.photos/420/620?random=6" alt="Fernando Ramirez">
+          <h3>Fernando Ramirez</h3>
+          <p>Developer Front-End</p>
+          <div class="redes-sociais"><a href="#">in</a><a href="#">@</a></div>
+        </article>
+      </div>
 
-         <div class="card">
-           <img src="https://picsum.photos/300/200?random=1" alt="rayssa">
-           <h3>Rayssa Casagrande</h3>
-           <p>Developer Front-End</p>
-           <div class="redes-sociais">
-            <a href="#">in</a>
-            <a href="#">@</a>
-           </div> 
-        </div>
+      <button class="setas-carrossel direita" aria-label="Próximo">&#10095;</button>
+    </section>
+  </main>
 
-         <div class="card">
-           <img src="https://picsum.photos/300/200?random=1" alt="fernando">
-           <h3>Fernando Ramirez</h3>
-           <p>Developer Front-End</p>
-           <div class="redes-sociais">
-            <a href="#">in</a>
-            <a href="#">@</a>
-           </div> 
-        </div>
-    </div>
+  <footer>Quer saber mais? Estamos prontos para ouvir você</footer>
 
-    <button class="setas-carrossel direita" onclick="moveCarousel(1)">&#10095;</button>
- </div>
-    </div>
+  <script>
+    // ===== Carrossel Empilhado =====
+    const stack = document.getElementById('stack');
+    const cards = Array.from(stack.querySelectorAll('.card'));
+    const btnPrev = document.querySelector('.setas-carrossel.esquerda');
+    const btnNext = document.querySelector('.setas-carrossel.direita');
 
-    <!-- Rodapé da página -->
+    let ativo = 2; // começa no terceiro card
 
-    <footer>
-        Quer saber mais? Estamos prontos para ouvir você
-    </footer>
+    function render(){
+      cards.forEach((card, i) => {
+        card.classList.remove('card--active','card--left','card--right','card--hidden');
+        const diff = i - ativo;
 
+        if (diff === 0){
+          card.classList.add('card--active');
+        } else if (diff === -1){
+          card.classList.add('card--left');
+        } else if (diff === 1){
+          card.classList.add('card--right');
+        } else {
+          card.classList.add('card--hidden');
+        }
+      });
+    }
+
+    function mover(d){
+      ativo += d;
+      if (ativo < 0) ativo = cards.length - 1;
+      if (ativo > cards.length - 1) ativo = 0;
+      render();
+    }
+
+    btnPrev.addEventListener('click', () => mover(-1));
+    btnNext.addEventListener('click', () => mover(1));
+
+    // suporte teclado
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') mover(-1);
+      if (e.key === 'ArrowRight') mover(1);
+    });
+
+    render();
+  </script>
 </body>
 </html>
-
-<script>
-
-    let index = 0;
-    const carousel = document.getElementById("carrossel");
-    const cardLargura = 19.2;
-
-    function moveCarousel(direcao){
-
-        const totalCards = carousel.children.length;
-        const telaLargura = window.innerWidth;
-
-        let cardsVisuali = 3;
-
-        if (telaLargura <= 768) cardsVisuali = 2;
-        if (telaLargura <= 480) cardsVisuali = 1;
-
-        const maxIndex = totalCards - cardsVisuali;
-
-        index += direcao;
-
-        //Lógica do loop do carrossel
-
-        if (index < 0) {
-
-            index = maxIndex; //voltou do inicio, vai para o fim
-        }
-
-        if (index > maxIndex) {
-
-            index = 0; //passou do fim, volta pro começo
-        }
-
-        carousel.style.transform = `translateX(${-index * cardLargura}rem)`;
-    }
-</script>
