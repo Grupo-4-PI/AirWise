@@ -19,7 +19,7 @@
         Por trás da AirWise está um time comprometido em desenvolver soluções
         que ajudam companhias aéreas a enxergar melhor seus desafios e oportunidades.
       </p>
-      <img src="../public/assets/aviao.jpg" alt="aviao">
+      <img src="../public/assets/aviao.png" alt="aviao">
     </section>
 
     <!-- DIREITA - CARROSSEL -->
@@ -90,48 +90,47 @@
   <footer>Quer saber mais? Estamos prontos para ouvir você</footer>
 
   <script>
-    // ===== Carrossel Empilhado =====
-    const stack = document.getElementById('stack');
-    const cards = Array.from(stack.querySelectorAll('.card'));
-    const btnPrev = document.querySelector('.setas-carrossel.esquerda');
-    const btnNext = document.querySelector('.setas-carrossel.direita');
+document.addEventListener('DOMContentLoaded', () => {
+  const stack = document.getElementById('stack');
+  if (!stack) return console.error('Elemento #stack não encontrado');
 
-    let ativo = 2; // começa no terceiro card
+  const cards = Array.from(stack.querySelectorAll('.card'));
+  const prevBtn = document.querySelector('.setas-carrossel.esquerda');
+  const nextBtn = document.querySelector('.setas-carrossel.direita');
 
-    function render(){
-      cards.forEach((card, i) => {
-        card.classList.remove('card--active','card--left','card--right','card--hidden');
-        const diff = i - ativo;
+  let ativo = 2; // índice inicial
 
-        if (diff === 0){
-          card.classList.add('card--active');
-        } else if (diff === -1){
-          card.classList.add('card--left');
-        } else if (diff === 1){
-          card.classList.add('card--right');
-        } else {
-          card.classList.add('card--hidden');
-        }
-      });
-    }
-
-    function mover(d){
-      ativo += d;
-      if (ativo < 0) ativo = cards.length - 1;
-      if (ativo > cards.length - 1) ativo = 0;
-      render();
-    }
-
-    btnPrev.addEventListener('click', () => mover(-1));
-    btnNext.addEventListener('click', () => mover(1));
-
-    // suporte teclado
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowLeft') mover(-1);
-      if (e.key === 'ArrowRight') mover(1);
+  function render(){
+    cards.forEach((card, i) => {
+      card.classList.remove('card--active','card--left','card--right','card--hidden');
+      const diff = i - ativo;
+      if (diff === 0) card.classList.add('card--active');
+      else if (diff === -1) card.classList.add('card--left');
+      else if (diff === 1) card.classList.add('card--right');
+      else card.classList.add('card--hidden');
     });
+  }
 
+  function mover(d){
+    ativo += d;
+    if (ativo < 0) ativo = cards.length - 1;
+    if (ativo > cards.length - 1) ativo = 0;
     render();
-  </script>
+  }
+
+  // Clique nos botões
+  if (prevBtn) prevBtn.addEventListener('click', (e) => { e.preventDefault(); mover(-1); });
+  if (nextBtn) nextBtn.addEventListener('click', (e) => { e.preventDefault(); mover(1); });
+
+  // Teclado
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') mover(-1);
+    if (e.key === 'ArrowRight') mover(1);
+  });
+
+  render();
+});
+</script>
+
 </body>
 </html>

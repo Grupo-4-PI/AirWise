@@ -22,6 +22,8 @@ body{
   grid-template-columns: 1.1fr auto;
   align-items:center;
   gap: clamp(1.5rem, 5vw, 4rem);
+  position: relative; /* IMPORTANTE */
+  z-index: 2;         /* fica acima do fundo */
 }
 
 /* Coluna esquerda */
@@ -130,11 +132,20 @@ body{
 
 /* Setas */
 .setas-carrossel{
-  position:absolute; top:50%; transform: translateY(-50%);
-  width:2.5rem; height:2.5rem; border-radius:50%;
-  border:none; cursor:pointer; font-size:1.2rem;
-  background:rgba(0,0,0,.55); color:#fff;
-  display:grid; place-items:center;
+  position:absolute; 
+  top:50%; 
+  transform: translateY(-50%);
+  z-index: 10;
+  width:2.5rem; 
+  height:2.5rem; 
+  border-radius:50%;
+  border:none; 
+  cursor:pointer; 
+  font-size:1.2rem;
+  background:rgba(0,0,0,.55); 
+  color:#fff;
+  display:grid; 
+  place-items:center;
   transition: background .2s ease, transform .2s ease;
   user-select:none;
 }
@@ -147,6 +158,20 @@ footer{
   position:fixed; left:50%; transform:translateX(-50%);
   bottom:1rem; width:100%; text-align:center; pointer-events:none;
   color: var(--azul); font-weight:700;
+}
+
+
+/* Avião decorativo */
+.aviao-bg {
+  position: absolute;
+  left: -8%;            /* joga um pouco para a esquerda */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60%;           /* tamanho do avião */
+  max-width: 500px;     /* limite */
+  opacity: 0.12;        /* bem transparente */
+  z-index: 1;           /* atrás de tudo */
+  pointer-events: none; /* não atrapalha clique */
 }
 
 /* Responsividade */
