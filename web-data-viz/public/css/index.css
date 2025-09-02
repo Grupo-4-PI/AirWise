@@ -53,3 +53,33 @@ body{
         background-color: aqua;
     }
 }
+
+.cards-objectives{
+    background-color: red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .card{
+        height: 190px;
+        width: 23%;
+        padding: 30px;
+        background-color: orange;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        i{
+            font-size: 40px;
+        }
+        h3{
+            font-size: 18px;
+        }
+        p{
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+}
