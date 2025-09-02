@@ -1,18 +1,18 @@
-body{
-  min-height:100vh;
-  font-family:"Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: linear-gradient(90deg, #f0f0f0, #a9d6ff);
+body {
+    min-height: 100vh;
+    font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: linear-gradient(90deg, #f0f0f0, #a9d6ff);
 }
 
-.banner{
+.banner {
     height: 650px;
     background-color: olivedrab;
     display: flex;
     justify-content: right;
     align-items: center;
     position: relative;
-    
-    .container-data{
+
+    .container-data {
         width: 55%;
         height: 100%;
         background-color: rebeccapurple;
@@ -26,18 +26,18 @@ body{
         gap: 10px;
         padding: 0px 40px;
 
-        h2{
+        h2 {
             font-size: 33px;
             font-weight: 700;
         }
 
-        p{
+        p {
             font-weight: 350;
             text-align: justify;
             max-width: 600px;
         }
 
-        button{
+        button {
             width: 130px;
             border-radius: 50px;
             padding: 10px;
@@ -47,20 +47,20 @@ body{
         }
     }
 
-    .image-banner{
+    .image-banner {
         height: 100%;
         width: 50%;
         background-color: aqua;
     }
 }
 
-.cards-objectives{
+.cards-objectives {
     background-color: red;
     display: flex;
     justify-content: space-around;
     align-items: center;
 
-    .card{
+    .card {
         height: 190px;
         width: 23%;
         padding: 30px;
@@ -71,15 +71,57 @@ body{
         justify-content: center;
         gap: 10px;
 
-        i{
+        i {
             font-size: 40px;
         }
-        h3{
+
+        h3 {
             font-size: 18px;
         }
-        p{
+
+        p {
             font-size: 14px;
             text-align: center;
+        }
+    }
+}
+
+.segment {
+    height: 500px;
+    background-color: rgb(0, 193, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container-segment {
+        display: flex;
+        position: relative;
+        width: 950px;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+
+        .image-segment {
+            height: 400px;
+            width: 500px;
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .container-data-segment {
+            width: 550px;
+            height: 310px;
+            background-color: orangered;
+            padding: 20px;
+            position: absolute;
+            right: 42%;
         }
     }
 }
