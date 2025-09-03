@@ -17,3 +17,42 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.logo img {
+    width: 450px;
+    height: auto;
+}
+
+.texto {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    word-wrap: break-word; 
+}
+
+.texto h1 {
+    font-size: 2em;
+    color: #0d47a1;
+    margin-bottom: 20px;
+}
+
+.texto p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        text-align: center;
+        padding-left: 20px;
+        gap: 20px;
+    }
+
+    .texto {
+        max-width: 90%;
+    }
+}
