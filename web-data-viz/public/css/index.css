@@ -125,3 +125,83 @@ body {
         }
     }
 }
+
+.services{
+    background-color: yellow;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+
+    .image-service{
+        width: 50%;
+        height: 100%;
+        background-color: goldenrod;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            width: 80%;
+        }
+    }
+
+    .container-service{
+        width: 50%;
+        background-color: purple;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .content-services{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            flex: 1;
+            gap: 20px;
+
+            .service{
+                width: 48.5%;
+                height: 200px;
+                background-color: orange;
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                border-radius: 10px;
+                gap: 10px;
+
+                .icon-service{
+                    width: 60px;
+                    height: 60px;
+                    background-color: purple;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 7px;
+
+                    i{
+                        font-size: 30px;
+                    }
+                }
+
+                h2{
+                    font-size: 13px;
+                }
+
+                p{
+                    font-size: 12px;
+                }
+            }
+        }
+
+        button{
+            height: 38px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 13px;
+            border: none;
+        }
+    }
+
+}
