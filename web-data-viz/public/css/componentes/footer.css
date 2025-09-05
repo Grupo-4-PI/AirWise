@@ -23,7 +23,8 @@ body {
 }
 
 .footer-logo img {
-  max-width: 150px;
+  margin-bottom: 0%;
+  max-width: 450px;
   margin-bottom: 15px;
 }
 
@@ -77,4 +78,15 @@ body {
   border-top: 1px solid #003d66;
   margin-top: 20px;
   color: #ccc;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza logo e links */
+}
+
+.footer-logo img {
+  max-width: 220px; /* ajuste conforme necessário */
+  margin-bottom: 15px;
 }
