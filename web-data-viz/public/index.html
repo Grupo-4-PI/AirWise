@@ -66,7 +66,7 @@
             </div>
 
             <div class="card">
-       <i class="fa-solid fa-marker"></i>
+                <i class="fa-solid fa-marker"></i>
                 <h3>Ação no Momento Certo</h3>
                 <p>Informações precisas que guiam o próximo passo.</p>
             </div>
@@ -173,6 +173,40 @@
     <h2>Rodapé - Em Desenvolvimento</h2>
 
     <script src="./script/assets/navbar.js"></script>
+    <script>
+        const carousel = document.querySelector(".cards-objectives");
+        const cards = document.querySelectorAll(".cards-objectives .card");
+
+        let currentIndex = 0;
+        let intervalId;
+
+        function startCarousel() {
+            clearInterval(intervalId); // garante que não duplique o intervalo
+            if (window.innerWidth <= 500) {
+                intervalId = setInterval(nextCard, 3000);
+            }
+        }
+
+        function nextCard() {
+            const cardWidth = cards[0].offsetWidth + 20; // card width + gap
+            currentIndex = (currentIndex + 1) % cards.length;
+
+            carousel.scrollTo({
+                left: cardWidth * currentIndex,
+                behavior: 'smooth'
+            });
+        }
+
+        // Inicializa carrossel ao carregar a página
+        window.addEventListener("load", startCarousel);
+
+        // Recalcula ao redimensionar a tela
+        window.addEventListener("resize", startCarousel);
+    </script>
+
+
+
+
 </body>
 
 </html>
