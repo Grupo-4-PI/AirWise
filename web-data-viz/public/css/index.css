@@ -5,7 +5,7 @@ body {
 }
 
 .banner {
-    height: 650px;
+    height: 700px;
     display: flex;
     justify-content: right;
     align-items: center;
@@ -14,7 +14,7 @@ body {
     .container-data {
         width: 55%;
         height: 100%;
-        background: url(../assets/img-site-institucional/banner-componente-airwise.png) no-repeat left center/contain;
+        background: url(../assets/img-site-institucional/banner-componente-airwise.png) no-repeat right center/cover;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -34,23 +34,38 @@ body {
         p {
             font-weight: 350;
             text-align: justify;
-            max-width: 600px;
+            max-width: 500px;
+            font-size: 17px;
         }
 
         button {
-            width: 130px;
+            font-family: "Montserrat", sans-serif;
+            width: 160px;
             border-radius: 50px;
             padding: 10px;
             border: none;
             box-shadow: 1px 1px 10px rgb(152, 152, 152);
             margin-top: 20px;
+            font-weight: 600;
+            background: linear-gradient(to right, #2785FF, #7CC6FF);
+            transition: all 0.5s ease;
+            color: white;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(to right, #004fb6, #3eacff);
         }
     }
 
     .image-banner {
         height: 100%;
         width: 70%;
-        background: url(../assets/img-site-institucional/banner-airwise-airplane.jpg) no-repeat right center/cover;
+
+        background:
+            linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.4)),
+            url("../assets/img-site-institucional/banner-airwise-airplane.jpg") no-repeat center/cover;
+
         transform: scaleX(-1);
     }
 }
@@ -205,4 +220,66 @@ body {
         }
     }
 
+}
+
+@media (max-width: 900px) {
+    .banner {
+        height: 600px;
+
+        .container-data {
+            width: 65%;
+
+            h2 {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 14px;
+                width: 350px;
+            }
+
+            button {
+                width: 120px;
+                font-size: 12px;
+            }
+
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .banner {
+        height: 670px;
+        flex-direction: column;
+        align-items: center;
+
+        .container-data {
+            width: 100%;
+            height: 66%;
+            background-image: none;
+            align-items: center;
+
+            h2 {
+                font-size: 25px;
+                width: 100%;
+                text-align: center;
+            }
+
+            p {
+                font-size: 12px;
+                padding: 10px;
+                text-align: center;
+            }
+
+            button {
+                width: 130px;
+                font-size: 11px;
+            }
+        }
+
+        .image-banner {
+            width: 100%;
+            background: url(../assets/img-site-institucional/banner-airwise-airplane.jpg) no-repeat bottom center/contain;
+        }
+    }
 }
