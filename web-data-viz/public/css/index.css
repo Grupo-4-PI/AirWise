@@ -1,12 +1,11 @@
 body {
     min-height: 100vh;
-    font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
     background: linear-gradient(90deg, #f0f0f0, #a9d6ff);
 }
 
 .banner {
     height: 650px;
-    background-color: olivedrab;
     display: flex;
     justify-content: right;
     align-items: center;
@@ -15,7 +14,7 @@ body {
     .container-data {
         width: 55%;
         height: 100%;
-        background-color: rebeccapurple;
+        background: url(../assets/img-site-institucional/banner-componente-airwise.png) no-repeat left center/contain;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -27,8 +26,9 @@ body {
         padding: 0px 40px;
 
         h2 {
-            font-size: 33px;
+            font-size: 45px;
             font-weight: 700;
+            max-width: 600px;
         }
 
         p {
@@ -49,8 +49,9 @@ body {
 
     .image-banner {
         height: 100%;
-        width: 50%;
-        background-color: aqua;
+        width: 70%;
+        background: url(../assets/img-site-institucional/banner-airwise-airplane.jpg) no-repeat right center/cover;
+        transform: scaleX(-1);
     }
 }
 
@@ -126,13 +127,13 @@ body {
     }
 }
 
-.services{
+.services {
     background-color: yellow;
     height: 600px;
     display: flex;
     justify-content: center;
 
-    .image-service{
+    .image-service {
         width: 50%;
         height: 100%;
         background-color: goldenrod;
@@ -140,12 +141,12 @@ body {
         justify-content: center;
         align-items: center;
 
-        img{
+        img {
             width: 80%;
         }
     }
 
-    .container-service{
+    .container-service {
         width: 50%;
         background-color: purple;
         padding: 30px;
@@ -153,7 +154,7 @@ body {
         flex-direction: column;
         gap: 20px;
 
-        .content-services{
+        .content-services {
             width: 100%;
             display: flex;
             justify-content: space-around;
@@ -161,7 +162,7 @@ body {
             flex: 1;
             gap: 20px;
 
-            .service{
+            .service {
                 width: 48.5%;
                 height: 200px;
                 background-color: orange;
@@ -171,7 +172,7 @@ body {
                 border-radius: 10px;
                 gap: 10px;
 
-                .icon-service{
+                .icon-service {
                     width: 60px;
                     height: 60px;
                     background-color: purple;
@@ -180,22 +181,22 @@ body {
                     align-items: center;
                     border-radius: 7px;
 
-                    i{
+                    i {
                         font-size: 30px;
                     }
                 }
 
-                h2{
+                h2 {
                     font-size: 13px;
                 }
 
-                p{
+                p {
                     font-size: 12px;
                 }
             }
         }
 
-        button{
+        button {
             height: 38px;
             border-radius: 50px;
             font-weight: bold;
