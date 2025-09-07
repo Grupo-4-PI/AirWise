@@ -123,6 +123,10 @@ nav {
         .container-logotipo {
             min-width: 130px;
             margin-bottom: 10px;
+
+            img{
+                width: 80%;
+            }
         }
 
         .menu-toggle {
@@ -164,7 +168,7 @@ nav {
             }
 
             button {
-                font-size: 16px;
+                font-size: 13px;
             }
         }
     }
@@ -213,7 +217,6 @@ nav {
         z-index: 10;
     }
 
-    /* Hamburger animado */
     nav.open .menu-toggle span:nth-child(1) {
         transform: rotate(50deg) translate(7px, 5px);
     }
