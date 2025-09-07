@@ -71,7 +71,7 @@ body {
 }
 
 .cards-objectives {
-    height: 250px;
+    height: 200px;
     display: flex;
     justify-content: space-around;
     position: relative;
@@ -111,6 +111,49 @@ body {
 
     .card:hover {
         transform: translateY(-70px);
+    }
+}
+
+.about-us {
+    display: flex;
+    height: 600px;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(to bottom, white, #7de1ff, #c5ecff, white);
+
+    .image-logotipo {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 450px;
+            height: auto;
+        }
+    }
+
+    .container-data-about {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 30px;
+        word-wrap: break-word;
+
+        h1 {
+            font-size: 2em;
+            color: #003e90;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #000000;
+            text-align: justify;
+            max-width: 600px;
+        }
     }
 }
 
@@ -260,7 +303,7 @@ body {
     }
 
     .cards-objectives {
-        height: 170px;
+        height: 150px;
 
         .card {
             height: 150px;
@@ -281,7 +324,30 @@ body {
             }
         }
     }
+
+    .about-us {
+        height: 400px;
+
+        .image-logotipo {
+            img {
+                width: 300px;
+            }
+        }
+
+        .container-data-about {
+            h1 {
+                font-size: 1.3em;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+
+    }
 }
+
+@media (max-width: 768px) {}
 
 @media (max-width: 500px) {
     .banner {
@@ -324,7 +390,7 @@ body {
     }
 
     .cards-objectives {
-        height: 240px;
+        height: 200px;
         flex-direction: row;
         align-items: center;
         overflow-x: hidden;
@@ -340,8 +406,35 @@ body {
             transform: none;
         }
 
-        .card:hover{
+        .card:hover {
             transform: translateY(-20px);
+        }
+    }
+
+    .about-us {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        flex-direction: column;
+        gap: 20px;
+
+        .image-logotipo img {
+            width: 280px;
+        }
+
+        .container-data-about {
+            width: 100%;
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 0.8em;
+                margin-bottom: 100px;
+            }
         }
     }
 }
