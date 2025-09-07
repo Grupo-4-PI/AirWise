@@ -1,0 +1,41 @@
+Proto persona 1
+1.Quem? Nome, foto e uma frase que especifique o problema
+
+João
+"Sou gerente de atendimento de uma companhia aérea brasileira, e recebo muitas reclamações diariamente por conta dos problemas nos serviços oferecidos"
+
+2.Palavras/frases que definem a persona
+
+- Sobrecarregado;
+- Visão analítica;
+- Apaga incêndios;
+- Focado em buscar formas de aumentar a eficiência dos processos de atendimento ao cliente;
+
+3.Dores e necessidades
+
+- A quantidade de problemas diários no atendimento reduz o tempo para que foque em atividades analíticas que poderiam reduzir a quantidade de reclamações e consequentemente o tempo para lidar com esses problemas;
+- Pressão do jurídico para aumentar qualidade do atendimento e reduzir o número de processos;
+- Pressão dos superiores para melhorar os números dos atendentes e satisfação do usuário com o atendimento;
+- Precisa encontrar formas de mostrar aos gestores o que precisa ser feito para aumentar a eficiência e qualidade dos serviços da companhia;
+- Dificuldade na retenção dos funcionários, que precisam lidar diariamente com a pressão e com as reclamações dos usuários.
+
+Proto persona 2
+1.Quem? Nome, foto e uma frase que especifique o problema
+
+Maria
+"Sou gerente de marketing de uma companhia aérea brasileira, e estou tendo dificuldade de entender as quedas nas vendas, e formas de contornar isso"
+
+2.Palavras/frases que definem a persona
+
+- Engajada em novas tecnologias e soluções fora da "caixinha";
+- Criativa;
+- Acredita na importância de atuar de forma conjunta com outras áreas na resolução de problemas;
+
+
+3.Dores e necessidades
+
+- Números de vendas estagnados ou em declínio;
+- Ações de engajamento de marketing não dão retorno;
+- Clientes retratores reclamam nas ações de engajamento, afetando a percepção de possíveis novos usuários;
+- Dificuldade de acesso a dados de outras áreas para investigar origem do problema;
+- Pressão dos superiores para aumentar o número de vendas;
