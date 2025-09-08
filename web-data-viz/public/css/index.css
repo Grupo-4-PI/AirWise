@@ -421,9 +421,19 @@ body {
         }
 
     }
-}
 
-@media (max-width: 768px) {}
+    .segment {
+        height: 550px;
+
+        .container-data-segment {
+            transform: scale(0.8);
+        }
+        
+        .image-segment{
+            transform: scale(0.8);
+        }
+    }
+}
 
 @media (max-width: 500px) {
     .banner {
@@ -494,7 +504,6 @@ body {
         text-align: center;
         gap: 30px;
         flex-direction: column;
-        gap: 20px;
 
         .image-logotipo img {
             width: 280px;
@@ -509,7 +518,40 @@ body {
 
             p {
                 font-size: 0.8em;
-                margin-bottom: 100px;
+            }
+        }
+    }
+
+    .segment {
+        width: 100%;
+        margin: 0;
+        height: 600px;
+
+        .container-segment {
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            margin-bottom: 60px;
+
+            .image-segment {
+                width: 100%;
+            }
+
+            .container-data-segment {
+                width: 460px;
+                height: 410px;
+                left: -30px;
+                top: 40%;
+
+                h2 {
+                    font-size: 27px;
+                }
+
+                p {
+                    font-size: 15px;
+                    text-align: justify;
+                    word-wrap: break-word;
+                }
             }
         }
     }
