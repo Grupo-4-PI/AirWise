@@ -1,29 +1,33 @@
+/* Variáveis globais */
 :root{
-  --azul:#0a66c2;
-  --cinza:#333;
-  --card-w: 18rem;
-  --card-h: 30rem;
+  --azul:#0a66c2; /* Cor principal */
+  --cinza:#333; /* Cinza padrão */
+  --card-w: 18rem; /* Largura padrão dos cards do carrossel */
+  --card-h: 30rem; /* Altura padrão dos cards */
 }
 
 *{ box-sizing:border-box; margin:0; padding:0 }
 
+/* Corpo da página */
+
 body{
-  min-height:100vh;
+  min-height:100vh; /* Ocupa toda a altura da tela */
   font-family:"Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: linear-gradient(90deg, #f0f0f0, #a9d6ff);
+  background: linear-gradient(90deg, #f0f0f0, #a9d6ff); /* Degradê de fundo */
   display:flex;
-  align-items:center;
-  justify-content:center;
+  align-items:center; /* Centraliza verticalmente */
+  justify-content:center; /* Centraliza horizontalmente */
 }
 
+/* Container principal de conteúdo */
 .conteudo{
-  width: min(1200px, 94vw);
+  width: min(1200px, 94vw); /* Máximo de 1200px ou 94% da largura da tela */
   display:grid;
-  grid-template-columns: 1.1fr auto;
+  grid-template-columns: 1.1fr auto; /* Duas colunas, esquerda maior que a direita */
   align-items:center;
-  gap: clamp(1.5rem, 5vw, 4rem);
-  position: relative; /* IMPORTANTE */
-  z-index: 2;         /* fica acima do fundo */
+  gap: clamp(1.5rem, 5vw, 4rem); /* Espaçamento responsivo entre colunas */
+  position: relative; /* IMPORTANTE para a sobreposição do avião*/
+  z-index: 2;         /* fica acima do fundo (avião)*/
 }
 
 /* Coluna esquerda */
