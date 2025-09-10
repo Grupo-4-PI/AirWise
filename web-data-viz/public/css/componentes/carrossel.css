@@ -30,9 +30,9 @@ body{
   z-index: 2;         /* fica acima do fundo (avião)*/
 }
 
-/* Coluna esquerda */
+/* Coluna esquerda de texto*/
 .coluna-texto h2{
-  font-size: clamp(1.7rem, 2.5vw, 2.2rem);
+  font-size: clamp(1.7rem, 2.5vw, 2.2rem); /* Responsivo: Cresce com a tela (e diminui também) */
   font-weight:700;
   margin-bottom: .8rem;
   color:#111;
@@ -40,11 +40,11 @@ body{
 .coluna-texto p{
   color:#333;
   line-height:1.5;
-  max-width: 40rem;
+  max-width: 40rem; /* Limita a altura do parágrafo para melhor leitura */
   margin-bottom: 1.3rem;
 }
 .coluna-texto img{
-  width: 11rem;
+  width: 11rem; /* Tamanho fixo da logo */
   opacity:.85;
   display:block;
   margin-top:.5rem;
@@ -53,7 +53,7 @@ body{
 /* Carrossel */
 .carrossel-container{
   position:relative;
-  width: calc(var(--card-w) + 4rem);
+  width: calc(var(--card-w) + 4rem); /* Largura total do container incluido */
   height: var(--card-h);
   margin-left:auto;
 }
@@ -63,6 +63,7 @@ body{
   height:100%;
 }
 
+/* Card individual */
 .card{
   position:absolute;
   top:0;
