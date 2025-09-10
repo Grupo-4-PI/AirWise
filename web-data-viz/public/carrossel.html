@@ -107,7 +107,7 @@
     </main>
 
 
-  <!-- Scipt do carrossel -->
+  <!-- Script do carrossel -->
 
     <script>
 
@@ -152,14 +152,14 @@
 
       //Altera o índice
       ativo += d;
-      if (ativo < 0) ativo = cards.length - 1; //wrap-around início (quando chega no último card, ele volta pro primeiro)
-      if (ativo > cards.length - 1) ativo = 0; //wrap-around fim (quando está no 1 card, se clicar pra esquerda, ele volta pro final)
+      if (ativo < 0) ativo = cards.length - 1; //wrap-around início (quando chega no último card, ele volta para o primeiro)
+      if (ativo > cards.length - 1) ativo = 0; //wrap-around fim (quando está no 1 card, se clicar pra esquerda, ele volta para o final)
       render(); //Atualiza a visualização
     }
 
     // Clique nos botões
     prevBtn?.addEventListener('click', (e) => { e.preventDefault(); mover(-1); resetAutoplay(); }); //Quando o usuário clicar no botão de voltar, ele volta para o card anterior (-1)
-    nextBtn?.addEventListener('click', (e) => { e.preventDefault(); mover(1); resetAutoplay(); }); //Reinicia o autoplay para que o tempo de troca volte a contar do 0
+    nextBtn?.addEventListener('click', (e) => { e.preventDefault(); mover(1); resetAutoplay(); }); //Reinicia o autoplay para que o tempo de troca de card volte a contar do 0
 
     // Teclado(keyboard- setas esquerda e direita no teclado)
     window.addEventListener('keydown', (e) => {
