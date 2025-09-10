@@ -3,30 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <title>Carrossel Empilhado</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
+
+  <!-- Importa a fonte do site -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Importa o css -->
   <link rel="stylesheet" href="../public/css/componentes/carrossel.css">
 </head>
 <body>
 
-  <main class="conteudo">
-    <!-- ESQUERDA -->
+ <!-- Container principal -->
+  <main class="conteudo"> 
+   
+    <!-- Coluna ESQUERDA (texto e imagem)-->
     <section class="coluna-texto">
+
+      <!-- Titulo da sessão -->
       <h2>Nosso Team</h2>
       <p>
         Por trás da AirWise está um time comprometido em desenvolver soluções
         que ajudam companhias aéreas a enxergar melhor seus desafios e oportunidades.
       </p>
+
       <img src="../public/assets/aviao.png" alt="aviao">
     </section>
 
     <!-- DIREITA - CARROSSEL -->
     <section class="carrossel-container">
+
+      <!-- Botão que move para a esquerda -->
       <button class="setas-carrossel esquerda" aria-label="Anterior">&#10094;</button>
 
+      <!-- Container dos cards do carrossel -->
       <div class="carrossel-stack" id="stack">
+
+        <!-- Card 1 -->
         <article class="card">
           <img src="./assets/colaboradores/toledo.jpg" alt="Guilherme Toledo">
           <h3>Guilherme Toledo</h3>
@@ -37,6 +53,7 @@
         </div>
         </article>
 
+        <!-- Card 2 -->
         <article class="card">
           <img src="./assets/colaboradores/alves.jpg" alt="João Victor Alves">
           <h3>João Victor Alves</h3>
@@ -46,6 +63,7 @@
     </div>
         </article>
 
+        <!-- Card 3 -->
         <article class="card">
           <img src="./assets/colaboradores/carlinhos.jpg" alt="João Victor Carlos">
           <h3>João Victor Carlos</h3>
@@ -55,6 +73,7 @@
         </div>
         </article>
 
+        <!-- Card 4 -->
         <article class="card">
           <img src="./assets/colaboradores/vini.jpg" alt="Vinicius Ventura">
           <h3>Vinicius Ventura</h3>
@@ -64,6 +83,7 @@
         </div>
         </article>
 
+        <!-- Card 5 -->
         <article class="card">
           <img src="./assets/colaboradores/ray.jpg" alt="Rayssa Casagrande">
           <h3>Rayssa Casagrande</h3>
@@ -73,6 +93,7 @@
         </div>
         </article>
 
+        <!-- Card 6 -->
         <article class="card">
           <img src="./assets/colaboradores/fernando.jpg" alt="Fernando Ramirez">
           <h3>Fernando Ramirez</h3>
@@ -83,12 +104,13 @@
         </article>
       </div>
 
+      <!-- Seta que move para a direita -->
       <button class="setas-carrossel direita" aria-label="Próximo">&#10095;</button>
     </section>
   </main>
 
 
-
+<!-- Scipt do carrossel -->
   <script>
 
 document.addEventListener('DOMContentLoaded', () => {
