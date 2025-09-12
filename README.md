@@ -85,6 +85,14 @@ Neste contexto, o projeto **AirWise** tem como objetivo oferecer uma solução q
     style="padding-right: 10px;" 
     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-original.svg" 
 />
+<img 
+    align="left" 
+    alt="intellij" 
+    title="intellij"
+    width="30px" 
+    style="padding-right: 10px;" 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" 
+/>
 
 
 <br/>
