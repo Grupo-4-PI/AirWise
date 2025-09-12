@@ -1,31 +1,30 @@
 # ✈️ Projeto Air Wise
 
-<img src="[https://yolongbrewtech.com/wp-content/uploads/2021/12/IMG_20200428_095541-1030x644.jpg](https://static.ndmais.com.br/2025/06/qual-e-o-assento-mais-seguro-no-aviao-1300x731.jpg)" alt="Foto Cervejas">
+<img src="[https://yolongbrewtech.com/wp-content/uploads/2021/12/IMG_20200428_095541-1030x644.jpg](https://static.ndmais.com.br/2025/06/qual-e-o-assento-mais-seguro-no-aviao-1300x731.jpg)" alt="Foto Avião">
 <br>
 <br>
 
 ## 📄 Descrição do Projeto
 
-A **MoniBeer** tem como objetivo entregar um sistema de monitoramento contínuo da temperatura na etapa de fermentação da cerveja artesanal IPA e PILSEN.
-Que terá uma dashboard para visualização de dados e históricos, teremos um site funcional que irá emitir alertas caso a temperatura esteja diferente do ideal
-recomendado, O projeto visa aumentar a eficácia e ter uma diminuição de perda que varia entre 10% a 25% nas cervejas artesanais no processo da fermentação. 
-A falta de um monitoramento correto na etapa de fermentação da cerveja artesanal causa diversos problemas que afetam tanto a qualidade quanto a estabilidade do produto. Os principais problemas que podem acontecer:  
+O setor de aviação civil no Brasil, embora vital para a mobilidade e economia, enfrenta um desafio significativo e recorrente: o alto volume de reclamações de passageiros. De acordo com dados da ANAC, as companhias aéreas receberam, só em 2024, mais de 90 mil reclamações, o que equivale a quase 250 queixas por dia. Estas reclamações, além de afetarem a imagem das empresas, geram uma série de consequências operacionais e financeiras.
 
-Se as temperaturas estiverem muito altas aumentam a produção de ésteres frutados (São compostos orgânicos oxigenados, resultado da reação entre um ácido carboxílico e um álcool, que conferem o aroma e sabor característico a diversas frutas), que podem resultar em aromas indesejáveis, como solvente ou álcool forte.  
+### O Desafio da Judicialização
+Historicamente, o mercado aéreo brasileiro registra um alto índice de reclamações que evoluem para ações judiciais, tornando o Brasil um dos países com o maior número de processos contra companhias aéreas no mundo. Essa escalada para o litígio causa prejuízos diretos às empresas, incluindo altos custos com indenizações, multas e honorários advocatícios. A má reputação e a publicidade negativa corroem a confiança do cliente e diminuem a competitividade da marca no mercado.
 
-Se a temperatura estiver muito abaixo do indicado, a atividade das leveduras pode diminuir ou até parar, deixando açúcares não fermentados e comprometendo o teor alcoólico desejado.  
+### Fiscalização da ANAC
+As reclamações também acarretam uma fiscalização mais rigorosa por parte da Agência Nacional de Aviação Civil (ANAC). A agência utiliza dados das reclamações para realizar fiscalizações remotas e presenciais, podendo aplicar multas pesadas no caso de descumprimento das normas, o que reforça a urgência de uma gestão proativa do problema.
 
-Temperaturas instáveis podem enfraquecer a levedura, deixando um ambiente favorável para contaminações por bactérias e leveduras selvagens. Ela afeta diretamente na taxa de conversão dos açúcares em álcool. Se a fermentação for muito rápida (alta temperatura), pode causar uma cerveja mais seca e alcoólica. Se for muito lenta (baixa temperatura), pode deixar a cerveja com corpo excessivo e resíduos adocicados.  
+### Disponibilidade dos Dados
+A ANAC e o portal Consumidor.gov.br disponibilizam publicamente os dados de todas as reclamações. Estas informações, detalhadas por motivo, data e status de tratamento, são a base para o nosso projeto. O desafio é transformar estes dados brutos em insights valiosos para as companhias.
 
-Os afetados são principalmente os fabricantes de cerveja artesanal que tem uma faixa no percentual de prejuízo devido à falta de um monitoramento eficaz da temperatura na etapa de fermentação. 
-
-Com base nessas informações das cervejas PILSEN e IPA, a fermentação é um dos processos mais sensíveis na produção de cervejas, que exige um controle rigoroso na medição da temperatura durante a fermentação. Caso a temperatura fique fora do normal irá afetar o sabor, aroma e na qualidade final da cerveja. Para que esses problemas sejam evitados, foi proposto uma solução através do Sensor de Temperatura, que irá monitorar a temperatura na fermentação das cervejas. 
-
+Neste contexto, o projeto **AirWise** tem como objetivo oferecer uma solução que permita às companhias aéreas identificarem, de forma precisa, os padrões de reclamações, agindo de forma preventiva e reduzindo o volume de queixas e a consequente judicialização.
 
 ## 🖥️ Tecnologias Utilizadas:
-- **Hardware:** Arduino Uno R3, Sensor LM35.
-- **Softwares:** HTML, CSS, JavaScript, MySQL Server.
-- **Ferramentas:** Linux Lubunto (VM Oracle Virtual Box), Figma, Canva, Visual Studio Code, Mysql Workbench, Trello, Git.
+- **Backend/Processamento de Dados:** Java
+- **Cloud:** Amazon Web Services (AWS) - EC2 e S3
+- **Banco de Dados:** MySQL
+- **Frontend:** HTML, CSS, JavaScript
+- **Ferramentas:** Git, Intellij, Trello
   
 <img 
     align="left" 
