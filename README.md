@@ -1,6 +1,6 @@
 # ✈️ Projeto Air Wise
 
-<img src="[https://yolongbrewtech.com/wp-content/uploads/2021/12/IMG_20200428_095541-1030x644.jpg](https://static.ndmais.com.br/2025/06/qual-e-o-assento-mais-seguro-no-aviao-1300x731.jpg)" alt="Foto Avião">
+<img src="https://yolongbrewtech.com/wp-content/uploads/2021/12/IMG_20200428_095541-1030x644.jpg](https://static.ndmais.com.br/2025/06/qual-e-o-assento-mais-seguro-no-aviao-1300x731.jpg)" alt="Foto Avião">
 <br>
 <br>
 
@@ -24,7 +24,7 @@ Neste contexto, o projeto **AirWise** tem como objetivo oferecer uma solução q
 - **Cloud:** Amazon Web Services (AWS) - EC2 e S3
 - **Banco de Dados:** MySQL
 - **Frontend:** HTML, CSS, JavaScript
-- **Ferramentas:** Git, Intellij, Trello
+- **Ferramentas:** Git, Intellij, Trello, Excel, Canva, VsCode
   
 <img 
     align="left" 
@@ -76,6 +76,14 @@ Neste contexto, o projeto **AirWise** tem como objetivo oferecer uma solução q
     width="30px" 
     style="padding-right: 10px;" 
     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original-wordmark.svg" 
+/>
+<img 
+    align="left" 
+    alt="trello" 
+    title="trello"
+    width="30px" 
+    style="padding-right: 10px;" 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/aarch64/aarch64-original.svg" 
 />
 
 
