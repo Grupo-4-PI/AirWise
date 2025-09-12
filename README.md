@@ -93,6 +93,14 @@ Neste contexto, o projeto **AirWise** tem como objetivo oferecer uma solução q
     style="padding-right: 10px;" 
     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/intellij/intellij-original.svg" 
 />
+<img 
+    align="left" 
+    alt="aws" 
+    title="aws"
+    width="30px" 
+    style="padding-right: 10px;" 
+    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/aws/aws-original.svg" 
+/>
 
 
 <br/>
