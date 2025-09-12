@@ -100,12 +100,12 @@ Neste contexto, o projeto **AirWise** tem como objetivo oferecer uma solução q
   </tr>
   <tr>
     <td align="center">
-      <img src="https://github.com/VinicusxL777.png" alt="Imagem Vinicius Ventura" width="100" height="100"><br>
-      <a href="https://github.com/VinicusxL777">Vinicius Ventura</a>
+      <img src="https://github.com/ViniciusxL777.png" alt="Imagem Vinicius Ventura" width="100" height="100"><br>
+      <a href="https://github.com/ViniciusxL777">Vinicius Ventura</a>
     </td>
     <td align="center">
-      <img src="https://github.com/ojoaoalvss.png" alt="Imagem João Alves" width="100" height="100"><br>
-      <a href="https://github.com/ojoaoalvss">João Alves</a>
+      <img src="https://github.com/ojoaoalvsss.png" alt="Imagem João Alves" width="100" height="100"><br>
+      <a href="https://github.com/ojoaoalvsss">João Alves</a>
     </td>
     <td align="center">
       <img src="https://github.com/joaovictoradsb.png" alt="Imagem João Victor" width="100" height="100"><br>
