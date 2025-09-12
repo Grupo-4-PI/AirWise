@@ -86,12 +86,12 @@ Neste contexto, o projeto **AirWise** tem como objetivo oferecer uma solução q
 <table>
   <tr>
     <td align="center">
-      <img src="https://github.com/bee-perez.png" alt="Imagem Beatriz Pere" width="100" height="100"><br>
-      <a href="https://github.com/bee-perez">Beatriz Perez</a>
+      <img src="https://github.com/raycasagrande.png" alt="Imagem Rayssa Casagrande" width="100" height="100"><br>
+      <a href="https://github.com/raycasagrande">Rayssa Casagrande</a>
     </td>
     <td align="center">
-      <img src="https://github.com/Emanuelle-Fernanda.png" alt="Imagem Emanuelle Fernanda" width="100" height="100"><br>
-      <a href="https://github.com/Emanuelle-Fernanda">Emanuelle Fernanda</a>
+      <img src="https://github.com/guigtoledo.png" alt="Imagem Guilherme Toledo" width="100" height="100"><br>
+      <a href="https://github.com/guigtoledo">Guilherme Toledo</a>
     </td>
     <td align="center">
       <img src="https://github.com/FernandoRDev457.png" alt="Imagem Fernando Gutierrez" width="100" height="100"><br>
@@ -100,12 +100,12 @@ Neste contexto, o projeto **AirWise** tem como objetivo oferecer uma solução q
   </tr>
   <tr>
     <td align="center">
-      <img src="https://github.com/nathalli99.png" alt="Imagem Nathalli Ribeiro" width="100" height="100"><br>
-      <a href="https://github.com/nathalli99">Nathalli Ribeiro</a>
+      <img src="https://github.com/VinicusxL777.png" alt="Imagem Vinicius Ventura" width="100" height="100"><br>
+      <a href="https://github.com/VinicusxL777">Vinicius Ventura</a>
     </td>
     <td align="center">
-      <img src="https://github.com/joaolureis.png" alt="Imagem João Reis" width="100" height="100"><br>
-      <a href="https://github.com/joaolureis">João Reis</a>
+      <img src="https://github.com/ojoaoalvss.png" alt="Imagem João Alves" width="100" height="100"><br>
+      <a href="https://github.com/ojoaoalvss">João Alves</a>
     </td>
     <td align="center">
       <img src="https://github.com/joaovictoradsb.png" alt="Imagem João Victor" width="100" height="100"><br>
