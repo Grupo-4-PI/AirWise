@@ -463,11 +463,14 @@ body {
 }
 
 .contact-us {
+    height: 900px;
     width: 100%;
     padding: 50px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: linear-gradient(to bottom, #d3ecff 30%, #b0ddff 100%);
+
 
     .container {
         width: 860px;
@@ -1056,7 +1059,7 @@ body {
     .segment {
         width: 100%;
         margin: 0;
-        height: 600px;
+        height: 800px;
 
         .container-segment {
             display: flex;
@@ -1088,7 +1091,7 @@ body {
     }
 
     .services {
-        padding: 20px;
+        padding: 70px 20px;
 
         .container-service {
             padding: 20px;
@@ -1112,6 +1115,7 @@ body {
     }
 
     .team {
+        height: 1000px;
         .conteudo {
             .coluna-texto {
                 display: flex;
@@ -1148,6 +1152,7 @@ body {
     }
 
     .contact-us {
+        height: 1050px;
         padding: 30px 15px;
 
         .container {
