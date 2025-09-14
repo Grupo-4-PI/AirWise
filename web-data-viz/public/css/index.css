@@ -851,6 +851,27 @@ body {
             margin-top: 1.5rem;
         }
     }
+
+    .contact-us {
+        .container {
+            .contact-wrapper {
+                justify-content: left;
+                align-items: center;
+                position: relative;
+
+                .form-card {
+                    width: 68%;
+                    padding: 25px;
+                }
+
+                .info-card {
+                    bottom: -25px;
+                    right: -35px;
+                }
+
+            }
+        }
+    }
 }
 
 @media (max-width: 768px) {
