@@ -1,27 +1,29 @@
 package log;
 
-import java.time.LocalDateTime; // Importa a classe correta
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.concurrent.TimeUnit;
 
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
-        DateTimeFormatter formatador = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss.SSS");
+        String severidade = "INFO";
 
-        String dataHoraAtualFormatada = LocalDateTime.now().format(formatador);
-        System.out.println("[INFO] %s - Iniciando tratamento de dados - Arquivo XPTO.".formatted(dataHoraAtualFormatada));
+        DateTimeFormatter formatador = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS");
+
+        String data_hora_atual_formatada = LocalDateTime.now().format(formatador);
+        System.out.println("%s [%s] - Iniciando tratamento de dados - Arquivo XPTO.".formatted(data_hora_atual_formatada, severidade));
 
         int totalLinhas = 100;
 
         for (int linhaAtual = 1; linhaAtual <= totalLinhas; linhaAtual += 10) {
             TimeUnit.MILLISECONDS.sleep(150);
 
-            dataHoraAtualFormatada = LocalDateTime.now().format(formatador);
-            System.out.println("[INFO] " + dataHoraAtualFormatada + " - Processando linha " + linhaAtual + "...");
+            data_hora_atual_formatada = LocalDateTime.now().format(formatador);
+            System.out.println("%s [%s] - Processando linha %d...".formatted(data_hora_atual_formatada, severidade, linhaAtual));
         }
 
-        dataHoraAtualFormatada = LocalDateTime.now().format(formatador);
-        System.out.println("[INFO] " + dataHoraAtualFormatada + " - Tratamento de dados concluído.");
+        data_hora_atual_formatada = LocalDateTime.now().format(formatador);
+        System.out.println("%s [%s] - Tratamento de dados concluído.".formatted(data_hora_atual_formatada, severidade));
     }
 }
