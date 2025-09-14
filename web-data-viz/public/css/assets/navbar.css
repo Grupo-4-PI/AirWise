@@ -85,7 +85,7 @@ nav {
             background: linear-gradient(to right, #2785FF, #7CC6FF);
             transition: all 0.5s ease;
         }
-        
+
         button:hover {
             background: linear-gradient(to right, #004fb6, #3eacff);
         }
@@ -119,12 +119,12 @@ nav {
         display: flex;
         justify-content: space-between;
         padding: 5px;
-        
+
         .container-logotipo {
             min-width: 130px;
             margin-bottom: 10px;
 
-            img{
+            img {
                 width: 80%;
             }
         }
@@ -140,7 +140,7 @@ nav {
             left: 0;
             width: 100%;
             height: 100vh;
-            background: rgba(255, 165, 0);
+            background: url(../../assets/img-site-institucional/wallpaper-navbar.jpg) no-repeat center top/cover;
             flex-direction: column;
             justify-content: start;
             align-items: center;
@@ -163,7 +163,7 @@ nav {
             margin-right: 28px;
             scale: 0.86;
 
-            p{
+            p {
                 display: none;
             }
 
@@ -181,12 +181,19 @@ nav {
         li {
             opacity: 1;
             transition: all 0.3s linear;
-            background-color: olivedrab;
-            width: 100%;
-            height: 70px;
+            background-color: rgba(225, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            width: 80%;
+            border-radius: 24px;
+            height: 60px;
             display: flex;
             justify-content: center;
             align-items: center;
+            transition: all 0.3 ease;
+        }
+        
+        li:hover{
+            background-color: rgba(225, 255, 255, 0.2);
         }
 
         li:nth-child(1) {

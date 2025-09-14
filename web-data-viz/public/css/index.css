@@ -611,8 +611,8 @@ body {
                 padding: 30px 25px;
                 border-radius: 20px;
                 box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-                color: #fff;
-                z-index: 10;
+                color: white;
+                z-index: 4;
 
                 .btn-close{
                     display: none;
@@ -933,7 +933,7 @@ body {
                     opacity: 0;
                     pointer-events: none;
                     transition: all 0.3s ease;
-                    z-index: 999;
+                    z-index: 7;
 
                     .btn-close{
                         position: absolute;
