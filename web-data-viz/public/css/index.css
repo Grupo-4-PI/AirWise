@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     min-height: 100vh;
     font-family: "Montserrat", sans-serif;
@@ -392,6 +396,12 @@ body {
             }
         }
 
+        a {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
         button {
             font-family: "Montserrat", sans-serif;
             width: fit-content;
@@ -576,7 +586,7 @@ body {
 
                 button {
                     font-family: "Montserrat", sans-serif;
-                    width: 170px;
+                    width: 100%;
                     border-radius: 50px;
                     padding: 12px;
                     border: none;
@@ -614,7 +624,7 @@ body {
                 color: white;
                 z-index: 4;
 
-                .btn-close{
+                .btn-close {
                     display: none;
                 }
 
@@ -935,7 +945,7 @@ body {
                     transition: all 0.3s ease;
                     z-index: 7;
 
-                    .btn-close{
+                    .btn-close {
                         position: absolute;
                         display: flex;
                         background-color: transparent;
@@ -1010,14 +1020,13 @@ body {
     }
 
     .cards-objectives {
-        height: 200px;
+        height: 240px;
         flex-direction: row;
         align-items: center;
         overflow-x: hidden;
         gap: 20px;
         scroll-snap-type: x mandatory;
         padding: 0px 30px;
-        transform: translateY(-90px);
 
         .card {
             flex: 0 0 80%;
@@ -1116,6 +1125,7 @@ body {
 
     .team {
         height: 1000px;
+
         .conteudo {
             .coluna-texto {
                 display: flex;
