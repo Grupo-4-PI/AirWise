@@ -287,7 +287,7 @@
 
         <section class="contact-us">
             <div class="container">
-                <div class="titulo">
+                <div class="titles">
                     <h3>Quer saber mais? Estamos prontos para ouvir você</h3>
                     <h1>Contate-nos</h1>
                 </div>
@@ -299,13 +299,27 @@
                         <p>Estamos à disposição para responder suas dúvidas de forma simples e rápida.</p>
 
                         <div class="form-row">
-                            <input type="text" placeholder="Digite seu nome">
-                            <input type="text" placeholder="Digite seu sobrenome">
+                            <div class="input-label">
+                                <label for="name">Nome:</label>
+                                <input id="name" type="text" placeholder="Digite seu nome">
+                            </div>
+
+                            <div class="input-label">
+                                <label for="last-name">Sobrenome:</label>
+                                <input id="last-name" type="text" placeholder="Digite seu sobrenome">
+                            </div>
                         </div>
 
                         <div class="form-row">
-                            <input type="email" placeholder="Digite seu e-mail">
-                            <input type="tel" placeholder="Digite seu número de telefone">
+                            <div class="input-label">
+                                <label for="email">E-mail:</label>
+                                <input id="email" type="email" placeholder="Digite seu e-mail">
+                            </div>
+
+                            <div class="input-label">
+                                <label for="phone">Telefone:</label>
+                                <input id="phone" type="tel" placeholder="Digite seu número de telefone">
+                            </div>
                         </div>
 
                         <textarea placeholder="Digite sua mensagem..."></textarea>
@@ -341,16 +355,16 @@
                             </div>
                         </div>
 
+                        <hr class="bar-divisor-social-media">
+
                         <div class="socials">
-                            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174848.png"
-                                    alt="Facebook"></a>
-                            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png"
-                                    alt="Instagram"></a>
-                            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046122.png" alt="X"></a>
-                            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046126.png"
-                                    alt="TikTok"></a>
-                            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-                                    alt="LinkedIn"></a>
+                            <h2>Acompanhe-nos em nossas redes sociais:</h2>
+                            <div class="social-media">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-x-twitter"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
