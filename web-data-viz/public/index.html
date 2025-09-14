@@ -293,7 +293,6 @@
                 </div>
 
                 <div class="contact-wrapper">
-                    <!-- Card principal -->
                     <div class="form-card">
                         <h2>Converse com nosso time</h2>
                         <p>Estamos à disposição para responder suas dúvidas de forma simples e rápida.</p>
@@ -327,7 +326,9 @@
                         <button class="btn">Enviar mensagem</button>
                     </div>
 
-                    <!-- Card azul flutuante -->
+                    <input type="checkbox" id="toggle-info" hidden>
+                    <label for="toggle-info" class="toggle-info">Mais informações</label>
+
                     <div class="info-card">
                         <h3>Entre contato também pelo...</h3>
 
@@ -376,6 +377,18 @@
     <script src="./script/assets/navbar.js"></script>
     <script src="./script/components/carrossel-card-objects.js"></script>
     <script src="./script/components/carrossel-team.js"></script>
+    <script>
+        const toggleBtn = document.querySelector('.toggle-info');
+        const infoCard = document.querySelector('.info-card');
+
+        toggleBtn.addEventListener('click', () => {
+            infoCard.classList.toggle('active');
+            toggleBtn.textContent = infoCard.classList.contains('active')
+                ? "Fechar informações"
+                : "Mais informações";
+        });
+
+    </script>
 </body>
 
 </html>
