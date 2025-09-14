@@ -941,7 +941,7 @@ body {
                 }
 
                 #toggle-info:checked+.toggle-info:hover {
-                    background-color: rebeccapurple;
+                    background-color: red;
                     color: white;
                 }
 
