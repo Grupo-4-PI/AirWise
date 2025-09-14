@@ -611,6 +611,10 @@ body {
                 color: #fff;
                 z-index: 10;
 
+                .btn-close{
+                    display: none;
+                }
+
                 h3 {
                     margin: 0 0 20px;
                     font-size: 16px;
@@ -927,6 +931,17 @@ body {
                     pointer-events: none;
                     transition: all 0.3s ease;
                     z-index: 999;
+
+                    .btn-close{
+                        position: absolute;
+                        display: flex;
+                        background-color: transparent;
+                        border: none;
+                        font-size: 23px;
+                        right: 22px;
+                        color: white;
+                        cursor: pointer;
+                    }
                 }
 
                 #toggle-info:checked~.info-card {

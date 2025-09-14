@@ -7,3 +7,8 @@ toggleBtn.addEventListener('click', () => {
         ? "Fechar informações"
         : "Mais informações";
 });
+
+function closeContactInfo() {
+    document.getElementById('toggle-info').checked = false;
+    toggleBtn.textContent = "Mais informações"
+}
