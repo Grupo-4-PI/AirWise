@@ -60,8 +60,9 @@
                   font-weight: 700;
                   transition: color 0.25s ease;
 
-                  &:hover {
-                    color: #0a66c2;
+                  img{
+                    height: 26px;
+                    object-fit: contain;
                   }
                 }
 

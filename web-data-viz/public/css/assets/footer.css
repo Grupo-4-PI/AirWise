@@ -78,10 +78,14 @@
           transition: 0.3s;
           text-decoration: none;
           display: inline-block;
+
+          img{
+            height: 35px;
+          }
         }
 
         .social-icons a:hover {
-          color: #66ccff;
+          opacity: 0.8;
         }
 
         .location-airwise{
