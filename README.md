@@ -1,6 +1,6 @@
 # ✈️ Projeto Air Wise
 
-<img src="https://yolongbrewtech.com/wp-content/uploads/2021/12/IMG_20200428_095541-1030x644.jpg](https://static.ndmais.com.br/2025/06/qual-e-o-assento-mais-seguro-no-aviao-1300x731.jpg" alt="Foto Avião">
+<img src="https://www.melhoresdestinos.com.br/wp-content/uploads/2020/01/boeing-777x-capa2019-01.jpg">
 <br>
 <br>
 
