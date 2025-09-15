@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="26.95mm" height="44.12mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 2695 4412"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill:url(#id0)}
+   ]]>
+  </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="2316.36" y1="914.46" x2="1538.44" y2="3590.03">
+   <stop offset="0" style="stop-opacity:1; stop-color:#4888FF"/>
+   <stop offset="1" style="stop-opacity:1; stop-color:#9BD3FF"/>
+  </linearGradient>
+ </defs>
+ <g id="Camada_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <path class="fil0" d="M301.15 1994.89c89.37,-117.93 760.88,-400.01 796.96,-401.6 13.98,-15.15 -6.35,-1.28 27.33,-22.05l104.67 -52.29c268.87,-150.09 371.76,-236.06 553.86,-486.87 34.25,-47.17 52.42,-80.71 83.03,-129.86 22.64,-36.33 56.08,-103.27 79.37,-129.36 55.53,-131.14 212.44,-371.16 288.35,-465.62 91.7,-114.13 242.52,-263.09 453.19,-303.37l0 1251.36 0 1361.34 0 856.33 0 942.84c-1050.14,-20.02 -1344.25,-28.25 -2067.04,-681.6l-140.02 -139.36c-162,-162.58 -346.3,-430.82 -425.39,-660.95 -139.51,-405.93 -41.33,-643.77 245.69,-938.94z"/>
+ </g>
+</svg>

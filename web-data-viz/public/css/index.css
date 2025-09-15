@@ -126,8 +126,9 @@ body {
     justify-content: space-around;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, #eaf6ff 0%, #d9f2ff 40%, #bbecff 60%);
-
+    background:
+        url("../assets/img-site-institucional/route-airplane.png") no-repeat right center/20%,
+        linear-gradient(to bottom, #eaf6ff 0%, #d9f2ff 40%, #bbecff 60%);
 
     .image-logotipo {
         width: 50%;
@@ -479,7 +480,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(to bottom, #d3ecff 30%, #b0ddff 100%);
+    background:
+        url("../assets/img-site-institucional/drop-base-component.svg") no-repeat right bottom/auto 50%,
+        linear-gradient(to bottom, #d3ecff 30%, #b0ddff 100%);
 
 
     .container {
@@ -989,7 +992,7 @@ body {
         .container-data {
             width: 100%;
             height: 58%;
-            background-image: none;
+            background: url(../assets/img-site-institucional/banner-componente-airwise-mobile.png) no-repeat bottom center/cover;
             align-items: center;
 
             h2 {
