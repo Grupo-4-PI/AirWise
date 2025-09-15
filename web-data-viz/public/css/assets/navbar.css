@@ -30,6 +30,10 @@ nav {
         }
     }
 
+    a {
+        color: black;
+    }
+
     .nav-links {
         display: flex;
         justify-content: end;
@@ -38,14 +42,14 @@ nav {
         gap: 16px;
         padding: 0px 20px;
 
-        li a {
+        a li {
             text-decoration: none;
             color: black;
             position: relative;
             padding: 5px 0;
         }
 
-        li a::after {
+        a li::after {
             content: '';
             position: absolute;
             bottom: 0;
@@ -56,7 +60,7 @@ nav {
             transition: width 0.3s;
         }
 
-        li a:hover::after {
+        a li:hover::after {
             width: 100%;
         }
     }
@@ -139,7 +143,7 @@ nav {
             top: 0;
             left: 0;
             width: 100%;
-            height: 100vh;
+            height: 130vh;
             background: url(../../assets/img-site-institucional/wallpaper-navbar.jpg) no-repeat center top/cover;
             flex-direction: column;
             justify-content: start;
@@ -147,7 +151,6 @@ nav {
             gap: 30px;
             transform: translateX(100%);
             transition: transform 0.3s ease;
-            backdrop-filter: blur(5px);
             opacity: 0;
             pointer-events: none;
             z-index: 10;
@@ -178,6 +181,13 @@ nav {
         opacity: 1;
         pointer-events: auto;
 
+        a {
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
         li {
             opacity: 1;
             transition: all 0.3s linear;
@@ -191,8 +201,8 @@ nav {
             align-items: center;
             transition: all 0.3 ease;
         }
-        
-        li:hover{
+
+        li:hover {
             background-color: rgba(225, 255, 255, 0.2);
         }
 

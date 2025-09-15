@@ -36,7 +36,7 @@ body {
         }
 
         p {
-            font-weight: 350;
+            font-weight: 400;
             text-align: justify;
             max-width: 500px;
             font-size: 17px;
@@ -212,7 +212,7 @@ body {
             border-radius: 20px;
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 16px;
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 
             h2 {
@@ -225,6 +225,7 @@ body {
                 font-size: 16px;
                 line-height: 1.5;
                 color: #000000;
+                text-align: justify;
             }
 
             .list-types-segment {
@@ -384,6 +385,7 @@ body {
                     font-size: 13px;
                     color: #555;
                     line-height: 1.4;
+                    text-align: justify;
                 }
             }
 
