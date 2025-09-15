@@ -1,8 +1,7 @@
 # ✈️ Projeto Air Wise
 
 <img src="https://www.melhoresdestinos.com.br/wp-content/uploads/2020/01/boeing-777x-capa2019-01.jpg">
-<br>
-## 📄 Descrição do Projeto
+📄 Descrição do Projeto
 
 O setor de aviação civil no Brasil, embora vital para a mobilidade e economia, enfrenta um desafio significativo e recorrente: o alto volume de reclamações de passageiros. De acordo com dados da ANAC, as companhias aéreas receberam, só em 2024, mais de 90 mil reclamações, o que equivale a quase 250 queixas por dia. Estas reclamações, além de afetarem a imagem das empresas, geram uma série de consequências operacionais e financeiras.
 
