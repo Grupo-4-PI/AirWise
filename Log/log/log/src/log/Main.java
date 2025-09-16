@@ -14,7 +14,7 @@ public class Main {
         String data_hora_atual_formatada = LocalDateTime.now().format(formatador);
         System.out.println("%s [%s] - Iniciando tratamento de dados - Arquivo XPTO.".formatted(data_hora_atual_formatada, severidade));
 
-        int totalLinhas = 100;
+        int totalLinhas = 600;
 
         for (int linhaAtual = 1; linhaAtual <= totalLinhas; linhaAtual += 10) {
             TimeUnit.MILLISECONDS.sleep(150);
