@@ -7,19 +7,20 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Fundo com degradê + imagem */
 .login-section {
+  flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* card fica no topo da section */
+  padding-top: 5rem;       /* cria espaço entre navbar e card */
   background: linear-gradient(
       rgba(10, 102, 194, 0.85),
       rgba(51, 51, 51, 0.9)
     ),
-    url("https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80")
       center/cover no-repeat;
-  padding: 2rem;
+  padding-bottom: 3rem; /* espaço extra antes do footer */
 }
+
 
 /* Card do formulário */
 .login-card {
