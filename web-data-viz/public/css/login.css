@@ -17,6 +17,7 @@ body {
       rgba(10, 102, 194, 0.85),
       rgba(51, 51, 51, 0.9)
     ),
+       url("../../public/assets/img-login/1faad0965fd2374bb8233733b2bdfd43.gif") center/cover no-repeat;
       center/cover no-repeat;
   padding-bottom: 3rem; /* espaço extra antes do footer */
 }
