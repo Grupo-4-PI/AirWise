@@ -1,11 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AirWise - Login</title>
+  <link rel="stylesheet" href="../../css/assets/main.css">
+  <link rel="stylesheet" href="../../css/index.css">
+  <link rel="stylesheet" href="../../css/componentes/carrossel.css">
+  <link rel="stylesheet" href="../../css/login.css"> <!-- Novo CSS separado -->
 </head>
+
 <body>
-    <h2>Login - Em Desenvolvimento</h2>
+  <!-- Navbar -->
+  <header>
+    <nav id="main-nav">
+      <div class="container-logotipo">
+        <a href="./index.html">
+          <img src="../../assets/logotipo/logotipo-airwise-pad-white.png" alt="">
+        </a>
+      </div>
+
+      <ul class="nav-links">
+        <a href="./index.html">
+          <li>Home</li>
+        </a>
+        <a href="#about-us">
+          <li>Sobre Nós</li>
+        </a>
+        <a href="#service">
+          <li>Serviços</li>
+        </a>
+        <a href="#contact">
+          <li>Contato</li>
+        </a>
+      </ul>
+
+      <div class="methods-acess">
+        <p>Cadastro</p>
+        <button>Login</button>
+      </div>
+
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Seção de Login -->
+  <main class="login-section">
+    <div class="login-card">
+      <h2>Bem-vindo de volta</h2>
+
+      <div class="input-label">
+        <label for="email">E-mail:</label>
+        <input id="email" type="email" placeholder="Digite seu e-mail">
+      </div>
+
+      <div class="input-label">
+        <label for="password">Senha:</label>
+        <input id="password" type="password" placeholder="Digite sua senha">
+      </div>
+
+      <button>Entrar</button>
+
+      <p>Não tem conta? <a href="#">Cadastre-se aqui</a></p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <a href="./index.html">
+          <img src="../../assets/logotipo/logotipo-airwise-pad-black.png" alt="logo">
+        </a>
+      </div>
+
+      <div class="footer-sessao">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#about-us">Sobre nós</a></li>
+          <li><a href="#service">Serviços</a></li>
+          <li><a href="#contact">Contatos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-sessao">
+        <h4>Links úteis</h4>
+        <ul>
+          <li><a href="#">Suporte</a></li>
+          <li><a href="#">E-mail</a></li>
+          <li><a href="#">API</a></li>
+        </ul>
+      </div>
+
+      <div class="container-data-info-airwise">
+        <div class="footer-sessao">
+          <h4>Nossas redes sociais</h4>
+          <div class="social-icons">
+            <a href="https://instagram.com" target="_blank">
+              <img src="../../assets/social-media/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://linkedin.com" target="_blank">
+              <img src="../../assets/social-media/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://tiktok.com" target="_blank">
+              <img src="../../assets/social-media/tiktok.png" alt="TikTok">
+            </a>
+            <a href="https://facebook.com" target="_blank">
+              <img src="../../assets/social-media/facebook.png" alt="Facebook">
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-sessao">
+          <h4>Onde estamos?</h4>
+          <div class="location-airwise">
+            <img src="../../assets/social-media/local.png" alt="local">
+            <p>Rua Haddock Lobo, 595 - Cerqueira César, São Paulo - SP, 01414-001</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-direitos">
+      <p>Projetado e desenvolvido pela equipe AirWise</p>
+      <p>© 2025</p>
+    </div>
+  </footer>
+
+  <script src="../../script/assets/navbar.js"></script>
 </body>
+
 </html>
