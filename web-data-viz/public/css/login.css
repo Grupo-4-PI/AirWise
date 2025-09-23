@@ -11,33 +11,33 @@ body {
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* card fica no topo da section */
-  padding-top: 5rem;       /* cria espaço entre navbar e card */
+  align-items: flex-start;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+
   background: linear-gradient(
-      rgba(10, 102, 194, 0.85),
-      rgba(51, 51, 51, 0.9)
+      rgba(10, 102, 194, 0.25),   /* antes 0.85 */
+      rgba(51, 51, 51, 0.35)     /* antes 0.9  */
     ),
-       url("../../public/assets/img-login/1faad0965fd2374bb8233733b2bdfd43.gif") center/cover no-repeat;
-      center/cover no-repeat;
-  padding-bottom: 3rem; /* espaço extra antes do footer */
+    url("../../public/assets/img-login/a57a70080ce3d85164dcec8ae4613308.jpg")
+    center/cover no-repeat;
 }
 
 
-/* Card do formulário */
 .login-card {
   background: rgba(255, 255, 255, 0.97);
-  padding: 4rem 2.5rem;       /* mais alto */
+  padding: 4rem 2.5rem;      
   border-radius: 1.2rem;
 
   flex: 1;
-  min-height: 480px;          /* altura mínima maior */
+  min-height: 480px;          
   max-width: 420px;
   width: 100%;
   box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3);
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;    /* centraliza conteúdo dentro do card */
+  justify-content: center;  
 }
 
 .login-card h2 {
@@ -46,7 +46,7 @@ body {
   font-size: 1.8rem;
 }
 
-/* Inputs */
+
 .login-card .input-label {
   display: flex;
   flex-direction: column;
@@ -74,7 +74,7 @@ body {
   box-shadow: 0 0 6px rgba(10, 102, 194, 0.4);
 }
 
-/* Botão */
+
 .login-card button {
   margin-top: 1.5rem;
   width: 100%;
@@ -95,7 +95,6 @@ body {
   opacity: 0.95;
 }
 
-/* Texto abaixo */
 .login-card p {
   margin-top: 1.5rem;
   font-size: 0.95rem;
