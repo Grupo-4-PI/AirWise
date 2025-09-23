@@ -1,4 +1,4 @@
-# ✈️ Projeto Air Wise
+# ✈️ Projeto Air Wise - front-end
 
 <img src="https://www.melhoresdestinos.com.br/wp-content/uploads/2020/01/boeing-777x-capa2019-01.jpg">
 📄 Descrição do Projeto
