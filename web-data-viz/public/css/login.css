@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
   margin: 0;
   padding: 0;
@@ -8,25 +13,33 @@ body {
 }
 
 
-#main-nav .nav-links a li {
-  color: white;        
-  font-weight: 500;  
-  transition: color 0.3s ease;
-}
-
-
-#main-nav .nav-links a li:hover {
-  color: #0a66c2; 
-}
-
-#main-nav .methods-acess p {
+#main-nav .nav-links li a {
   color: white;
-  font-weight: 600; 
+  font-weight: 500;
+  text-decoration: none; 
+  transition: color 0.3s ease, text-decoration-color 0.3s ease;
 }
 
-#main-nav .methods-acess p:hover {
-  color: #0a66c2;
+#main-nav .nav-links li a:hover {
+  color: #0a66c2;         
+  text-decoration: underline; 
+  text-decoration-color: black;
 }
+
+/* Cadastro */
+#main-nav .methods-acess .cadastro-link {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+#main-nav .methods-acess .cadastro-link:hover {
+  color: #0a66c2;
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+
 
 
 .login-section {
