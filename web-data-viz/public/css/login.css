@@ -7,6 +7,28 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+#main-nav .nav-links a li {
+  color: white;        
+  font-weight: 500;  
+  transition: color 0.3s ease;
+}
+
+
+#main-nav .nav-links a li:hover {
+  color: #0a66c2; 
+}
+
+#main-nav .methods-acess p {
+  color: white;
+  font-weight: 600; 
+}
+
+#main-nav .methods-acess p:hover {
+  color: #0a66c2;
+}
+
+
 .login-section {
   flex: 1;
   display: flex;
@@ -16,8 +38,8 @@ body {
   padding-bottom: 2rem;
 
   background: linear-gradient(
-      rgba(10, 102, 194, 0.25),   /* antes 0.85 */
-      rgba(51, 51, 51, 0.35)     /* antes 0.9  */
+      rgba(10, 102, 194, 0.25), 
+      rgba(51, 51, 51, 0.35) 
     ),
     url("../../public/assets/img-login/a57a70080ce3d85164dcec8ae4613308.jpg")
     center/cover no-repeat;
