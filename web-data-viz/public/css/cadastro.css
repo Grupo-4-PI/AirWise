@@ -1,6 +1,4 @@
-/* ===============================
-   RESET E CONFIGURAÇÕES GERAIS
-=============================== */
+
 html, body {
     margin: 0;
     padding: 0;
@@ -8,13 +6,11 @@ html, body {
     height: 100%;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     overflow: hidden; /* remove rolagem lateral e vertical */
-    background: url('../../public/assets/img-login/Imagem\ do\ WhatsApp\ de\ 2025-09-25\ à\(s\)\ 09.01.26_0bd36d26.jpg') no-repeat center center fixed;
+    background: url('../../public/assets/img-login/Imagem\ do\ WhatsApp\ de\ 2025-09-25\ à\(s\)\ 09.01.26_0bd36d26.jpg') 
+    no-repeat center center fixed;
     background-size: cover;
 }
 
-/* ===============================
-   NAVBAR
-=============================== */
 .navbar {
     width: 100%;
     height: 60px;
@@ -53,9 +49,6 @@ html, body {
     text-decoration-color: black;
 }
 
-/* ===============================
-   CONTAINER PRINCIPAL
-=============================== */
 .container {
     display: flex;
     justify-content: center;
@@ -64,9 +57,6 @@ html, body {
     padding: 20px;
 }
 
-/* ===============================
-   FORM BOX
-=============================== */
 .form-box {
     background: rgba(255, 255, 255, 0.95);
     padding: 40px;
