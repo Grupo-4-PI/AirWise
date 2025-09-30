@@ -7,7 +7,7 @@ function autenticar(email, senha) {
     senha
   );
   var instrucaoSql = `
-        SELECT idusuario, nome, email FROM usuario WHERE email = '${email}' AND senha = '${senha}';
+        SELECT idusuario, nome, email FROM usuario WHERE email = '${email}' AND senha = md5('${senha}');
     `;
   console.log("Executando a instrução SQL: \n" + instrucaoSql);
   return database.executar(instrucaoSql);
@@ -23,7 +23,7 @@ function cadastrar(nome, email, senha) {
   );
 
   var instrucaoSql = `
-        INSERT INTO usuario (nome, email, senha) VALUES ('${nome}', '${email}', '${senha}');
+        INSERT INTO usuario (nome, email, senha) VALUES md5(('${nome}', '${email}', '${senha}'));
     `;
   console.log("Executando a instrução SQL: \n" + instrucaoSql);
   return database.executar(instrucaoSql);

@@ -1,62 +1,70 @@
--- Arquivo de apoio, caso você queira criar tabelas como as aqui criadas para a API funcionar.
--- Você precisa executar os comandos no banco de dados para criar as tabelas,
--- ter este arquivo aqui não significa que a tabela em seu BD estará como abaixo!
+create database airwise;
 
-/*
-comandos para mysql server
-*/
+use airwise;
 
-CREATE DATABASE aquatech;
-
-USE aquatech;
+drop table usuario;
 
 CREATE TABLE empresa (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	razao_social VARCHAR(50),
-	cnpj CHAR(14),
-	codigo_ativacao VARCHAR(50)
+    idEmpresa INT AUTO_INCREMENT PRIMARY KEY,
+    cnpj CHAR(14) NOT NULL,
+    nomeFantasia VARCHAR(45) NOT NULL,
+    razaoSocial VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE usuario (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50),
-	fk_empresa INT,
-	FOREIGN KEY (fk_empresa) REFERENCES empresa(id)
+    idUsuario INT AUTO_INCREMENT PRIMARY KEY,
+    fkEmpresa INT NOT NULL,
+    nome VARCHAR(45) NOT NULL,
+    cpf CHAR(11) NOT NULL,
+    email VARCHAR(45) NOT NULL,
+    senha VARCHAR(45) NOT NULL UNIQUE,	
+    cargo VARCHAR(45),
+    FOREIGN KEY (fkEmpresa) REFERENCES empresa(idEmpresa)
 );
 
-CREATE TABLE aviso (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	titulo VARCHAR(100),
-	descricao VARCHAR(150),
-	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
+CREATE TABLE endereco (
+    idEndereco INT AUTO_INCREMENT PRIMARY KEY,
+    fkEmpresa INT NOT NULL,
+    cep CHAR(9) NOT NULL,
+    logradouro VARCHAR(45) NOT NULL,
+    numero INT NOT NULL,
+    bairro VARCHAR(45) NOT NULL,
+    cidade VARCHAR(45) NOT NULL,
+    uf CHAR(2) NOT NULL,
+    FOREIGN KEY (fkEmpresa) REFERENCES empresa(idEmpresa)
 );
 
-create table aquario (
-/* em nossa regra de negócio, um aquario tem apenas um sensor */
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	descricao VARCHAR(300),
-	fk_empresa INT,
-	FOREIGN KEY (fk_empresa) REFERENCES empresa(id)
+
+CREATE TABLE chaveDeAcesso (
+    idChave INT AUTO_INCREMENT PRIMARY KEY,
+    fkEmpresa INT NOT NULL,
+    status TINYINT NOT NULL,
+    codigo VARCHAR(45) NOT NULL UNIQUE,
+    dataCriacao DATE NOT NULL,
+    FOREIGN KEY (fkEmpresa) REFERENCES empresa(idEmpresa)
 );
 
-/* esta tabela deve estar de acordo com o que está em INSERT de sua API do arduino - dat-acqu-ino */
+INSERT INTO empresa (cnpj, nomeFantasia, razaoSocial) VALUES
+('11222333000144', 'AeroTech Solutions', 'AeroTech Solucoes Aeronauticas LTDA'),
+('55666777000188', 'SkyHigh Analytics', 'SkyHigh Analise de Dados SA'),
+('99888777000166', 'InfraAir Portos', 'InfraAir Infraestrutura Aeroportuaria LTDA');
 
-create table medida (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	dht11_umidade DECIMAL,
-	dht11_temperatura DECIMAL,
-	luminosidade DECIMAL,
-	lm35_temperatura DECIMAL,
-	chave TINYINT,
-	momento DATETIME,
-	fk_aquario INT,
-	FOREIGN KEY (fk_aquario) REFERENCES aquario(id)
-);
 
-insert into empresa (razao_social, codigo_ativacao) values ('Empresa 1', 'ED145B');
-insert into empresa (razao_social, codigo_ativacao) values ('Empresa 2', 'A1B2C3');
-insert into aquario (descricao, fk_empresa) values ('Aquário de Estrela-do-mar', 1);
-insert into aquario (descricao, fk_empresa) values ('Aquário de Peixe-dourado', 2);
+INSERT INTO usuario (fkEmpresa, nome, cpf, email, senha, cargo) VALUES
+(1, 'Ana Silva', '12345678901', 'ana.silva@airwise.com', md5('senhaForte123'), 'Gerente de TI'),
+(1, 'Joao Ribeiro', '1235367890', 'joao.ribeiro@airwise.com', md5('AOlcakcsnoj234243'), 'Analista');
+
+INSERT INTO endereco (fkEmpresa, cep, logradouro, numero, bairro, cidade, uf) VALUES
+(1, '01311-000', 'Avenida Paulista', 1578, 'Bela Vista', 'São Paulo', 'SP'),
+(2, '20090-003', 'Avenida Rio Branco', 1, 'Centro', 'Rio de Janeiro', 'RJ'),
+(3, '70340-906', 'SBN Quadra 2', 10, 'Asa Norte', 'Brasília', 'DF');
+
+INSERT INTO chaveDeAcesso (fkEmpresa, status, codigo, dataCriacao) VALUES
+(1, 1, 'AERO-TECH-KEY-2025-ACTIVE', '2025-01-15'),
+(2, 0, 'SKY-HIGH-KEY-2024-INACTIVE', '2024-11-20'),
+(3, 1, 'INFRAAIR-KEY-2025-VALID', '2025-03-10');
+
+select * from usuario;
+
+
+select * from usuario where senha = md5('senhaForte123');
