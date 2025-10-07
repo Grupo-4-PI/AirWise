@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - AirWise</title>
+    <link rel="stylesheet" href="../../css/assets/main.css">
     <link rel="stylesheet" href="../../css/cadastro.css">
 </head>
+
 <body>
     <!-- NAVBAR -->
     <nav class="navbar">
@@ -32,32 +35,31 @@
                 <form>
                     <div>
                         <label for="nome">Nome completo</label>
-                        <input type="text" id="nome" placeholder="Digite seu nome completo">
+                        <input type="text" id="nome_input" placeholder="Digite seu nome completo">
                     </div>
                     <div>
                         <label for="cpf">CPF</label>
-                        <input type="text" id="cpf" placeholder="Digite seu CPF">
+                        <input type="text" id="cpf_input" placeholder="Digite seu CPF">
                     </div>
                     <div>
                         <label for="email">E-mail</label>
-                        <input type="email" id="email" placeholder="Digite seu e-mail">
+                        <input type="email" id="email_input" placeholder="Digite seu e-mail">
                     </div>
                     <div>
                         <label for="cargo">Cargo</label>
-                        <select name="cargo" id="">
-                            <option value=""></option>
-                            <option value="admin">Administrador</option>
+                        <select name="cargo" id="cargo_input">
+                            <option value="admin" selected disabled>Administrador</option>
                         </select>
                     </div>
                     <div>
                         <label for="senha">Senha</label>
-                        <input type="password" id="senha" placeholder="Digite sua senha">
+                        <input type="password" id="senha_input" placeholder="Digite sua senha">
                     </div>
                     <div>
                         <label for="passkey">Passkey</label>
-                        <input type="text" id="passkey" placeholder="Digite sua passkey">
+                        <input type="text" id="chaveAcesso_input" placeholder="Digite sua passkey">
                     </div>
-                    <button type="submit">Finalizar</button>
+                    <button type="submit" onclick="cadastrar(event)">Finalizar</button>
                 </form>
             </div>
         </div>
@@ -74,4 +76,137 @@
         });
     </script>
 </body>
+
+<script>
+
+    // Array para armazenar empresas cadastradas para validação de código de ativação 
+    // let listaEmpresasCadastradas = [];
+
+    function cadastrar(event) {
+        event.preventDefault()
+        // aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = nome_input.value;
+        var cpfVar = cpf_input.value;
+        var cargoVar = cargo_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        // var confirmacaoSenhaVar = confirmacao_senha_input.value;
+        var chaveVar = chaveAcesso_input.value;
+        // var idEmpresaVincular
+
+        // Verificando se há algum campo em branco
+        if (
+            nomeVar == "" ||
+            emailVar == "" ||
+            senhaVar == "" ||
+            // confirmacaoSenhaVar == "" ||
+            chaveVar == "" ||
+            cpfVar == "" ||
+            cargoVar == ""
+        ) {
+            // cardErro.style.display = "block";
+            // mensagem_erro.innerHTML =
+            // "(Mensagem de erro para todos os campos em branco)";
+            console.log("Vazios")
+            finalizarAguardar();
+            return false;
+        } else {
+            // setInterval(sumirMensagem, 5000);
+        }
+
+        // if (!senhaVar == confirmacaoSenhaVar) {
+        //     // cardErro.style.display = "block";
+        //     // mensagem_erro.innerHTML =
+        //     // "(Senhas diferentes!! >:( )";
+
+        //     console.log('Senhas Diferentes')
+        //     finalizarAguardar();
+        //     return false;
+        // }
+
+        // // Verificando se o código de ativação é de alguma empresa cadastrada
+        // for (let i = 0; i < listaEmpresasCadastradas.length; i++) {
+        //   if (listaEmpresasCadastradas[i].codigo_ativacao == codigoVar) {
+        //     idEmpresaVincular = listaEmpresasCadastradas[i].id
+        //     console.log("Código de ativação válido.");
+        //     break;
+        //   } else {
+        //     cardErro.style.display = "block";
+        //     mensagem_erro.innerHTML = "(Mensagem de erro para código inválido)";
+        //     finalizarAguardar();
+        //   }
+        // }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+                nomeServer: nomeVar,
+                cpfServer: cpfVar,
+                cargoServer: cargoVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+                chaveAcessoServer: chaveVar
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    // cardErro.style.display = "block";
+
+                    // mensagem_erro.innerHTML =
+                    //     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+                    
+                    setTimeout(() => {
+                        window.location = "login.html";
+                    }, "2000");
+
+                    limparFormulario();
+                    finalizarAguardar();
+                } else {
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                // finalizarAguardar();
+            });
+
+        return false;
+    }
+
+    // // Listando empresas cadastradas 
+    // function listar() {
+    //   fetch("/empresas/listar", {
+    //     method: "GET",
+    //   })
+    //     .then(function (resposta) {
+    //       resposta.json().then((empresas) => {
+    //         empresas.forEach((empresa) => {
+    //           listaEmpresasCadastradas.push(empresa);
+
+    //           console.log("listaEmpresasCadastradas")
+    //           console.log(listaEmpresasCadastradas[0].codigo_ativacao)
+    //         });
+    //       });
+    //     })
+    //     .catch(function (resposta) {
+    //       console.log(`#ERRO: ${resposta}`);
+    //     });
+    // }
+
+    // function sumirMensagem() {
+    //     cardErro.style.display = "none";
+    // }
+</script>
+
 </html>
