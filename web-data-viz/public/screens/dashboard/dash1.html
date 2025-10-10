@@ -7,17 +7,28 @@
   <link rel="stylesheet" href="../../css/dash1.css" />
 </head>
 <body>
+  <!-- Barra superior -->
+  <header class="header">
+    <div class="user-info">
+      <i class="moon">🌙</i>
+      <i class="bell">🔔</i>
+      <span>Rosaria Moda</span>
+    </div>
+  </header>
+
   <div class="container">
     <!-- Menu lateral -->
     <aside class="sidebar">
-      <div class="logo">Logotipo</div>
-      <nav>
-        <button class="active">Home</button>
-        <button>Reclamações</button>
-        <button>Tendências e Insights</button>
-        <button>Registros</button>
-        <button>Gestão de Usuários</button>
-      </nav>
+      <div class="sidebar-content">
+        <div class="logo">Logotipo</div>
+        <nav>
+          <button class="active">Home</button>
+          <button>Reclamações</button>
+          <button>Tendências e Insights</button>
+          <button>Registros</button>
+          <button>Gestão de Usuários</button>
+        </nav>
+      </div>
       <div class="bottom-menu">
         <button>Perfil</button>
         <button>Sair</button>
@@ -26,11 +37,60 @@
 
     <!-- Conteúdo principal -->
     <main class="main-content">
-      <header class="header">
-        <h1>Home</h1>
-        <div class="user-info">
-          <i class="moon">🌙</i>
-          <i class="bell">🔔</i>
-          <span>Rosaria Moda</span>
+          <h1>Home</h1> 
+      <section class="stats">
+        <div class="card">
+          <span class="icon">⭐</span>
+          
+          <div>
+            <h2>4,5/5</h2>
+            <p>Nota média dos consumidores (342)</p>
+          </div>
         </div>
-      </header>
+
+        <div class="card">
+          <span class="icon">⏱️</span>
+          <div>
+            <h2>12h 37min</h2>
+            <p>Tempo médio de resolução</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="icon">🌿</span>
+          <div>
+            <h2>89%</h2>
+            <p>Taxa de resolução dos chamados</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <span class="icon">👥</span>
+          <div>
+            <h2>1.240</h2>
+            <p>Total de chamados</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="charts">
+        <div class="chart">
+          <h3>Comparativo Mensal da Nota Média do Consumidor</h3>
+          <canvas id="chartLine"></canvas>
+        </div>
+
+        <div class="chart">
+          <h3>Nota Média por Estados</h3>
+          <img src="https://i.ibb.co/LZsxChS/mapa-brasil.png" alt="Mapa do Brasil" class="mapa" />
+          <div class="legenda">
+            <span>3.8</span><span>3.9</span><span>4.0</span><span>4.1</span><span>4.2</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
