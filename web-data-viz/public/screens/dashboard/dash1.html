@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../../css/dash1.css" />
 </head>
 <body>
-  <!-- Barra superior -->
+  <!-- Barra superior fixa -->
   <header class="header">
     <div class="user-info">
       <i class="moon">🌙</i>
@@ -17,7 +17,7 @@
   </header>
 
   <div class="container">
-    <!-- Menu lateral -->
+    <!-- Menu lateral fixo -->
     <aside class="sidebar">
       <div class="sidebar-content">
         <div class="logo">Logotipo</div>
@@ -29,19 +29,20 @@
           <button>Gestão de Usuários</button>
         </nav>
       </div>
+
       <div class="bottom-menu">
         <button>Perfil</button>
         <button>Sair</button>
       </div>
     </aside>
 
-    <!-- Conteúdo principal -->
+    <!-- Conteúdo principal (sem rolagem) -->
     <main class="main-content">
-          <h1>Home</h1> 
+      <h1>Home</h1> 
+
       <section class="stats">
         <div class="card">
           <span class="icon">⭐</span>
-          
           <div>
             <h2>4,5/5</h2>
             <p>Nota média dos consumidores (342)</p>
@@ -91,6 +92,6 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="script.js"></script>
+  <script src="../../js/script.js"></script>
 </body>
 </html>
