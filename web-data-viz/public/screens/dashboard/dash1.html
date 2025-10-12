@@ -1,97 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard - Rosaria Moda</title>
-  <link rel="stylesheet" href="../../css/dash1.css" />
+  <link rel="stylesheet" href="../../css/dash1.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Barra superior fixa -->
+  <!-- Barra superior -->
   <header class="header">
+    <div class="logo">Logotipo</div>
     <div class="user-info">
-      <i class="moon">🌙</i>
-      <i class="bell">🔔</i>
+      <i class="bx bx-moon"></i>
+      <i class="bx bx-sun"></i>
       <span>Rosaria Moda</span>
+      <i class="bx bx-user-circle"></i>
     </div>
   </header>
 
-  <div class="container">
-    <!-- Menu lateral fixo -->
-    <aside class="sidebar">
-      <div class="sidebar-content">
-        <div class="logo">Logotipo</div>
-        <nav>
-          <button class="active">Home</button>
-          <button>Reclamações</button>
-          <button>Tendências e Insights</button>
-          <button>Registros</button>
-          <button>Gestão de Usuários</button>
-        </nav>
+  <!-- Menu lateral -->
+  <aside class="sidebar">
+    <nav class="menu">
+      <button class="menu-btn active"><i class="bx bx-home"></i> Home</button>
+      <button class="menu-btn"><i class="bx bx-error"></i> Reclamações</button>
+      <button class="menu-btn"><i class="bx bx-line-chart"></i> Tendências e Insights</button>
+      <button class="menu-btn"><i class="bx bx-file"></i> Registros</button>
+      <button class="menu-btn"><i class="bx bx-group"></i> Gestão de Usuários</button>
+    </nav>
+
+    <div class="footer-sidebar">
+      <button class="menu-btn"><i class="bx bx-user"></i> Perfil</button>
+      <button class="menu-btn"><i class="bx bx-log-out"></i> Sair</button>
+    </div>
+  </aside>
+
+  <!-- Conteúdo principal -->
+  <main class="main-content">
+    <h2>Home</h2>
+
+    <section class="stats">
+      <div class="card"><i class="bx bx-star icon"></i><div><strong>4,5/5</strong><p>Nota média dos consumidores (3x)</p></div></div>
+      <div class="card"><i class="bx bx-time icon"></i><div><strong>12h 37min</strong><p>Tempo médio de resolução</p></div></div>
+      <div class="card"><i class="bx bx-check-circle icon"></i><div><strong>89%</strong><p>Taxa de solução dos chamados</p></div></div>
+      <div class="card"><i class="bx bx-user icon"></i><div><strong>1.240</strong><p>Total de chamados abertos (2x)</p></div></div>
+    </section>
+
+    <section class="charts">
+      <div class="chart">
+        <h3>Comparativo Mensal da Nota Média do Consumidor</h3>
+        <p class="subtitle">Evolução da nota média</p>
+        <img src="grafico-linha.png" alt="Gráfico de linha" class="mapa">
       </div>
 
-      <div class="bottom-menu">
-        <button>Perfil</button>
-        <button>Sair</button>
+      <div class="chart">
+        <h3>Nota Média por Estados</h3>
+        <img src="mapa-brasil.png" alt="Mapa do Brasil" class="mapa">
+        <div class="legenda">
+          <span>3.8</span><span>4.0</span><span>4.1</span><span>4.2</span>
+        </div>
       </div>
-    </aside>
-
-    <!-- Conteúdo principal (sem rolagem) -->
-    <main class="main-content">
-      <h1>Home</h1> 
-
-      <section class="stats">
-        <div class="card">
-          <span class="icon">⭐</span>
-          <div>
-            <h2>4,5/5</h2>
-            <p>Nota média dos consumidores (342)</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <span class="icon">⏱️</span>
-          <div>
-            <h2>12h 37min</h2>
-            <p>Tempo médio de resolução</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <span class="icon">🌿</span>
-          <div>
-            <h2>89%</h2>
-            <p>Taxa de resolução dos chamados</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <span class="icon">👥</span>
-          <div>
-            <h2>1.240</h2>
-            <p>Total de chamados</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="charts">
-        <div class="chart">
-          <h3>Comparativo Mensal da Nota Média do Consumidor</h3>
-          <canvas id="chartLine"></canvas>
-        </div>
-
-        <div class="chart">
-          <h3>Nota Média por Estados</h3>
-          <img src="https://i.ibb.co/LZsxChS/mapa-brasil.png" alt="Mapa do Brasil" class="mapa" />
-          <div class="legenda">
-            <span>3.8</span><span>3.9</span><span>4.0</span><span>4.1</span><span>4.2</span>
-          </div>
-        </div>
-      </section>
-    </main>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="../../js/script.js"></script>
+    </section>
+  </main>
 </body>
 </html>
