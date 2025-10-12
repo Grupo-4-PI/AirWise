@@ -39,7 +39,7 @@
   <main class="main-content">
     <h2>Home</h2>
 
-    <!-- ===== KPIs com imagens ===== -->
+    <!-- KPIs -->
     <section class="stats">
       <div class="card">
         <img src="../../assets/dasboard/star.png" alt="Ícone estrela" class="kpi-img">
@@ -74,13 +74,19 @@
       </div>
     </section>
 
-    <!-- ===== Gráficos ===== -->
-    <section class="charts">
-      <div class="chart">
-        <h3>Comparativo Mensal da Nota Média do Consumidor</h3>
-        <p class="subtitle">Evolução da nota média</p>
-        <img src="../../img/grafico-linha.png" alt="Gráfico de linha" class="mapa">
-      </div>
+    <!-- Gráficos  -->
+   <section class="charts">
+  <div class="chart">
+    <h3>Comparativo Mensal da Nota Média do Consumidor</h3>
+    <canvas id="graficoNota"></canvas>
+  </div>
+
+  <div class="chart">
+    <h3>Nota Média por Estados</h3>
+    <canvas id="graficoEstados"></canvas>
+  </div>
+</section>
+
 
       <div class="chart">
         <h3>Nota Média por Estados</h3>
@@ -91,5 +97,58 @@
       </div>
     </section>
   </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  // Gráfico 1 - Nota média mensal
+  const ctx1 = document.getElementById('graficoNota').getContext('2d');
+  new Chart(ctx1, {
+    type: 'line',
+    data: {
+      labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+      datasets: [{
+        label: 'Nota média',
+        data: [3.9, 4.1, 4.0, 4.3, 4.2, 4.4],
+        borderColor: '#3158A4',
+        backgroundColor: 'rgba(49, 88, 164, 0.2)',
+        tension: 0.4,
+        fill: true,
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: false }
+      },
+      scales: {
+        y: { beginAtZero: false, min: 3.5, max: 5 }
+      }
+    }
+  });
+
+  // Gráfico 2 - Nota por estado
+  const ctx2 = document.getElementById('graficoEstados').getContext('2d');
+  new Chart(ctx2, {
+    type: 'bar',
+    data: {
+      labels: ['SP', 'RJ', 'MG', 'RS', 'BA', 'PR'],
+      datasets: [{
+        label: 'Nota Média',
+        data: [4.1, 3.9, 4.3, 4.2, 4.0, 4.4],
+        backgroundColor: '#191369'
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: false }
+      },
+      scales: {
+        y: { beginAtZero: true, max: 5 }
+      }
+    }
+  });
+</script>
+
 </body>
 </html>

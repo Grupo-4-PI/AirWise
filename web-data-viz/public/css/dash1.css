@@ -59,8 +59,7 @@ body {
   color: var(--azul-escuro);
 }
 
-/* ===== SIDEBAR ===== */
-/* ===== SIDEBAR ===== */
+/* SIDEBAR */
 .sidebar {
   position: fixed;
   top: 60px;
@@ -165,38 +164,38 @@ h2 {
   object-fit: contain;
 }
 
-/* ===== GRÁFICOS / CONTAINERS EM BRANCO ===== */
+/* ===== CENTRALIZAÇÃO DOS GRÁFICOS ===== */
 .charts {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 1rem;
+  display: flex;
+  justify-content: center;   /* centraliza horizontalmente */
+  align-items: center;       /* centraliza verticalmente */
+  gap: 2rem;                 /* espaço entre os gráficos */
+  height: 70vh;              /* controla o espaço total ocupado */
+  margin-top: 1rem;
 }
 
 .chart {
   background: var(--branco);
   border-radius: 10px;
-  padding: 1.5rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 2rem;
+  width: 600px;              /* largura fixa */
+  height: 380px;             /* altura fixa */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: var(--azul-escuro);
-  height: 300px; /* altura fixa para os containers */
 }
 
 .chart h3 {
-  margin-bottom: 10px;
-}
-
-.subtitle {
-  color: var(--azul-medio);
-  font-size: 0.9rem;
+  color: var(--azul-escuro);
   margin-bottom: 1rem;
 }
 
-/* Remove qualquer scroll no main */
-.main-content::-webkit-scrollbar {
-  display: none;
+.chart canvas {
+  width: 100% !important;
+  height: 300px !important;
 }
+
+
 
