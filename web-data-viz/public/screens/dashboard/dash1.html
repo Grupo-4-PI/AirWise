@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard - Rosaria Moda</title>
   <link rel="stylesheet" href="../../css/dash1.css">
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+ 
 </head>
 <body>
   <!-- Barra superior -->
   <header class="header">
-    <div class="logo">Logotipo</div>
+    <div class="logo"><img src="../../assets/logotipo/logotipo-airwise-lamp-black.png" alt="logo" class="logo-img"></div>
     <div class="user-info">
       <i class="bx bx-moon"></i>
       <i class="bx bx-sun"></i>
@@ -39,23 +39,52 @@
   <main class="main-content">
     <h2>Home</h2>
 
+    <!-- ===== KPIs com imagens ===== -->
     <section class="stats">
-      <div class="card"><i class="bx bx-star icon"></i><div><strong>4,5/5</strong><p>Nota média dos consumidores (3x)</p></div></div>
-      <div class="card"><i class="bx bx-time icon"></i><div><strong>12h 37min</strong><p>Tempo médio de resolução</p></div></div>
-      <div class="card"><i class="bx bx-check-circle icon"></i><div><strong>89%</strong><p>Taxa de solução dos chamados</p></div></div>
-      <div class="card"><i class="bx bx-user icon"></i><div><strong>1.240</strong><p>Total de chamados abertos (2x)</p></div></div>
+      <div class="card">
+        <img src="../../assets/dasboard/star.png" alt="Ícone estrela" class="kpi-img">
+        <div>
+          <strong>4,5/5</strong>
+          <p>Nota média dos consumidores (3x)</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../../assets/dasboard/clock.png" alt="Ícone relógio" class="kpi-img">
+        <div>
+          <strong>12h 37min</strong>
+          <p>Tempo médio de resolução</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../../assets/dasboard/check.png" alt="Ícone check" class="kpi-img">
+        <div>
+          <strong>89%</strong>
+          <p>Taxa de solução dos chamados</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../../assets/dasboard/call.png" alt="Ícone usuário" class="kpi-img">
+        <div>
+          <strong>1.240</strong>
+          <p>Total de chamados abertos (2x)</p>
+        </div>
+      </div>
     </section>
 
+    <!-- ===== Gráficos ===== -->
     <section class="charts">
       <div class="chart">
         <h3>Comparativo Mensal da Nota Média do Consumidor</h3>
         <p class="subtitle">Evolução da nota média</p>
-        <img src="grafico-linha.png" alt="Gráfico de linha" class="mapa">
+        <img src="../../img/grafico-linha.png" alt="Gráfico de linha" class="mapa">
       </div>
 
       <div class="chart">
         <h3>Nota Média por Estados</h3>
-        <img src="mapa-brasil.png" alt="Mapa do Brasil" class="mapa">
+        <img src="../../img/mapa-brasil.png" alt="Mapa do Brasil" class="mapa">
         <div class="legenda">
           <span>3.8</span><span>4.0</span><span>4.1</span><span>4.2</span>
         </div>

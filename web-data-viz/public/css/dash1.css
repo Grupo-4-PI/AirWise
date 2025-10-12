@@ -19,7 +19,7 @@
 body {
   background-color: var(--cinza-claro);
   height: 100vh;
-  overflow: hidden;
+  overflow: hidden; /* sem scroll */
 }
 
 /* ===== HEADER ===== */
@@ -39,8 +39,17 @@ body {
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-weight: 600;
   color: var(--azul-escuro);
+}
+
+.logo-img {
+  height: 35px;
+  width: auto;
+  object-fit: contain;
 }
 
 .user-info {
@@ -83,7 +92,8 @@ body {
   transition: background 0.3s;
 }
 
-.menu-btn:hover, .menu-btn.active {
+.menu-btn:hover,
+.menu-btn.active {
   background: var(--azul-medio);
 }
 
@@ -91,21 +101,22 @@ body {
 .main-content {
   margin-left: 220px;
   margin-top: 60px;
-  padding: 20px 30px;
+  padding: 25px 30px;
   height: calc(100vh - 60px);
-  overflow: hidden;
+  overflow: hidden; /* sem scroll */
 }
 
 h2 {
   color: var(--azul-escuro);
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
-/* ===== CARDS ===== */
+/* ===== CARDS (KPIs) ===== */
 .stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+  margin-bottom: 25px; /* espaço entre KPIs e área inferior */
 }
 
 .card {
@@ -119,17 +130,17 @@ h2 {
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.icon {
-  font-size: 2rem;
-  color: var(--azul-medio);
+.kpi-img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
 }
 
-/* ===== GRÁFICOS ===== */
+/* ===== GRÁFICOS / CONTAINERS EM BRANCO ===== */
 .charts {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 1rem;
-  margin-top: 1rem;
 }
 
 .chart {
@@ -137,11 +148,16 @@ h2 {
   border-radius: 10px;
   padding: 1.5rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--azul-escuro);
+  height: 300px; /* altura fixa para os containers */
 }
 
 .chart h3 {
-  color: var(--azul-escuro);
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .subtitle {
@@ -150,15 +166,8 @@ h2 {
   margin-bottom: 1rem;
 }
 
-.mapa {
-  width: 100%;
-  border-radius: 10px;
+/* Remove qualquer scroll no main */
+.main-content::-webkit-scrollbar {
+  display: none;
 }
 
-.legenda {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.9rem;
-  color: var(--azul-escuro);
-  margin-top: 0.5rem;
-}
