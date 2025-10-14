@@ -1,0 +1,152 @@
+body {
+    display: flex;
+}
+
+aside {
+    width: 220px;
+    background-color: orange;
+    height: 100vh;
+}
+
+main {
+    height: 100vh;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+
+    .container-kpis {
+        width: 100%;
+        height: 165px;
+        display: flex;
+        justify-content: space-between;
+        gap: 25px;
+
+        .container-main-problem,
+        .container-efficiency-company {
+            width: 100%;
+            border-radius: 12px;
+            padding: 13px 20px;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.2);
+            background-color: whitesmoke;
+        }
+
+        .container-problem {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .container-main-problem {
+            h3 {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            .problem {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    height: 55px;
+                    object-fit: contain;
+                }
+
+                p {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+            }
+
+            .divisor {
+                width: 3px;
+                height: 66px;
+                background-color: black;
+                margin: 0px 10px;
+            }
+
+            .data-problem {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 13px;
+                justify-content: center;
+                align-items: center;
+
+                .number-data {
+                    display: flex;
+                    font-weight: bold;
+
+                    h2 {
+                        font-size: 50px;
+                    }
+
+                    p {
+                        font-size: 18px;
+                        margin-top: 4px;
+                    }
+                }
+
+                p {
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .container-efficiency-company {
+            h3 {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            .container-graphics {
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+
+                .graphic-efficiency {
+                    width: 100%;
+                    height: 105px;
+                    background-color: white;
+                    border-radius: 10px;
+
+                    canvas {}
+                }
+            }
+        }
+    }
+
+    
+    .container-broad-problem-data {
+        background-color: orange;
+        width: 400px;
+        .rank-mains-problema {
+            height: 200px;
+            background-color: green;
+            h2 {}
+
+        }
+
+        .map-problems-brazil {
+            h3 {}
+
+            canvas {}
+        }
+    }
+
+    .graphic-complaints-monthly {
+        h3 {}
+
+        canvas {}
+    }
+
+}
