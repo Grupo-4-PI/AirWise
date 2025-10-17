@@ -162,7 +162,7 @@
         transition: background .18s, transform .18s;
 
         i {
-            font-size: 20px;
+            font-size: 21px;
             min-width: 20px;
             display: inline-flex;
             justify-content: center;
@@ -232,6 +232,10 @@
         gap: 8px;
         align-items: center;
 
+        a{
+            width: 100%;
+        }
+
         .menu-btn {
             display: flex;
             align-items: center;
@@ -250,7 +254,7 @@
 
 
             i {
-                font-size: 16px;
+                font-size: 21px;
                 color: rgba(255, 255, 255, 0.8);
             }
 
