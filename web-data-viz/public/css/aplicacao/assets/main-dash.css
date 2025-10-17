@@ -1,0 +1,26 @@
+@import url(../../assets/reset.css);
+@import url(../assets/sidebar.css);
+
+:root {
+    --azul-claro: #191369;
+    --azul-medio: #3158A4;
+    --roxo: #673397;
+    --lilas: #BFA1F2;
+    --azul-escuro: #1E255C;
+    --branco: #fff;
+    --cinza-claro: #f5f5f5;
+    --cinza: #e0e0e0;
+}
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: var(--cinza-claro);
+    height: 100vh;
+    overflow: hidden;
+}

@@ -1,0 +1,66 @@
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background: var(--azul-claro);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--branco);
+    padding: 20px 0;
+}
+
+/* Centraliza verticalmente os botões principais */
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    gap: 10px;
+}
+
+/* Botões centralizados (ícone em cima e texto abaixo) */
+.menu-btn {
+    background: none;
+    border: none;
+    color: var(--branco);
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    /* Ícone acima do texto */
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.menu-btn i {
+    font-size: 22px;
+}
+
+.menu-btn:hover,
+.menu-btn.active {
+    background: var(--azul-medio);
+}
+
+/* Rodapé da sidebar */
+.footer-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 10px;
+}
+
+
+.menu-btn:hover,
+.menu-btn.active {
+    background: var(--azul-medio);
+}

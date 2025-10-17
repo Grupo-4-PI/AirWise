@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Rosaria Moda</title>
+  <link rel="stylesheet" href="../../../css/aplicacao/assets/main-dash.css">
+  <link rel="stylesheet" href="../../../css/aplicacao/dash-geral.css">
+</head>
+
+<body>
+  <!-- Menu lateral -->
+  <aside class="sidebar">
+    <nav class="menu">
+      <button class="menu-btn active"><i class="bx bx-home"></i> Home</button>
+      <button class="menu-btn"><i class="bx bx-error"></i> Reclamações</button>
+      <button class="menu-btn"><i class="bx bx-line-chart"></i> Tendências e Insights</button>
+      <button class="menu-btn"><i class="bx bx-file"></i> Registros</button>
+      <button class="menu-btn"><i class="bx bx-group"></i> Gestão de Usuários</button>
+    </nav>
+
+    <div class="footer-sidebar">
+      <button class="menu-btn"><i class="bx bx-user"></i> Perfil</button>
+      <button class="menu-btn"><i class="bx bx-log-out"></i> Sair</button>
+    </div>
+  </aside>
+
+  <!-- Conteúdo principal -->
+  <main class="main-content">
+    <h2>Home</h2>
+
+    <!-- KPIs -->
+    <section class="stats">
+      <div class="card">
+        <img src="../../assets/dasboard/star.png" alt="Ícone estrela" class="kpi-img">
+        <div>
+          <strong>4,5/5</strong>
+          <p>Nota média dos consumidores (3x)</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../../assets/dasboard/clock.png" alt="Ícone relógio" class="kpi-img">
+        <div>
+          <strong>12h 37min</strong>
+          <p>Tempo médio de resolução</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../../assets/dasboard/check.png" alt="Ícone check" class="kpi-img">
+        <div>
+          <strong>89%</strong>
+          <p>Taxa de solução dos chamados</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="../../assets/dasboard/call.png" alt="Ícone usuário" class="kpi-img">
+        <div>
+          <strong>1.240</strong>
+          <p>Total de chamados abertos (2x)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gráficos  -->
+    <section class="charts">
+      <div class="chart">
+        <h3>Comparativo Mensal da Nota Média do Consumidor</h3>
+        <canvas id="graficoNota"></canvas>
+      </div>
+
+      <div class="chart">
+        <h3>Nota Média por Estados</h3>
+        <canvas id="graficoEstados"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    // Gráfico 1 - Nota média mensal
+    const ctx1 = document.getElementById('graficoNota').getContext('2d');
+    new Chart(ctx1, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+        datasets: [{
+          label: 'Nota média',
+          data: [3.9, 4.1, 4.0, 4.3, 4.2, 4.4],
+          borderColor: '#3158A4',
+          backgroundColor: 'rgba(49, 88, 164, 0.2)',
+          tension: 0.4,
+          fill: true,
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          y: { beginAtZero: false, min: 3.5, max: 5 }
+        }
+      }
+    });
+
+    // Gráfico 2 - Nota por estado
+    const ctx2 = document.getElementById('graficoEstados').getContext('2d');
+    new Chart(ctx2, {
+      type: 'bar',
+      data: {
+        labels: ['SP', 'RJ', 'MG', 'RS', 'BA', 'PR'],
+        datasets: [{
+          label: 'Nota Média',
+          data: [4.1, 3.9, 4.3, 4.2, 4.0, 4.4],
+          backgroundColor: '#191369'
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false }
+        },
+        scales: {
+          y: { beginAtZero: true, max: 5 }
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>
