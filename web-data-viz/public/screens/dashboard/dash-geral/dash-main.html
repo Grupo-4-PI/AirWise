@@ -11,19 +11,66 @@
 
 <body>
   <!-- Menu lateral -->
-  <aside class="sidebar">
-    <nav class="menu">
-      <button class="menu-btn active"><i class="bx bx-home"></i> Home</button>
-      <button class="menu-btn"><i class="bx bx-error"></i> Reclamações</button>
-      <button class="menu-btn"><i class="bx bx-line-chart"></i> Tendências e Insights</button>
-      <button class="menu-btn"><i class="bx bx-file"></i> Registros</button>
-      <button class="menu-btn"><i class="bx bx-group"></i> Gestão de Usuários</button>
+  <aside class="sidebar" aria-label="Barra lateral de navegação">
+    <header class="sidebar-top">
+      <div class="container-header-company">
+        <button class="toggle-btn" aria-label="Alternar menu" title="Alternar menu">
+          <i class='bx  bx-menu'></i>
+        </button>
+
+        <div class="container-logotipo">
+          <img src="../../../assets/logotipo/logotipo-airwise-pad-white.png" alt="">
+        </div>
+      </div>
+
+      <div class="brand">
+        <div class="brand-avatar">
+          <img
+            src="https://images.vexels.com/media/users/3/137047/isolated/preview/5831a17a290077c646a48c4db78a81bb-icone-azul-do-perfil-de-usuario.png"
+            alt="">
+        </div>
+        <div class="brand-text">
+          <h3>Rosaria Mendes</h3>
+          <p>Supervisora de Marketing </p>
+        </div>
+      </div>
+    </header>
+
+    <nav class="menu" role="navigation" aria-label="Menu principal">
+      <button class="menu-btn active" aria-pressed="true">
+        <i class="bx bx-home"></i>
+        <p class="label">Home</p>
+      </button>
+
+      <button class="menu-btn" aria-pressed="false">
+        <i class="bx bx-error"></i>
+        <p class="label">Reclamações</p>
+      </button>
+
+      <button class="menu-btn">
+        <i class="bx bx-line-chart"></i>
+        <p class="label">Tendências e Insights</p>
+      </button>
+
+      <button class="menu-btn">
+        <i class="bx bx-file"></i>
+        <p class="label">Registros</p>
+      </button>
+
+      <button class="menu-btn">
+        <i class="bx bx-group"></i>
+        <p class="label">Gestão de Usuários</p>
+      </button>
     </nav>
 
-    <div class="footer-sidebar">
-      <button class="menu-btn"><i class="bx bx-user"></i> Perfil</button>
-      <button class="menu-btn"><i class="bx bx-log-out"></i> Sair</button>
-    </div>
+    <footer class="footer-sidebar">
+      <div class="footer-actions">
+        <button class="menu-btn">
+          <i class="bx bx-log-out"></i>
+          <p class="label">Sair</p>
+        </button>
+      </div>
+    </footer>
   </aside>
 
   <!-- Conteúdo principal -->
@@ -130,7 +177,7 @@
       }
     });
   </script>
-
+  <script src="../../../script/assets-aplicacao/sidebar.js"></script>
 </body>
 
 </html>

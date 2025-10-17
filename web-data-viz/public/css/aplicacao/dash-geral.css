@@ -1,20 +1,7 @@
-:root {
-  --azul-claro: #191369;
-  --azul-medio: #3158A4;
-  --roxo: #673397;
-  --lilas: #BFA1F2;
-  --azul-escuro: #1E255C;
-  --branco: #fff;
-  --cinza-claro: #f5f5f5;
-  --cinza: #e0e0e0;
-}
-
 /* ===== MAIN ===== */
 .main-content {
-  margin-left: 220px;
   padding: 25px 30px;
   overflow: hidden;
-  background-color: orange;
   /* sem scroll */
 }
 
