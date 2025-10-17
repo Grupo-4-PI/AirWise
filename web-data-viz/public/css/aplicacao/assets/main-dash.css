@@ -27,6 +27,52 @@ body {
     overflow: hidden;
 }
 
-main{
-  margin-left: 240px;
+main {
+    transition: all .4s;
+    margin-left: 240px;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        padding-bottom: 4px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+
+        .header-left {
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+
+            h1.page-title {
+                font-size: 24px;
+                margin: 0;
+            }
+
+            p.subtitle {
+                margin: 4px 0 0 0;
+                color: #6B7280;
+                font-size: 13px;
+            }
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+
+            select {
+                padding: 8px 10px;
+                border-radius: 8px;
+                border: 1px solid rgba(0, 0, 0, 0.08);
+                background: #fff;
+                font-size: 14px;
+            }
+        }
+    }
+
+}
+
+main.collapsed{
+    margin-left: 70px;
 }

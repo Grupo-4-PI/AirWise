@@ -75,20 +75,36 @@
 
   <!-- Conteúdo principal -->
   <main class="main-content">
-    <h2>Home</h2>
+    <header class="header" role="banner" aria-label="Barra superior do painel">
+      <div class="header-left">
+        <h1 class="page-title">Home - Gol Airlines</h1>
+        <p class="subtitle">Visão geral das reclamações, eficiência e tendências</p>
+      </div>
+
+      <div class="header-actions" role="region" aria-label="Controles do painel">
+        <div class="range">
+          <label for="period" class="sr-only">Período</label>
+          <select id="period" name="period" aria-label="Selecionar período">
+            <option>Últimos 30 dias</option>
+            <option>Últimos 90 dias</option>
+            <option>Últimos 12 meses</option>
+          </select>
+        </div>
+      </div>
+    </header>
 
     <!-- KPIs -->
     <section class="stats">
       <div class="card">
-        <img src="../../assets/dasboard/star.png" alt="Ícone estrela" class="kpi-img">
+        <img src="../../../assets/dasboard/star.png" alt="Ícone estrela" class="kpi-img">
         <div>
           <strong>4,5/5</strong>
-          <p>Nota média dos consumidores (3x)</p>
+          <p>Nota média dos consumidores (30d)</p>
         </div>
       </div>
 
       <div class="card">
-        <img src="../../assets/dasboard/clock.png" alt="Ícone relógio" class="kpi-img">
+        <img src="../../../assets/dasboard/clock.png" alt="Ícone relógio" class="kpi-img">
         <div>
           <strong>12h 37min</strong>
           <p>Tempo médio de resolução</p>
@@ -96,7 +112,7 @@
       </div>
 
       <div class="card">
-        <img src="../../assets/dasboard/check.png" alt="Ícone check" class="kpi-img">
+        <img src="../../../assets/dasboard/check.png" alt="Ícone check" class="kpi-img">
         <div>
           <strong>89%</strong>
           <p>Taxa de solução dos chamados</p>
@@ -104,10 +120,10 @@
       </div>
 
       <div class="card">
-        <img src="../../assets/dasboard/call.png" alt="Ícone usuário" class="kpi-img">
+        <img src="../../../assets/dasboard/call.png" alt="Ícone usuário" class="kpi-img">
         <div>
           <strong>1.240</strong>
-          <p>Total de chamados abertos (2x)</p>
+          <p>Total de chamados abertos (30d)</p>
         </div>
       </div>
     </section>
