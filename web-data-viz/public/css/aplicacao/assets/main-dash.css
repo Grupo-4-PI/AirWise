@@ -22,10 +22,16 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
-    background-color: var(--branco);
     height: 100vh;
     overflow: hidden;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.7)),
+        /* camada transparente */
+        url('../../../assets/dashboard/wallpaper-dash.jpg') no-repeat right center / contain;
+    background-blend-mode: lighten;
+    /* ou try 'overlay', 'soft-light', 'multiply' */
 }
+
 
 main {
     transition: all .4s;
@@ -73,6 +79,6 @@ main {
 
 }
 
-main.collapsed{
+main.collapsed {
     margin-left: 70px;
 }
