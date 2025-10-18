@@ -29,6 +29,7 @@
     justify-content: space-between;
     box-shadow: 0 8px 24px rgba(10, 15, 35, 0.06);
     transition: width 0.35s;
+    z-index: 1;
 
     &.collapsed {
         width: 72px;

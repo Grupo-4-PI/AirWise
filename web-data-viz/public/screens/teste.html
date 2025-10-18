@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Gauge Simples — Nota</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        .card {
+            width: 320px;
+            padding: 20px;
+            border-radius: 10px;
+            /* background: linear-gradient(180deg, #efefef, #e2e2e2); */
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            text-align: center;
+            background-color: orange;
+        }
+
+.gauge {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: conic-gradient(#138a2f 0deg 100deg, #dcdcdc 0deg);
+    transform: rotate(90deg) scale(1, -1);
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+
+        .gauge::before {
+            content: "";
+            position: absolute;
+            inset: 10px;
+            background: #f4f4f4;
+            border-radius: 180px 180px;
+        }
+
+        .score {
+            margin-top: 20px;
+            font-weight: 900;
+            font-size: 36px;
+            color: #0b0b0b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .score .star {
+            font-size: 32px;
+            filter: drop-shadow(0 3px 4px rgba(0, 0, 0, 0.12));
+        }
+
+        .label {
+            font-weight: 700;
+            font-size: 13px;
+            margin-top: 8px;
+            color: #0b0b0b;
+        }
+
+        .sub {
+            font-size: 12px;
+            color: #444;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <div class="gauge" id="gauge"></div>
+        <div class="score">
+            <div class="star">⭐</div>
+            <div id="scoreText">4,3/5</div>
+        </div>
+        <div class="label">Nota Média do Consumidor</div>
+        <div class="sub">Nos Últimos 30 dias</div>
+    </div>
+
+    <script>
+        // const ratingValue = 4.3; // altera aqui
+        // const ratingMax = 5;
+
+        // // calcular porcentagem (0 a 1)
+        // const percent = Math.max(0, Math.min(1, ratingValue / ratingMax));
+
+        // // aplicar ao gauge
+        // const gauge = document.getElementById('gauge');
+        // gauge.style.setProperty('--percent', percent);
+
+        // // atualizar texto
+        // document.getElementById('scoreText').textContent =
+        //     ratingValue.toFixed(1).replace('.', ',') + '/' + ratingMax;
+    </script>
+
+</body>
+
+</html>
