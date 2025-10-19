@@ -26,16 +26,16 @@
             background-color: orange;
         }
 
-.gauge {
-    width: 180px;
-    height: 180px;
-    margin: 0 auto;
-    border-radius: 50%;
-    background: conic-gradient(#138a2f 0deg 100deg, #dcdcdc 0deg);
-    transform: rotate(90deg) scale(1, -1);
-    position: relative;
-    overflow: hidden;
-}
+        .gauge {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto;
+            border-radius: 50%;
+            background: conic-gradient(#138a2f 0deg 100deg, #dcdcdc 0deg);
+            transform: rotate(90deg) scale(1, -1);
+            position: relative;
+            overflow: hidden;
+        }
 
 
 
@@ -80,16 +80,58 @@
 </head>
 
 <body>
+    <!-- HTML -->
+    <div class="kpis-card">
+        <div class="kpi">
+            <div class="meta">
+                <div class="title">Dado Numérico</div>
+                <div class="badge up">+18%</div>
+            </div>
 
-    <div class="card">
-        <div class="gauge" id="gauge"></div>
-        <div class="score">
-            <div class="star">⭐</div>
-            <div id="scoreText">4,3/5</div>
+            <div class="value-row">
+                <div class="value">250<span class="pct">%</span></div>
+            </div>
+
+            <!-- Sparkline inline SVG (small, decorative) -->
+            <svg class="spark" viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true">
+                <polyline points="0,18 18,14 36,10 54,12 72,6 90,8 100,4" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" />
+            </svg>
         </div>
-        <div class="label">Nota Média do Consumidor</div>
-        <div class="sub">Nos Últimos 30 dias</div>
+
+        <div class="kpi">
+            <div class="meta">
+                <div class="title">Dado Numérico</div>
+                <div class="badge neutral">0%</div>
+            </div>
+
+            <div class="value-row">
+                <div class="value">250<span class="pct">%</span></div>
+            </div>
+
+            <svg class="spark" viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true">
+                <polyline points="0,16 18,16 36,14 54,14 72,14 90,12 100,12" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" />
+            </svg>
+        </div>
+
+        <div class="kpi">
+            <div class="meta">
+                <div class="title">Dado Numérico</div>
+                <div class="badge down">-6%</div>
+            </div>
+
+            <div class="value-row">
+                <div class="value">250<span class="pct">%</span></div>
+            </div>
+
+            <svg class="spark" viewBox="0 0 100 24" preserveAspectRatio="none" aria-hidden="true">
+                <polyline points="0,8 18,12 36,16 54,14 72,18 90,20 100,22" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" />
+            </svg>
+        </div>
     </div>
+
 
     <script>
         // const ratingValue = 4.3; // altera aqui

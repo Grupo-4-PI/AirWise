@@ -7,6 +7,8 @@
     <title>Dashboard - Marketing</title>
     <link rel="stylesheet" href="../../../css/aplicacao/assets/main-dash.css">
     <link rel="stylesheet" href="../../../css/aplicacao/dash-marketing-company.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
 </head>
 
 <body>
@@ -86,18 +88,21 @@
 
 
     <main>
-        <header class="header-marketing" role="banner" aria-label="Barra superior do painel">
+        <header class="header-marketing">
             <div class="header-left">
-                <h1 class="page-title">Ola</h1>
-                <p class="subtitle">teste</p>
+                <h1 class="page-title">Painel de Empresa X Mercado</h1>
+                <p class="subtitle">Visão da sua Empresa em relação ao Mercado Nacional</p>
             </div>
 
             <div class="header-score-company">
                 <div class="card">
                     <div class="circle-base"></div>
+                    <div class="container-tap-visible"></div>
                     <div class="container-data">
                         <div class="score">
-                            <div class="star">⭐</div>
+                            <div class="star">
+                                <img src="https://cdn-icons-png.flaticon.com/128/4715/4715346.png" alt="">
+                            </div>
                             <div id="scoreText">4,3/5</div>
                         </div>
                         <div class="label">Nota Média do Consumidor</div>
@@ -106,48 +111,77 @@
                 </div>
             </div>
 
-            <div class="header-rank" role="region" aria-label="Controles do painel">
+            <div class="header-rank">
+                <div class="container-rank">
+                    <div class="titles">
+                        <h3 class="title">Posição no Ranking</h3>
+                        <p class="date-update">Última atualização: Out/2025</p>
+                    </div>
+
+                    <div class="rank-data">
+                        <h2 class="rank-number">4°</h2>
+                        <p class="description">Posição no Mercado Nacional</p>
+                    </div>
+                </div>
             </div>
         </header>
 
         <section>
             <div class="container-kpis">
                 <div class="kpis-left">
+                    <h3>Visão do Mercado:</h3>
                     <div class="kpi">
                         <div class="container-header">
-                            <h3 class="title"></h3>
-                            <p class="date-update"></p>
+                            <h3 class="title">Nota Média</h3>
+                            <p class="date-update">Nos Últimos 30 dias</p>
                         </div>
 
                         <div class="container-data">
-                            <i></i>
+                            <img src="https://cdn-icons-png.flaticon.com/512/2164/2164197.png" alt="">
                             <span class="data">4.5/5</span>
                         </div>
+
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/010/986/873/small/3d-illustration-of-business-tasklist-png.png"
+                            alt="" class="img-icon-kpi">
                     </div>
 
                     <div class="kpi">
                         <div class="container-header">
-                            <h3 class="title"></h3>
-                            <p class="date-update"></p>
+                            <h3 class="title">Delta da Nota </h3>
+                            <p class="date-update">Nos Últimos 30 dias</p>
                         </div>
 
                         <div class="container-data">
-                            <i></i>
-                            <span class="data">4.5/5</span>
+                            <img src="https://img.icons8.com/?size=1200&id=20997&format=png" alt="">
+                            <span class="data">+0,3</span>
                         </div>
+
+                        <img src="https://cdn-icons-png.flaticon.com/512/923/923051.png" alt="" class="img-icon-kpi">
                     </div>
                 </div>
 
                 <div class="kpi-center">
                     <div class="kpi">
-                        <div class="container-header">
-                            <h3 class="title"></h3>
-                            <p class="date-update"></p>
+                        <div class="data-content">
+                            <i class='bx  bx-math'></i>
+                            <h3>Dado Númerico</h3>
+                            <h2>250%</h2>
                         </div>
 
-                        <div class="container-data">
-                            <i></i>
-                            <span class="data">4.5/5</span>
+                        <div class="divisor"></div>
+
+                        <div class="data-content">
+                            <i class='bx  bx-math'></i>
+                            <h3>Dado Númerico</h3>
+                            <h2>250%</h2>
+                        </div>
+
+                        <div class="divisor"></div>
+
+                        <div class="data-content">
+                            <i class='bx  bx-math'></i>
+                            <h3>Dado Númerico</h3>
+                            <h2>250%</h2>
                         </div>
                     </div>
                 </div>
@@ -155,26 +189,30 @@
                 <div class="kpis-right">
                     <div class="kpi">
                         <div class="container-header">
-                            <h3 class="title"></h3>
-                            <p class="date-update"></p>
+                            <h3 class="title">Variação da Nota (%)</h3>
+                            <p class="date-update">Nos Últimos 30 dias</p>
                         </div>
 
                         <div class="container-data">
-                            <i></i>
-                            <span class="data">4.5/5</span>
+                            <img src="https://cdn-icons-png.flaticon.com/512/2333/2333293.png" alt="">
+                            <span class="data">+9,1%</span>
                         </div>
+
+                        <img src="https://cdn-icons-png.flaticon.com/512/3270/3270735.png" alt="" class="img-icon-kpi">
                     </div>
 
                     <div class="kpi">
                         <div class="container-header">
-                            <h3 class="title"></h3>
-                            <p class="date-update"></p>
+                            <h3 class="title">Variação da Nota (%)</h3>
+                            <p class="date-update">Nos Últimos 30 dias</p>
                         </div>
 
                         <div class="container-data">
-                            <i></i>
-                            <span class="data">4.5/5</span>
+                            <img src="https://cdn-icons-png.flaticon.com/512/2333/2333293.png" alt="">
+                            <span class="data">+9,1%</span>
                         </div>
+
+                        <img src="https://cdn-icons-png.flaticon.com/512/3270/3270735.png" alt="" class="img-icon-kpi">
                     </div>
                 </div>
             </div>
@@ -186,28 +224,28 @@
 
                         <div class="list-region">
                             <div class="rank-region">
-                                <div class="bagde">1</div>
-                                <p class="region">SP</p>
+                                <div class="bagde">1°</div>
+                                <p class="region">São Paulo</p>
                                 <p class="score">
-                                    <i></i>
+                                    <i class='bx  bx-star'></i>
                                     <span>4.5</span>
                                 </p>
                             </div>
 
                             <div class="rank-region">
-                                <div class="bagde">1</div>
-                                <p class="region">SP</p>
+                                <div class="bagde">2°</div>
+                                <p class="region">Rio de Janeiro</p>
                                 <p class="score">
-                                    <i></i>
+                                    <i class='bx  bx-star'></i>
                                     <span>4.5</span>
                                 </p>
                             </div>
 
                             <div class="rank-region">
-                                <div class="bagde">1</div>
-                                <p class="region">SP</p>
+                                <div class="bagde">3°</div>
+                                <p class="region">Espirito Santo</p>
                                 <p class="score">
-                                    <i></i>
+                                    <i class='bx  bx-star'></i>
                                     <span>4.5</span>
                                 </p>
                             </div>
@@ -216,18 +254,23 @@
                         <button>Ver detalhes</button>
                     </div>
                     <div class="map-score">
-                        <canvas></canvas>
+                        <div id="map" role="img" aria-label="Mapa do Brasil com intensidade de reclamações"></div>
                     </div>
                 </div>
 
                 <div class="graphic-score-evolution">
                     <h3>Evolução da Nota</h3>
                     <div class="score-evolution">
-                        <canvas></canvas>
+                        <canvas id="scoreChart"></canvas>
                     </div>
                 </div>
         </section>
     </main>
 </body>
+<script src="../../../script/assets-aplicacao/sidebar.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="./graphics-marketing-company.js"></script>
 
 </html>
