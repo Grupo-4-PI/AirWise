@@ -30,7 +30,7 @@ main {
         display: flex;
         flex-direction: column;
         gap: 4px;
-        padding: 5px 0px;
+        padding: 5px 10px;
 
         h1.page-title {
             font-size: 24px;
@@ -163,7 +163,6 @@ section {
         margin-top: 78px;
         display: flex;
         gap: 20px;
-        contain: red;
 
         .kpis-left,
         .kpi-center,
@@ -253,7 +252,7 @@ section {
         .kpis-left {
             padding: 10px;
             gap: 10px;
-            background-color: rgb(226, 240, 255);
+            background-color: rgb(227, 244, 255);
             border-radius: 8px;
             box-shadow: 2px 2px 10px rgb(63, 63, 63, 0.3);
 
@@ -281,38 +280,120 @@ section {
                 }
             }
 
+            /* SCSS - Rank Mercado (coloque em seu arquivo .scss / dentro do .rank-mercado) */
             .rank-mercado {
                 display: flex;
                 flex-direction: row;
+                align-items: center;
+                gap: 3px;
+                padding: 12px;
+                border-radius: 12px;
+                box-shadow: 0 6px 18px rgba(17, 24, 64, 0.08);
+                border: 1px solid rgba(15, 23, 80, 0.04);
 
-                .data-content {
+                .item {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    justify-content: space-between;
+                    gap: 12px;
+                    min-width: 0;
+                    border-radius: 10px;
+                    transition: transform .18s ease, box-shadow .18s ease;
+                    cursor: default;
 
-                    i {
-                        font-size: 32px;
-                    }
-
-                    h3 {
-                        font-size: 12px;
-                        color: rgb(0, 46, 154);
-                    }
-
-                    h2 {
-                        font-size: 26px;
+                    .pos-badge {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 3px;
+                        border-radius: 12px;
+                        padding: 10px;
+                        place-items: center;
                         font-weight: 800;
-                        color: rgb(13, 0, 157);
+                        font-size: 17px;
+                        color: #06205e;
+                        background: linear-gradient(180deg, #fff 0%, #eef3ff 100%);
+                        box-shadow: 0 4px 12px rgba(2, 6, 23, 0.2), inset 0 -6px 10px rgba(9, 63, 255, 0.02);
+
+                        &::before {
+                            content: "";
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            box-shadow: 0 2px 6px rgba(2, 6, 23, 0.12);
+                        }
+
+                        &.silver {
+                            color: #0b2b5f;
+                            background: linear-gradient(180deg, #f7f9fc, #f0f4fb);
+
+                            &::before {
+                                background: linear-gradient(180deg, #d6d6d6, #bfbfbf);
+                            }
+                        }
+
+                        &.bronze {
+                            color: #3b1d00;
+                            background: linear-gradient(180deg, #fff7f0, #fff1e6);
+                            
+                            &::before {
+                                background: linear-gradient(180deg, #d19a6d, #b56e3a);
+                            }
+                        }
+                        
+                        &.gold {
+                            background: linear-gradient(180deg, #fffef0, #feffe6);
+                            &::before {
+                                background: linear-gradient(180deg, #ffbf00, #ffc107);
+                            }
+                        }
+                    }
+
+                    .info {
+                        display: flex;
+                        flex-direction: column;
+                        min-width: 0;
+
+                        .company {
+                            font-size: 14px;
+                            font-weight: 700;
+                            color: #07206f;
+                            margin: 0;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
                     }
                 }
 
                 .divisor {
                     width: 1px;
-                    margin: 10px 0;
-                    background-color: rgb(145, 145, 145);
+                    height: 52px;
+                    background: linear-gradient(180deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.02));
+                    border-radius: 2px;
+                }
+
+                @media (max-width: 560px) {
+                    flex-direction: column;
+                    align-items: stretch;
+                    gap: 12px;
+
+                    .divisor {
+                        display: none;
+                    }
+
+                    .item {
+                        justify-content: flex-start;
+                        padding: 10px;
+
+                        .pos-badge {
+                            flex: 0 0 48px;
+                            height: 48px;
+                            font-size: 18px;
+                        }
+                    }
                 }
             }
+
 
             .container-rank {
                 position: relative;
@@ -453,7 +534,6 @@ section {
             }
 
             .map-score {
-                background-color: white;
                 width: 100%;
                 display: flex;
                 align-items: center;
@@ -514,5 +594,4 @@ section {
 
 .header-marketing .header-score-company .card .container-tap-visible {
     display: none;
-    /* background-color: white; */
 }
