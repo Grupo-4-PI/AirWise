@@ -14,7 +14,7 @@ map.boxZoom.disable();
 map.keyboard.disable();
 
 // dados fictícios
-const dados = { 'SP': 50, 'RJ': 30, 'MG': 20 };
+const dados = { 'SP': 4.5, 'RJ': 3.5, 'MG': 3.0 , 'BH': 2.0};
 
 // carrega só o GeoJSON do Brasil
 fetch('../../../map-states-local/brazil-states.geojson.txt')
@@ -24,12 +24,12 @@ fetch('../../../map-states-local/brazil-states.geojson.txt')
             style: feature => {
                 const uf = feature.properties.sigla;
                 const valor = dados[uf] || 0;
-                const cor = valor > 40 ? 'red' : valor > 20 ? 'orange' : 'green';
+                const cor = valor > 4.4 ? 'rgb(48, 48, 131)' : valor > 3.5 ? 'rgb(85, 85, 222)' : valor > 2.5 ?'rgb(164, 164, 255)' : 'rgb(191, 203, 255)';
                 return {
                     color: '#333',
                     fillColor: cor,
                     weight: 1,
-                    fillOpacity: 0.6
+                    fillOpacity: 1
                 };
             },
             onEachFeature: (feature, layer) => {

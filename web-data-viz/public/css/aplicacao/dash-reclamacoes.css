@@ -104,7 +104,7 @@ main {
             }
         }
 
-        .container-efficiency-company{
+        .container-efficiency-company {
             width: 100%;
             max-width: 600px;
             margin: 0 auto;
@@ -138,14 +138,14 @@ main {
                         color: rgb(73, 73, 73);
                     }
 
-                    .container-bars{
+                    .container-bars {
                         height: 100%;
                         display: flex;
                         gap: 10px;
                     }
 
                     .data-company,
-                    .data-competitor{
+                    .data-competitor {
                         flex: 1;
                         display: flex;
                         flex-direction: column;
@@ -182,7 +182,7 @@ main {
 
                     .bar-labels {
                         display: flex;
-                        justify-content:center;
+                        justify-content: center;
                         width: 100%;
                         margin-top: 5px;
                         font-size: 0.75rem;
@@ -231,7 +231,7 @@ main {
                             display: flex;
                             align-items: center;
                             justify-content: center;
-                            background: linear-gradient(180deg, #f97316 0%, #fb923c 100%);
+                            background: linear-gradient(180deg, #168bf9 0%, #006dd3 100%);
                             color: #fff;
                             font-size: 13px;
                             font-weight: 700;
@@ -311,12 +311,27 @@ main {
                     .color {
                         width: 20px;
                         height: 20px;
-                        background-color: rgb(77, 29, 0);
+                    }
+
+                    .color.major {
+                        background-color: rgb(48, 48, 131);
+                    }
+                    
+                    .color.uper {
+                        background-color: rgb(85, 85, 222);
+                    }
+                    
+                    .color.default {
+                        background-color: rgb(164, 164, 255);
+                    }
+                    
+                    .color.minor {
+                        background-color: rgb(191, 203, 255);
                     }
 
                     p {
                         font-size: 13px;
-                        color: #92400E;
+                        color: #000000;
                         font-weight: bold;
                     }
                 }
