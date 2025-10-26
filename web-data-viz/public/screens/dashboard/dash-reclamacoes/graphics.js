@@ -17,7 +17,7 @@ map.keyboard.disable();
 const dados = { 'SP': 50, 'RJ': 30, 'MG': 20 };
 
 // carrega só o GeoJSON do Brasil
-fetch('https://raw.githubusercontent.com/codeforamerica/click_that_hood/master/public/data/brazil-states.geojson')
+fetch('../../../map-states-local/brazil-states.geojson.txt')
     .then(r => r.json())
     .then(geojson => {
         L.geoJSON(geojson, {
@@ -37,9 +37,9 @@ fetch('https://raw.githubusercontent.com/codeforamerica/click_that_hood/master/p
             }
         }).addTo(map);
 
-        // ajusta para caber só o Brasil
         map.fitBounds(L.geoJSON(geojson).getBounds());
     });
+
 
 
 

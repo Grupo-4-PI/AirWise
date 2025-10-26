@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparativo com Mercado</title>
+    <link rel="stylesheet" href="../../../css/aplicacao/assets/main-dash.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+</head>
+
+<body>
+    <aside class="sidebar" aria-label="Barra lateral de navegação">
+        <header class="sidebar-top">
+            <div class="container-header-company">
+                <button class="toggle-btn" aria-label="Alternar menu" title="Alternar menu">
+                    <i class='bx  bx-menu'></i>
+                </button>
+
+                <div class="container-logotipo">
+                    <img src="../../../assets/logotipo/logotipo-airwise-pad-white.png" alt="">
+                </div>
+            </div>
+
+            <div class="brand">
+                <div class="brand-avatar">
+                    <img src="https://images.vexels.com/media/users/3/137047/isolated/preview/5831a17a290077c646a48c4db78a81bb-icone-azul-do-perfil-de-usuario.png"
+                        alt="">
+                </div>
+                <div class="brand-text">
+                    <h3>Rosaria Mendes</h3>
+                    <p>Supervisora de Marketing </p>
+                </div>
+            </div>
+        </header>
+
+        <nav class="menu" role="navigation" aria-label="Menu principal">
+            <a href="../dash-geral/dash-main.html">
+                <button class="menu-btn" aria-pressed="true">
+                    <i class="bx bx-home"></i>
+                    <p class="label">Home</p>
+                </button>
+            </a>
+
+            <a href="../dash-reclamacoes/dash-reclamacoes.html">
+                <button class="menu-btn" aria-pressed="false">
+                    <i class="bx bx-error"></i>
+                    <p class="label">Reclamações</p>
+                </button>
+            </a>
+
+            <a href="../dash-marketing-company/dash-marketing-company.html">
+                <button class="menu-btn">
+                    <i class="bx bx-line-chart"></i>
+                    <p class="label">Desempenho Interno</p>
+                </button>
+            </a>
+
+            <a href="../dash-benchmark/dash-benchmark.html">
+                <button class="menu-btn active">
+                    <i class="bx bx-line-chart"></i>
+                    <p class="label">Benchmark</p>
+                </button>
+            </a>
+        </nav>
+
+        <footer class="footer-sidebar">
+            <div class="footer-actions">
+                <a href="">
+                    <button class="menu-btn">
+                        <i class="bx bx-log-out"></i>
+                        <p class="label">Sair</p>
+                    </button>
+                </a>
+            </div>
+        </footer>
+    </aside>
+
+    <main role="main" aria-label="Conteúdo principal">
+        <header class="header" role="banner" aria-label="Barra superior do painel">
+            <div class="header-left">
+                <h1 class="page-title">Painel Comparativo com Mercado — Gol Linhas Aereas</h1>
+                <p class="subtitle">Visão do Mercado em comparação com o desempenho interno</p>
+            </div>
+
+            <div class="header-actions" role="region" aria-label="Controles do painel">
+                <div class="range">
+                    <label for="period" class="sr-only">Período</label>
+                    <select id="period" name="period" aria-label="Selecionar período">
+                        <option>Últimos 30 dias</option>
+                        <option>Últimos 90 dias</option>
+                        <option>Últimos 12 meses</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <div class="container-dash-benchmark">
+            <div class="left-dash">
+                <div class="container-overview">
+                    <h2></h2>
+
+                    <div class="container-problems">
+                        <div class="major-problem">
+                            <h3>Problema com Maior Nota Média</h3>
+
+                            <div class="problem">
+                                <img src="" alt="">
+                                <p>Bagagem Extraviada</p>
+                                <div class="data-score">
+                                    <img src="" alt="">
+                                    <p>4,5/5</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="minor-problem">
+                            <h3>Problema com Maior Nota Média</h3>
+
+                            <div class="problem">
+                                <img src="" alt="">
+                                <p>Bagagem Extraviada</p>
+                                <div class="data-score">
+                                    <img src="" alt="">
+                                    <p>4,5/5</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="graphic-mart-company">
+                    <h2>Melhores Notas Vs Mercado</h2>
+                    <div class="graph-score">
+                        <canvas></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-dash">
+                <div class="container-response-company"></div>
+                <div class="container-datas-comparative">
+                    <div class="mensuration-comparative-tmr"></div>
+
+                    <div class="graphics-statistics-comparative">
+                        <div class="graphic">
+                            <h3>Maior Grypo Problema vs Mercado</h3>
+                            <div class="graph-mains-problems-mart">
+                                <canvas></canvas>
+                            </div>
+                        </div>
+
+                        <div class="graphic">
+                            <h3>TMR Companhia vs Mercado</h3>
+                            <div class="graph-company-mart-tmr">
+                                <canvas></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+
+<!-- bibliotecas -->
+<script src="../../../script/assets-aplicacao/sidebar.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+</html>
