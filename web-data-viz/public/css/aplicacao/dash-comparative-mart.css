@@ -1,0 +1,306 @@
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-dash-benchmark {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    flex: 1;
+
+    .left-dash,
+    .right-dash {
+        margin-bottom: 0;
+    }
+
+    .left-dash {
+        display: flex;
+        flex-direction: column;
+        width: 530px;
+        gap: 20px;
+
+        .container-overview {
+            width: 100%;
+            background: linear-gradient(135deg, #ffffff, #f0f4ff);
+            background-color: #e6e6e6;
+            padding: 13px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+
+            h2 {
+                font-size: 18px;
+                margin: 0 0 6px 6px;
+                font-weight: 700;
+                color: #111;
+            }
+
+            .container-problems {
+                height: 250px;
+                display: flex;
+                justify-content: space-around;
+
+                .problem-card {
+                    width: 220px;
+                    height: 250px;
+                    background-color: #ffffff;
+                    border-radius: 12px;
+                    padding: 12px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+
+                    h3 {
+                        width: 80%;
+                        text-align: center;
+                        font-size: 15px;
+                        font-weight: 700;
+                        color: #111;
+                    }
+
+                    .problem {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+
+                        .icon-problem {
+                            width: 80px;
+                            height: 80px;
+                            border-radius: 50%;
+                            background: #e6e6e6;
+                            object-fit: cover;
+                            z-index: 3;
+                            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+                            border: 2px solid rgb(255, 255, 255);
+                            margin-bottom: 20px;
+                        }
+
+                        .type-problem {
+                            font-weight: 600;
+                            text-align: center;
+                            font-size: 15px;
+                            width: 90%;
+                            height: 35px;
+                            margin-bottom: 10px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        .data-score {
+                            display: flex;
+                            align-items: center;
+                            gap: 8px;
+                            background: #ffffff;
+                            padding: 8px 12px;
+                            border-radius: 20px;
+                            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
+
+                            img {
+                                width: 18px;
+                                height: 18px;
+                            }
+
+                            p {
+                                color: #1a1a1a;
+                                font-weight: 700;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .graphic-mart-company {
+            flex: 1;
+            width: 100%;
+            background: linear-gradient(135deg, #ffffff, #f0f4ff);
+            background-color: #e6e6e6;
+            padding: 13px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .graph-score {
+                flex: 1;
+                background-color: rgb(227, 227, 227);
+
+                canvas {}
+            }
+        }
+    }
+
+    .right-dash {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .mensuration-comparative-tmr {
+            background: linear-gradient(135deg, #ffffff, #f0f4ff);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            padding: 13px;
+            border-radius: 10px;
+
+            h2 {
+                font-size: 18px;
+            }
+        }
+
+        .container-gauge {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            height: 200px;
+
+            .gauge {
+                position: relative;
+                width: 40%;
+                height: 140px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+
+                .gauge-arc {
+                    position: absolute;
+                    display: flex;
+                    justify-content: center;
+                    width: 90%;
+                    height: 100%;
+                    border-top-left-radius: 140px;
+                    border-top-right-radius: 140px;
+                    overflow: hidden;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        width: 120%;
+                        height: 120%;
+                        border-top-left-radius: 200px;
+                        border-top-right-radius: 200px;
+                        transform: rotate(90deg);
+                        background: rgb(220, 220, 220);
+                        transform-origin: bottom center;
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        width: 90%;
+                        height: 90%;
+                        border-top-left-radius: 140px;
+                        border-top-right-radius: 140px;
+                        background: rgb(255, 255, 255);
+                        transform-origin: bottom center;
+                    }
+                }
+
+                .gauge-text {
+                    position: absolute;
+                    bottom: 10px;
+                    width: 74%;
+                    text-align: center;
+
+                    .title-gauge {
+                        font-size: 15px;
+                        font-weight: bold;
+                        color: black;
+                        margin-bottom: 10px;
+                    }
+
+                    h2 {
+                        font-size: 32px;
+                        font-weight: 700;
+                        margin-bottom: 5px;
+                    }
+
+                    p {
+                        font-size: 13px;
+                        color: rgb(84, 84, 84);
+                    }
+                }
+
+                .gauge-range {
+                    position: absolute;
+                    bottom: -20px;
+                    width: 95%;
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 13px;
+                    font-weight: bold;
+                }
+
+
+                /* COMPARATIO COLORS GAUGE */
+                .gauge-arc.company {
+                    background-color: rgb(77, 175, 255);
+                }
+
+                .gauge-arc.mart {
+                    background-color: rgb(35, 234, 31);
+                }
+
+                .gauge-arc.company::before {
+                    transform: rotate(160deg);
+                }
+
+                .gauge-arc.mart::before {
+                    transform: rotate(100deg);
+                }
+            }
+        }
+
+        .graphics-statistics-comparative {
+            flex: 1;
+            display: flex;
+            gap: 20px;
+
+            .graphic {
+                padding: 13px;
+                border-radius: 10px;
+                width: 100%;
+                background-color: rgb(255, 255, 255);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+
+                h3 {
+                    font-size: 18px;
+                }
+
+                .graph-mains-problems-mart,
+                .graph-company-mart-tmr {
+                    flex: 1;
+                    padding: 10px;
+
+                    #pioresDesempenhos,
+                    melhoresDesempenhos {
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
