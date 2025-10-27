@@ -4,7 +4,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background: url('../../public/assets/img-login/Imagem\ do\ WhatsApp\ de\ 2025-09-25\ à\(s\)\ 09.01.26_0bd36d26.jpg') 
+    background: url('../assets/img-login/wallpaper-ceu-azul.jpg') 
                 no-repeat center center fixed;
     background-size: cover;
     overflow-x: hidden; /* evita scroll lateral */
@@ -102,7 +102,7 @@ form {
     gap: 20px;
 }
 
-label {
+form label {
     font-size: 14px;
     font-weight: 500;
     color: #333;
@@ -110,7 +110,7 @@ label {
     display: block;
 }
 
-input, select {
+form input, form select {
     width: 100%;
     padding: 10px 14px;
     border: 1px solid #bbb;
@@ -121,14 +121,14 @@ input, select {
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-input:focus, select:focus {
+form input:focus, form select:focus {
     border-color: #0a66c2;
     box-shadow: 0 0 6px rgba(10, 102, 194, 0.35);
     outline: none;
 }
 
 /* botão */
-button {
+form button {
     grid-column: span 2;
     background: linear-gradient(90deg, #0a66c2, #084a94);
     color: white;
@@ -142,7 +142,7 @@ button {
     transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-button:hover {
+form button:hover {
     transform: translateY(-2px);
     opacity: 0.95;
 }
@@ -179,7 +179,7 @@ button:hover {
         grid-template-columns: 1fr;
     }
 
-    button {
+    form button {
         grid-column: span 1;
     }
 }
@@ -194,7 +194,7 @@ button:hover {
         border-radius: 12px;
     }
 
-    input, select, button {
+    form input, form select, form button {
         font-size: 14px;
         padding: 10px;
     }
@@ -203,3 +203,5 @@ button:hover {
         font-size: 20px;
     }
 }
+
+

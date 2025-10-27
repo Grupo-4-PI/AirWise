@@ -7,12 +7,13 @@
     <title>Cadastro - AirWise</title>
     <link rel="stylesheet" href="../../css/assets/main.css">
     <link rel="stylesheet" href="../../css/cadastro.css">
+    <link rel="stylesheet" href="../../css/assets/alert.css">
 </head>
 
 <body>
     <!-- NAVBAR -->
     <nav class="navbar">
-        <img src="../../assets/logotipo/logotipo-airwise-pad-black.png" alt="AirWise">
+        <img src="../../assets/logotipo/logotipo-airwise-pad-white.png" alt="AirWise">
 
         <!-- Botão hamburger -->
         <button class="menu-toggle" aria-label="Abrir menu">☰</button>
@@ -64,91 +65,52 @@
             </div>
         </div>
     </main>
-
-    <!-- Script para abrir/fechar menu -->
-    <script>
-        const menuToggle = document.querySelector(".menu-toggle");
-        const navMenu = document.querySelector(".navbar ul");
-
-        menuToggle.addEventListener("click", () => {
-            navMenu.classList.toggle("active");
-            menuToggle.textContent = navMenu.classList.contains("active") ? "✖" : "☰";
-        });
-    </script>
 </body>
 
+<!-- Script para abrir/fechar menu -->
 <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector(".navbar ul");
 
-    // Array para armazenar empresas cadastradas para validação de código de ativação 
-    // let listaEmpresasCadastradas = [];
+    menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        menuToggle.textContent = navMenu.classList.contains("active") ? "✖" : "☰";
+    });
+</script>
 
+<script>
     function cadastrar(event) {
         event.preventDefault()
-        // aguardar();
 
-        //Recupere o valor da nova input pelo nome do id
-        // Agora vá para o método fetch logo abaixo
         var nomeVar = nome_input.value;
         var cpfVar = cpf_input.value;
         var cargoVar = cargo_input.value;
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
-        // var confirmacaoSenhaVar = confirmacao_senha_input.value;
         var chaveVar = chaveAcesso_input.value;
-        // var idEmpresaVincular
 
         // Verificando se há algum campo em branco
         if (
             nomeVar == "" ||
             emailVar == "" ||
             senhaVar == "" ||
-            // confirmacaoSenhaVar == "" ||
             chaveVar == "" ||
             cpfVar == "" ||
             cargoVar == ""
         ) {
-            // cardErro.style.display = "block";
-            // mensagem_erro.innerHTML =
-            // "(Mensagem de erro para todos os campos em branco)";
-            console.log("Vazios")
-            finalizarAguardar();
+            console.log("Vazios");
+            showAlert("error", "Preencha todos os campos!");
             return false;
         } else {
-            // setInterval(sumirMensagem, 5000);
+
         }
 
-        // if (!senhaVar == confirmacaoSenhaVar) {
-        //     // cardErro.style.display = "block";
-        //     // mensagem_erro.innerHTML =
-        //     // "(Senhas diferentes!! >:( )";
-
-        //     console.log('Senhas Diferentes')
-        //     finalizarAguardar();
-        //     return false;
-        // }
-
-        // // Verificando se o código de ativação é de alguma empresa cadastrada
-        // for (let i = 0; i < listaEmpresasCadastradas.length; i++) {
-        //   if (listaEmpresasCadastradas[i].codigo_ativacao == codigoVar) {
-        //     idEmpresaVincular = listaEmpresasCadastradas[i].id
-        //     console.log("Código de ativação válido.");
-        //     break;
-        //   } else {
-        //     cardErro.style.display = "block";
-        //     mensagem_erro.innerHTML = "(Mensagem de erro para código inválido)";
-        //     finalizarAguardar();
-        //   }
-        // }
-
-        // Enviando o valor da nova input
         fetch("/usuarios/cadastrar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                // crie um atributo que recebe o valor recuperado aqui
-                // Agora vá para o arquivo routes/usuario.js
                 nomeServer: nomeVar,
                 cpfServer: cpfVar,
                 cargoServer: cargoVar,
@@ -161,52 +123,43 @@
                 console.log("resposta: ", resposta);
 
                 if (resposta.ok) {
-                    // cardErro.style.display = "block";
+                    showAlert("success", "Cadastro realizado com sucesso! Redirecionando...");
 
-                    // mensagem_erro.innerHTML =
-                    //     "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-                    
                     setTimeout(() => {
                         window.location = "login.html";
                     }, "2000");
 
-                    limparFormulario();
-                    finalizarAguardar();
                 } else {
+                    showAlert("error", "Houve um erro ao tentar realizar o cadastro!");
                     throw "Houve um erro ao tentar realizar o cadastro!";
                 }
             })
             .catch(function (resposta) {
                 console.log(`#ERRO: ${resposta}`);
-                // finalizarAguardar();
+                showAlert("error", "Erro de comunicação com o servidor.");
             });
 
         return false;
     }
 
-    // // Listando empresas cadastradas 
-    // function listar() {
-    //   fetch("/empresas/listar", {
-    //     method: "GET",
-    //   })
-    //     .then(function (resposta) {
-    //       resposta.json().then((empresas) => {
-    //         empresas.forEach((empresa) => {
-    //           listaEmpresasCadastradas.push(empresa);
+    // ALERT BONITO CENTRAL
+    function showAlert(type, message, timeout = 3000) {
+        const alert = document.createElement("div");
+        alert.className = `alert ${type}`;
+        alert.innerHTML = `
+      <div class="icon">${type === "success" ? "✅" : type === "error" ? "❌" : "ℹ️"
+            }</div>
+      <div class="message">${message}</div>
+      <button onclick="this.parentElement.classList.add('hide'); setTimeout(()=>this.parentElement.remove(),300)">✖</button>
+    `;
+        document.body.appendChild(alert);
 
-    //           console.log("listaEmpresasCadastradas")
-    //           console.log(listaEmpresasCadastradas[0].codigo_ativacao)
-    //         });
-    //       });
-    //     })
-    //     .catch(function (resposta) {
-    //       console.log(`#ERRO: ${resposta}`);
-    //     });
-    // }
-
-    // function sumirMensagem() {
-    //     cardErro.style.display = "none";
-    // }
+        setTimeout(() => {
+            alert.classList.add("hide");
+            setTimeout(() => alert.remove(), 300);
+        }, timeout);
+    }
 </script>
+
 
 </html>

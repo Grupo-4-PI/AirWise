@@ -1,151 +1,147 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AirWise - Login</title>
-    <link rel="stylesheet" href="../../css/assets/main.css" />
-    <link rel="stylesheet" href="../../css/index.css" />
-    <link rel="stylesheet" href="../../css/componentes/carrossel.css" />
-    <link rel="stylesheet" href="../../css/login.css" />
-  </head>
 
-  <body>
-    <!-- Navbar -->
-    <header>
-      <nav id="main-nav">
-        <div class="container-logotipo">
-          <a href="../institucional/index.html">
-            <img
-              src="../../assets/logotipo/logotipo-airwise-pad-white.png"
-              alt=""
-            />
-          </a>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AirWise - Login</title>
+  <link rel="stylesheet" href="../../css/assets/main.css" />
+  <link rel="stylesheet" href="../../css/assets/alert.css">
+  <link rel="stylesheet" href="../../css/login.css" />
+</head>
 
-        <ul class="nav-links">
-          <li><a href="../institucional/index.html">Home</a></li>
-          <li><a href="../institucional/index.html#about-us">Sobre Nós</a></li>
-          <li><a href="../institucional/index.html#service">Serviços</a></li>
-          <li><a href="../institucional/index.html#team">Equipe</a></li>
-          <li><a href="../institucional/index.html#contact">Contato</a></li>
-        </ul>
-
-        <div class="methods-acess">
-          <a href="../login/cadastro.html" class="cadastro-link">Cadastro</a>
-          <button>Login</button>
-        </div>
-
-        <div class="menu-toggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </nav>
-    </header>
-
-    <!-- Seção de Login -->
-    <main class="login-section">
-      <div class="login-card">
-        <h2>Bem-vindo</h2>
-
-        <div id="div_mensagemerro" style="color: red; text-align: center; margin-bottom: 10px;"></div>
-
-        <div class="input-label">
-          <label for="email">E-mail:</label>
-          <input
-            id="email_input"
-            type="email"
-            placeholder="Digite seu e-mail"
-          />
-        </div>
-
-        <div class="input-label">
-          <label for="password">Senha:</label>
-          <input
-            id="senha_input"
-            type="password"
-            placeholder="Digite sua senha"
-          />
-        </div>
-
-        <button onclick="entrar(event)">Entrar</button>
-
-        <p>Não tem conta? <a href="#">Cadastre-se aqui</a></p>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav id="main-nav">
+      <div class="container-logotipo">
+        <a href="../institucional/index.html">
+          <img src="../../assets/logotipo/logotipo-airwise-pad-white.png" alt="" />
+        </a>
       </div>
-    </main>
-    <!-- <script src="/js/sessao.js"></script> -->
-    <script>
-      // AQUI: Adicionei as funções que estavam faltando para evitar erros
-      function aguardar() {
-        console.log("Exibindo tela de aguardo...");
-        // Você pode adicionar um spinner de loading aqui
-      }
 
-      function finalizarAguardar(texto) {
-        console.log("Finalizando aguardo...");
-        console.log("Mensagem:", texto);
-        // Você pode esconder o spinner de loading aqui
-      }
+      <ul class="nav-links">
+        <li><a href="../institucional/index.html">Home</a></li>
+        <li><a href="../institucional/index.html#about-us">Sobre Nós</a></li>
+        <li><a href="../institucional/index.html#service">Serviços</a></li>
+        <li><a href="../institucional/index.html#team">Equipe</a></li>
+        <li><a href="../institucional/index.html#contact">Contato</a></li>
+      </ul>
 
-      function entrar(event) {
-        event.preventDefault(); // Impede o recarregamento da página
-        aguardar();
+      <div class="methods-acess">
+        <a href="../login/cadastro.html" class="cadastro-link">Cadastro</a>
+        <button>Login</button>
+      </div>
 
-        var emailVar = email_input.value;
-        var senhaVar = senha_input.value;
+      <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
 
-        // AQUI: Descomentei a linha para pegar o elemento de erro
-        var cardErro = document.getElementById("div_mensagemerro");
+  <!-- Seção de Login -->
+  <main class="login-section">
+    <div class="login-card">
+      <h2>Bem-vindo</h2>
 
-        if (emailVar === "" || senhaVar === "") {
-          cardErro.innerHTML = "Preencha todos os campos!";
-          finalizarAguardar("Campos obrigatórios vazios.");
-          return false;
-        } else {
-          // Limpa a mensagem de erro se os campos estiverem preenchidos
-          cardErro.innerHTML = "";
-        }
+      <div id="div_mensagemerro" style="color: red; text-align: center; margin-bottom: 10px;"></div>
 
-        console.log("FORM LOGIN:", emailVar, senhaVar);
+      <div class="input-label">
+        <label for="email">E-mail:</label>
+        <input id="email_input" type="email" placeholder="Digite seu e-mail" />
+      </div>
 
-        fetch("/usuarios/autenticar", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            emailServer: emailVar,
-            senhaServer: senhaVar,
-          }),
-        })
-          .then(function (resposta) {
-            if (resposta.ok) {
-              resposta.json().then((json) => {
-                console.log(json);
-                sessionStorage.EMAIL_USUARIO = json.email;
-                sessionStorage.NOME_USUARIO = json.nome;
-                sessionStorage.ID_USUARIO = json.idCadastro;
+      <div class="input-label">
+        <label for="password">Senha:</label>
+        <input id="senha_input" type="password" placeholder="Digite sua senha" />
+      </div>
 
-                setTimeout(function () {
-                  window.location = "../Dashboard.html";
-                }, 1000);
-              });
-            } else {
-              resposta.text().then((texto) => {
-                cardErro.innerHTML = texto; // Exibe o erro do servidor
-                finalizarAguardar(texto);
-              });
-            }
-          })
-          .catch(function (erro) {
-            console.error("Erro na requisição:", erro);
-            finalizarAguardar("Erro de comunicação com o servidor.");
-            cardErro.innerHTML = "Erro de comunicação com o servidor.";
-          });
+      <button onclick="entrar(event)">Entrar</button>
 
+      <p>Não tem conta? <a href="#">Cadastre-se aqui</a></p>
+    </div>
+  </main>
+
+
+  <!-- Seu script de login -->
+  <script>
+    function showAlert(type, message, timeout = 3000) {
+      const alert = document.createElement("div");
+      alert.className = `alert ${type}`;
+      alert.innerHTML = `
+      <span class="icon">${type === "success" ? "✅" : type === "error" ? "❌" : "ℹ️"
+        }</span>
+      <span class="message">${message}</span>
+      <button onclick="this.parentElement.remove()">×</button>
+    `;
+      document.body.appendChild(alert);
+
+      setTimeout(() => {
+        alert.classList.add("hide");
+        setTimeout(() => alert.remove(), 300);
+      }, timeout);
+    }
+
+    function aguardar() {
+      console.log("Exibindo tela de aguardo...");
+    }
+
+    function finalizarAguardar(texto) {
+      console.log("Finalizando aguardo...", texto || "");
+    }
+
+    function entrar(event) {
+      event.preventDefault();
+      aguardar();
+
+      const emailVar = email_input.value;
+      const senhaVar = senha_input.value;
+
+      if (emailVar === "" || senhaVar === "") {
+        showAlert("error", "Preencha todos os campos!");
+        finalizarAguardar("Campos obrigatórios vazios.");
         return false;
       }
-    </script>
-  </body>
+
+      fetch("/usuarios/autenticar", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          emailServer: emailVar,
+          senhaServer: senhaVar,
+        }),
+      })
+        .then((resposta) => {
+          if (resposta.ok) {
+            resposta.json().then((json) => {
+              sessionStorage.EMAIL_USUARIO = json.email;
+              sessionStorage.NOME_USUARIO = json.nome;
+              sessionStorage.ID_USUARIO = json.idCadastro;
+
+              showAlert("success", "Login efetuado com sucesso! Seja Bem Vindo de Volta!");
+              setTimeout(() => {
+                window.location = "../dashboard/dash-geral/dash-main.html";
+              }, 2000);
+            });
+          } else {
+            resposta.text().then((texto) => {
+              showAlert("error", texto);
+              finalizarAguardar(texto);
+            });
+          }
+        })
+        .catch((erro) => {
+          console.error("Erro:", erro);
+          showAlert("error", msg);
+          finalizarAguardar(msg);
+        });
+
+      return false;
+    }
+  </script>
+
+</body>
+
 </html>
