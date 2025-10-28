@@ -9,6 +9,7 @@ main {
     position: relative;
     height: 100vh;
     flex: 1;
+    overflow-x: hidden;
 }
 
 .header-marketing {
@@ -97,8 +98,8 @@ main {
         position: absolute;
         top: -20px;
         z-index: 10;
-        width: 100%;
-        left: 0;
+        width:100%;
+        left: 15px;
         top: 40px;
 
 
@@ -207,11 +208,11 @@ section {
                 justify-content: space-between;
 
                 h3 {
-                    font-size: 17px;
+                    font-size: 15px;
                 }
 
                 p {
-                    font-size: 14px;
+                    font-size: 12px;
                     color: rgb(160, 160, 160);
                     font-weight: bold;
                 }
@@ -334,14 +335,15 @@ section {
                         &.bronze {
                             color: #3b1d00;
                             background: linear-gradient(180deg, #fff7f0, #fff1e6);
-                            
+
                             &::before {
                                 background: linear-gradient(180deg, #d19a6d, #b56e3a);
                             }
                         }
-                        
+
                         &.gold {
                             background: linear-gradient(180deg, #fffef0, #feffe6);
+
                             &::before {
                                 background: linear-gradient(180deg, #ffbf00, #ffc107);
                             }
@@ -354,7 +356,7 @@ section {
                         min-width: 0;
 
                         .company {
-                            font-size: 14px;
+                            font-size: 13px;
                             font-weight: 700;
                             color: #07206f;
                             margin: 0;
@@ -394,12 +396,21 @@ section {
                 }
             }
 
-
             .container-rank {
                 position: relative;
                 overflow: hidden;
                 display: flex;
                 flex-direction: column;
+
+                .container-header {
+                    .title {
+                        font-size: 14px;
+                    }
+
+                    .date-update {
+                        font-size: 12px;
+                    }
+                }
 
                 .rank-data {
                     flex: 1;
@@ -444,7 +455,7 @@ section {
                 gap: 15px;
 
                 h3 {
-                    font-size: 17px;
+                    font-size: 16px;
                 }
 
                 .list-region {
@@ -551,6 +562,10 @@ section {
             display: flex;
             flex-direction: column;
             padding: 13px;
+
+            h3{
+                font-size: 16px;
+            }
 
             .score-evolution {
                 flex: 1;

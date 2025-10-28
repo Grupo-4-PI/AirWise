@@ -14,7 +14,36 @@ map.boxZoom.disable();
 map.keyboard.disable();
 
 // dados fictícios
-const dados = { 'SP': 50, 'RJ': 30, 'MG': 20 };
+const dados = {
+    'AC': 0.20,
+    'AL': -0.95,
+    'AM': 0.32,
+    'AP': -0.60,
+    'BA': 0.87,
+    'CE': -0.60,
+    'DF': 0.14,
+    'ES': 0.34,
+    'GO': 0.17,
+    'MA': -1.37,
+    'MG': -0.09,
+    'MS': 0.33,
+    'MT': -0.50,
+    'PA': 0.84,
+    'PB': -0.08,
+    'PE': -1.03,
+    'PI': -1.23,
+    'PR': 0.31,
+    'RJ': 0.17,
+    'RN': -0.33,
+    'RO': -0.09,
+    'RR': 1.00,
+    'RS': 0.21,
+    'SC': 0.01,
+    'SE': -0.04,
+    'SP': 0.65,
+    'TO': 1.57
+};
+
 
 // carrega só o GeoJSON do Brasil
 fetch('../../../map-states-local/brazil-states.geojson.txt')
@@ -24,7 +53,14 @@ fetch('../../../map-states-local/brazil-states.geojson.txt')
             style: feature => {
                 const uf = feature.properties.sigla;
                 const valor = dados[uf] || 0;
-                const cor = valor > 40 ? 'red' : valor > 20 ? 'orange' : 'green';
+                const cor = valor > 1
+                    ? 'rgba(55, 0, 179, 1)'
+                    : valor > 0
+                        ? 'rgba(106, 0, 255, 1)'
+                        : valor > -1
+                            ? 'rgba(0, 112, 255, 1)'
+                            : 'rgba(102, 178, 255, 1)';
+
                 return {
                     color: '#333',
                     fillColor: cor,
@@ -45,7 +81,7 @@ fetch('../../../map-states-local/brazil-states.geojson.txt')
 const labels = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
 
 const dataValues = [3.45, 3.55, 3.76, 3.98, 4.28, 4.34, 4.43, 4.38, 4.39, 4.35, 4.13, 3.51];
-const dataValuesMercado = [3.60, 3.50, 3.80, 4.05, 4.10, 4.20, 4.25, 4.30, 4.28, 4.15, 4.05, 3.95];
+const dataValuesMercado = [3.41, 3.69, 3.54, 3.62, 3.83, 3.84, 3.86, 3.83, 3.80, 3.79, 3.63, 3.35];
 
 const ctx = document.getElementById('scoreChart').getContext('2d');
 
