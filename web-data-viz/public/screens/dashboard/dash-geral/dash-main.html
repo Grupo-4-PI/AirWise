@@ -82,19 +82,19 @@
   <main class="main-content">
     <header class="header" role="banner" aria-label="Barra superior do painel">
       <div class="header-left">
-        <h1 class="page-title">Home - Gol Airlines</h1>
+        <h1 class="page-title">Home - Gol Linhas Aéreas</h1>
         <p class="subtitle">Visão geral das reclamações, eficiência e tendências</p>
       </div>
 
       <div class="header-actions" role="region" aria-label="Controles do painel">
-        <div class="range">
+        <!-- <div class="range">
           <label for="period" class="sr-only">Período</label>
           <select id="period" name="period" aria-label="Selecionar período">
             <option>Últimos 30 dias</option>
             <option>Últimos 90 dias</option>
             <option>Últimos 12 meses</option>
           </select>
-        </div>
+        </div> -->
       </div>
     </header>
 
@@ -103,7 +103,7 @@
       <div class="card">
         <img src="../../../assets/dasboard/star.png" alt="Ícone estrela" class="kpi-img">
         <div>
-          <strong>4,5/5</strong>
+          <strong>4,03/5</strong>
           <p>Nota média dos consumidores (30d)</p>
         </div>
       </div>
@@ -111,7 +111,7 @@
       <div class="card">
         <img src="../../../assets/dasboard/clock.png" alt="Ícone relógio" class="kpi-img">
         <div>
-          <strong>12h 37min</strong>
+          <strong>15h 33min</strong>
           <p>Tempo médio de resolução</p>
         </div>
       </div>
@@ -119,7 +119,7 @@
       <div class="card">
         <img src="../../../assets/dasboard/check.png" alt="Ícone check" class="kpi-img">
         <div>
-          <strong>89%</strong>
+          <strong>77,97%</strong>
           <p>Taxa de solução dos chamados</p>
         </div>
       </div>
@@ -127,7 +127,7 @@
       <div class="card">
         <img src="../../../assets/dasboard/call.png" alt="Ícone usuário" class="kpi-img">
         <div>
-          <strong>1.240</strong>
+          <strong>17138</strong>
           <p>Total de chamados abertos (30d)</p>
         </div>
       </div>
@@ -136,12 +136,12 @@
     <!-- Gráficos  -->
     <section class="charts">
       <div class="chart">
-        <h3>Comparativo Mensal da Nota Média do Consumidor</h3>
+        <h3>Comparativo Mensal da Nota média</h3>
         <canvas id="graficoNota"></canvas>
       </div>
 
       <div class="chart">
-        <h3>Nota Média por Estados</h3>
+        <h3>Estados com mais reclamações vs Nota média</h3>
         <canvas id="graficoEstados"></canvas>
       </div>
     </section>
@@ -154,10 +154,10 @@
     new Chart(ctx1, {
       type: 'line',
       data: {
-        labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun'],
+        labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Set', 'Out', 'Nov', 'Dez'],
         datasets: [{
           label: 'Nota média',
-          data: [3.9, 4.1, 4.0, 4.3, 4.2, 4.4],
+          data: [3.46, 3.63, 3.86, 4.13, 4.31, 4.35, 4.41, 4.39, 4.37, 4.33, 3.87, 3.38],
           borderColor: '#3158A4',
           backgroundColor: 'rgba(49, 88, 164, 0.2)',
           tension: 0.4,
@@ -170,30 +170,63 @@
           legend: { display: false }
         },
         scales: {
-          y: { beginAtZero: false, min: 3.5, max: 5 }
+          y: { beginAtZero: false, min: 0, max: 5 }
         }
       }
     });
 
-    // Gráfico 2 - Nota por estado
     const ctx2 = document.getElementById('graficoEstados').getContext('2d');
     new Chart(ctx2, {
-      type: 'bar',
       data: {
-        labels: ['SP', 'RJ', 'MG', 'RS', 'BA', 'PR'],
-        datasets: [{
-          label: 'Nota Média',
-          data: [4.1, 3.9, 4.3, 4.2, 4.0, 4.4],
-          backgroundColor: '#191369'
-        }]
+        labels: ['SP', 'MG', 'RJ', 'DF', 'PR'],
+        datasets: [
+          {
+            label: 'Nota',
+            data: [3.98, 3.84, 4.06, 4.14, 3.90],
+            type: 'line',
+            borderColor: '#F47C36',
+            backgroundColor: '#F47C36',
+            borderWidth: 2,
+            tension: 0.3,
+            yAxisID: 'y1',
+          },
+          {
+            label: 'Qtd',
+            data: [2910, 2090, 1713, 1597, 1183],
+            type: 'bar',
+            backgroundColor: '#155978',
+            borderRadius: 4,
+            yAxisID: 'y',
+          }
+        ]
       },
       options: {
         responsive: true,
         plugins: {
-          legend: { display: false }
+          title: {
+            display: false,
+            text: 'Estados com mais reclamações vs Nota média',
+            font: { size: 16 }
+          },
+          legend: {
+            position: 'bottom'
+          }
         },
         scales: {
-          y: { beginAtZero: true, max: 5 }
+          y: {
+            beginAtZero: true,
+            title: { display: false },
+            position: 'left',
+            ticks: { stepSize: 1000 }
+          },
+          y1: {
+            beginAtZero: false,
+            min: 0,
+            max: 5,
+            position: 'right',
+            grid: { drawOnChartArea: false },
+            ticks: { stepSize: 0.5 }
+          }
         }
       }
     });

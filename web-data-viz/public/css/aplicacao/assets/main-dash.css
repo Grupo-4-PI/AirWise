@@ -2,6 +2,7 @@
 @import url(../assets/sidebar.css);
 
 @import url(https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css);
+@import url(https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap);
 
 :root {
     --azul-claro: #191369;
@@ -15,7 +16,7 @@
 }
 
 * {
-    font-family: "Poppins", sans-serif;
+    font-family: "Sora", sans-serif;
 }
 
 body {
