@@ -14,7 +14,36 @@ map.boxZoom.disable();
 map.keyboard.disable();
 
 // dados fictícios
-const dados = { 'SP': 4.5, 'RJ': 3.5, 'MG': 3.0 , 'BH': 2.0};
+const dados = {
+    'SP': 2910,
+    'MG': 2090,
+    'RJ': 1713,
+    'DF': 1597,
+    'PR': 1183,
+    'BA': 990,
+    'SC': 968,
+    'RS': 953,
+    'ES': 603,
+    'GO': 552,
+    'CE': 462,
+    'PE': 359,
+    'MT': 326,
+    'PA': 316,
+    'AM': 257,
+    'MA': 246,
+    'PB': 229,
+    'SE': 229,
+    'RN': 213,
+    'MS': 171,
+    'PI': 164,
+    'RO': 139,
+    'AL': 137,
+    'AC': 123,
+    'TO': 95,
+    'AP': 59,
+    'RR': 54
+};
+
 
 // carrega só o GeoJSON do Brasil
 fetch('../../../map-states-local/brazil-states.geojson.txt')
@@ -24,7 +53,16 @@ fetch('../../../map-states-local/brazil-states.geojson.txt')
             style: feature => {
                 const uf = feature.properties.sigla;
                 const valor = dados[uf] || 0;
-                const cor = valor > 4.4 ? 'rgb(48, 48, 131)' : valor > 3.5 ? 'rgb(85, 85, 222)' : valor > 2.5 ?'rgb(164, 164, 255)' : 'rgb(191, 203, 255)';
+                const cor = valor >= 1500
+                    ? 'rgba(0, 32, 96, 1)'
+                    : valor >= 1000
+                        ? 'rgba(0, 64, 160, 1)'
+                        : valor >= 500
+                            ? 'rgba(0, 112, 255, 1)'
+                            : 'rgba(122, 191, 255, 1)';
+
+
+
                 return {
                     color: '#333',
                     fillColor: cor,
@@ -95,7 +133,7 @@ const scatterChart = new Chart(ctx, {
                 data: POINTS,
                 pointRadius: 8,
                 pointHoverRadius: 10,
-                backgroundColor: 'rgba(96,165,250,0.95)',
+                backgroundColor: 'rgba(0, 97, 216, 0.95)',
                 // datalabels somente para este dataset (exibe o 'group')
                 datalabels: {
                     display: true,

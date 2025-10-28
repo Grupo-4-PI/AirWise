@@ -72,33 +72,35 @@ main {
                 width: 100%;
                 display: flex;
                 flex-direction: column;
-                gap: 13px;
+                gap: 20px;
                 justify-content: center;
                 align-items: center;
 
                 .number-data {
                     display: flex;
+                    flex-direction: column;
+                    align-items: center;
                     font-weight: 700;
-                    align-items: baseline;
-                    gap: 8px;
 
                     h2 {
-                        font-size: 44px;
+                        font-size: 36px;
                         margin: 0;
                         line-height: 1;
                     }
 
                     p {
-                        font-size: 14px;
+                        display: none;
+                        font-size: 12px;
                         margin-top: 6px;
-                        color: #6B7280;
+                        color: #838487;
                     }
                 }
 
                 p {
                     font-size: 14px;
                     font-weight: 700;
-                    color: #6B7280;
+                    color: #373737;
+                    text-align: center;
                     margin: 0;
                 }
             }
@@ -132,14 +134,14 @@ main {
                     .kpi-title {
                         margin-bottom: 10px;
                         font-weight: 600;
-                        font-size: 12px;
+                        font-size: 11.5px;
                         text-align: center;
-                        height: 40px;
+                        height: 30px;
                         color: rgb(73, 73, 73);
                     }
 
                     .container-bars {
-                        height: 100%;
+                        height: 70%;
                         display: flex;
                         gap: 10px;
                     }
@@ -167,7 +169,8 @@ main {
                             justify-content: center;
                             align-items: flex-end;
                             color: #fff;
-                            font-size: 0.8rem;
+                            font-size: 12px;
+                            font-weight: 600;
                             border-radius: 4px 4px 0 0;
 
                             &.company {
@@ -314,19 +317,19 @@ main {
                     }
 
                     .color.major {
-                        background-color: rgb(48, 48, 131);
+                        background-color: rgba(0, 32, 96, 1);
                     }
-                    
+
                     .color.uper {
-                        background-color: rgb(85, 85, 222);
+                        background-color: rgba(0, 64, 160, 1);
                     }
-                    
+
                     .color.default {
-                        background-color: rgb(164, 164, 255);
+                        background-color: rgba(0, 112, 255, 1);
                     }
-                    
+
                     .color.minor {
-                        background-color: rgb(191, 203, 255);
+                        background-color: rgba(122, 191, 255, 1);
                     }
 
                     p {
