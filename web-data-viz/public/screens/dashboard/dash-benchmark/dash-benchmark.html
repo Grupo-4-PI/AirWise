@@ -86,14 +86,14 @@
             </div>
 
             <div class="header-actions" role="region" aria-label="Controles do painel">
-                <div class="range">
+                <!-- <div class="range">
                     <label for="period" class="sr-only">Período</label>
                     <select id="period" name="period" aria-label="Selecionar período">
                         <option>Últimos 30 dias</option>
                         <option>Últimos 90 dias</option>
                         <option>Últimos 12 meses</option>
                     </select>
-                </div>
+                </div> -->
             </div>
         </header>
 
@@ -108,10 +108,13 @@
                             <div class="problem">
                                 <img src="https://images.vexels.com/media/users/3/156818/isolated/preview/dd5e2a6e56180b587a71109957211e2e-icone-de-mala-de-bagagem.png"
                                     alt="" class="icon-problem">
-                                <p class="type-problem">Reembolso da Passagem</p>
-                                <div class="data-score">
-                                    <img src="https://cdn-icons-png.flaticon.com/128/4715/4715346.png" alt="">
-                                    <p>4,3/5</p>
+
+                                <div class="container-data">
+                                    <p class="type-problem">Reembolso da Passagem</p>
+                                    <div class="data-score">
+                                        <img src="https://cdn-icons-png.flaticon.com/128/4715/4715346.png" alt="">
+                                        <p>4,27/5</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -121,20 +124,25 @@
                             <div class="problem">
                                 <img src="https://images.vexels.com/media/users/3/156818/isolated/preview/dd5e2a6e56180b587a71109957211e2e-icone-de-mala-de-bagagem.png"
                                     alt="" class="icon-problem">
-                                <p class="type-problem">Extravio de Bagagem</p>
-                                <div class="data-score">
-                                    <img src="https://cdn-icons-png.flaticon.com/128/4715/4715346.png" alt="">
-                                    <p>2,3/5</p>
+
+                                <div class="container-data">
+                                    <p class="type-problem">Extravio de Bagagem</p>
+                                    <div class="data-score">
+                                        <img src="https://cdn-icons-png.flaticon.com/128/4715/4715346.png" alt="">
+                                        <p>3,51/5</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="graphic-mart-company">
-                    <h2>Undefined</h2>
-                    <div class="graph-score">
-                        <canvas></canvas>
+                <div class="graphics-statistics-comparative">
+                    <div class="graphic">
+                        <h3>Melhores Desempenho Vs Mercado</h3>
+                        <div class="graph-mains-problems-mart">
+                            <canvas id="melhoresDesempenhos" height="220" width="500px"></canvas>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -148,7 +156,7 @@
                             <div class="gauge-arc company"></div>
                             <div class="gauge-text">
                                 <p class="title-gauge">Empresa</p>
-                                <h2>12h 35min</h2>
+                                <h2>19h 11min</h2>
                                 <p>(TMR) Tempo Médio de Resposta</p>
                             </div>
                             <div class="gauge-range">
@@ -161,7 +169,7 @@
                             <div class="gauge-arc mart"></div>
                             <div class="gauge-text">
                                 <p class="title-gauge">Mercado</p>
-                                <h2>12h 35min</h2>
+                                <h2>18h 01min</h2>
                                 <p>(TMR) Tempo Médio de Resposta</p>
                             </div>
                             <div class="gauge-range">
@@ -174,16 +182,9 @@
 
                 <div class="graphics-statistics-comparative">
                     <div class="graphic">
-                        <h3>Melhores Desempenho Vs Mercado</h3>
-                        <div class="graph-mains-problems-mart">
-                            <canvas id="melhoresDesempenhos" height="220"></canvas>
-                        </div>
-                    </div>
-
-                    <div class="graphic">
                         <h3>Piores Desempenho Vs Mercado</h3>
                         <div class="graph-company-mart-tmr">
-                            <canvas id="pioresDesempenhos" height="220"></canvas>
+                            <canvas id="pioresDesempenhos" height="220" width="550px"></canvas>
                         </div>
                     </div>
                 </div>

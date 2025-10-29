@@ -18,7 +18,7 @@ main {
     .left-dash {
         display: flex;
         flex-direction: column;
-        width: 530px;
+        width: 580px;
         gap: 20px;
 
         .container-overview {
@@ -40,13 +40,12 @@ main {
             }
 
             .container-problems {
-                height: 250px;
+                height: 180px;
                 display: flex;
                 justify-content: space-around;
 
                 .problem-card {
-                    width: 220px;
-                    height: 250px;
+                    width: 240px;
                     background-color: #ffffff;
                     border-radius: 12px;
                     padding: 12px;
@@ -67,9 +66,14 @@ main {
                         width: 100%;
                         height: 100%;
                         display: flex;
-                        flex-direction: column;
                         align-items: center;
                         justify-content: center;
+
+                        .container-data {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        }
 
                         .icon-problem {
                             width: 80px;
@@ -87,7 +91,6 @@ main {
                             font-weight: 600;
                             text-align: center;
                             font-size: 15px;
-                            width: 90%;
                             height: 35px;
                             margin-bottom: 10px;
                             display: flex;
@@ -102,6 +105,7 @@ main {
                             background: #ffffff;
                             padding: 8px 12px;
                             border-radius: 20px;
+                            width: 100px;
                             box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
 
                             img {
@@ -116,6 +120,14 @@ main {
                             }
                         }
                     }
+                }
+
+                .problem-card:nth-child(1) {
+                    background-color: rgba(55, 0, 179, 0.2);
+                }
+
+                .problem-card:nth-child(2) {
+                    background-color: rgba(102, 178, 255, 0.2);
                 }
             }
         }
@@ -216,7 +228,7 @@ main {
 
                 .gauge-text {
                     position: absolute;
-                    bottom: 10px;
+                    bottom: 0px;
                     width: 74%;
                     text-align: center;
 
@@ -260,45 +272,46 @@ main {
                 }
 
                 .gauge-arc.company::before {
-                    transform: rotate(160deg);
+                    transform: rotate(170deg);
                 }
 
                 .gauge-arc.mart::before {
-                    transform: rotate(100deg);
+                    transform: rotate(160deg);
                 }
             }
         }
+    }
 
-        .graphics-statistics-comparative {
-            flex: 1;
+    .graphics-statistics-comparative {
+        flex: 1;
+        display: flex;
+        gap: 20px;
+
+        .graphic {
+            padding: 13px;
+            border-radius: 10px;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
             display: flex;
-            gap: 20px;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 
-            .graphic {
-                padding: 13px;
-                border-radius: 10px;
+            h3 {
+                font-size: 18px;
+            }
+
+            .graph-mains-problems-mart,
+            .graph-company-mart-tmr {
+                flex: 1;
                 width: 100%;
-                background-color: rgb(255, 255, 255);
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
-                box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+                padding: 10px;
 
-                h3 {
-                    font-size: 18px;
-                }
-
-                .graph-mains-problems-mart,
-                .graph-company-mart-tmr {
-                    flex: 1;
-                    padding: 10px;
-
-                    #pioresDesempenhos,
-                    melhoresDesempenhos {
-                        height: 100%;
-                        width: 100%;
-                    }
+                #pioresDesempenhos,
+                melhoresDesempenhos {
+                    height: 100%;
+                    width: 100%;
                 }
             }
         }
