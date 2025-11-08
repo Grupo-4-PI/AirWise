@@ -201,7 +201,8 @@
             return resposta.json();
           })
           .then((dados) => {
-            console.log(dados);
+            const { kpis, grafico1, grafico2 } = dados;
+            console.log(grafico1)
           })
           .catch((erro) => {
             console.error("❌ Erro no fetch:", erro);
