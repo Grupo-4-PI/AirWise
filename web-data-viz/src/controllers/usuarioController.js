@@ -31,8 +31,9 @@ function autenticar(req, res) {
                     idCadastro: resultadoAutenticar[0].idUsuario,
                     email: resultadoAutenticar[0].email,
                     nome: resultadoAutenticar[0].nome,
+                    cargo: resultadoAutenticar[0].cargo,
                     idEmpresa: idEmpresa,
-                    nomeEmpresa: nomeEmpresa,
+                    nomeEmpresa: nomeEmpresa
                   });
                 } else {
                   res.status(204).json({ Error });
