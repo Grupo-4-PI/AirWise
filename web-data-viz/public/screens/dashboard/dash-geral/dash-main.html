@@ -1,93 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Rosaria Moda</title>
+    <link rel="stylesheet" href="../../../css/aplicacao/assets/main-dash.css" />
+    <link rel="stylesheet" href="../../../css/aplicacao/dash-geral.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard - Rosaria Moda</title>
-  <link rel="stylesheet" href="../../../css/aplicacao/assets/main-dash.css">
-  <link rel="stylesheet" href="../../../css/aplicacao/dash-geral.css">
-</head>
+  <body onload="carregarVisaoGeral()">
+    <!-- Menu lateral -->
+    <aside class="sidebar" aria-label="Barra lateral de navegação">
+      <header class="sidebar-top">
+        <div class="container-header-company">
+          <button
+            class="toggle-btn"
+            aria-label="Alternar menu"
+            title="Alternar menu"
+          >
+            <i class="bx bx-menu"></i>
+          </button>
 
-<body>
-  <!-- Menu lateral -->
-  <aside class="sidebar" aria-label="Barra lateral de navegação">
-    <header class="sidebar-top">
-      <div class="container-header-company">
-        <button class="toggle-btn" aria-label="Alternar menu" title="Alternar menu">
-          <i class='bx  bx-menu'></i>
-        </button>
-
-        <div class="container-logotipo">
-          <img src="../../../assets/logotipo/logotipo-airwise-pad-white.png" alt="">
+          <div class="container-logotipo">
+            <img
+              src="../../../assets/logotipo/logotipo-airwise-pad-white.png"
+              alt=""
+            />
+          </div>
         </div>
-      </div>
 
-      <div class="brand">
-        <div class="brand-avatar">
-          <img
-            src="https://images.vexels.com/media/users/3/137047/isolated/preview/5831a17a290077c646a48c4db78a81bb-icone-azul-do-perfil-de-usuario.png"
-            alt="">
+        <div class="brand">
+          <div class="brand-avatar">
+            <img
+              src="https://images.vexels.com/media/users/3/137047/isolated/preview/5831a17a290077c646a48c4db78a81bb-icone-azul-do-perfil-de-usuario.png"
+              alt=""
+            />
+          </div>
+          <div class="brand-text">
+            <h3>Vinicius</h3>
+            <p>Administrador</p>
+          </div>
         </div>
-        <div class="brand-text">
-          <h3>Vinicius</h3>
-          <p>Administrador</p>
-        </div>
-      </div>
-    </header>
+      </header>
 
-    <nav class="menu" role="navigation" aria-label="Menu principal">
-      <a href="../dash-geral/dash-main.html">
-        <button class="menu-btn active" aria-pressed="true">
-          <i class="bx bx-home"></i>
-          <p class="label">Home</p>
-        </button>
-      </a>
-
-      <a href="../dash-reclamacoes/dash-reclamacoes.html">
-        <button class="menu-btn" aria-pressed="false">
-          <i class="bx bx-error"></i>
-          <p class="label">Reclamações</p>
-        </button>
-      </a>
-
-      <a href="../dash-marketing-company/dash-marketing-company.html">
-        <button class="menu-btn">
-          <i class="bx bx-line-chart"></i>
-          <p class="label">Desempenho Interno</p>
-        </button>
-      </a>
-
-      <a href="../dash-benchmark/dash-benchmark.html">
-        <button class="menu-btn">
-          <i class="bx bx-line-chart"></i>
-          <p class="label">Benchmark</p>
-        </button>
-      </a>
-    </nav>
-
-    <footer class="footer-sidebar">
-      <div class="footer-actions">
-        <a href="../../login/login.html">
-          <button class="menu-btn">
-            <i class="bx bx-log-out"></i>
-            <p class="label">Sair</p>
+      <nav class="menu" role="navigation" aria-label="Menu principal">
+        <a href="../dash-geral/dash-main.html">
+          <button class="menu-btn active" aria-pressed="true">
+            <i class="bx bx-home"></i>
+            <p class="label">Home</p>
           </button>
         </a>
-      </div>
-    </footer>
-  </aside>
 
-  <!-- Conteúdo principal -->
-  <main class="main-content">
-    <header class="header" role="banner" aria-label="Barra superior do painel">
-      <div class="header-left">
-        <h1 class="page-title">Home - Gol Linhas Aéreas</h1>
-        <p class="subtitle">Visão geral das reclamações, eficiência e tendências</p>
-      </div>
+        <a href="../dash-reclamacoes/dash-reclamacoes.html">
+          <button class="menu-btn" aria-pressed="false">
+            <i class="bx bx-error"></i>
+            <p class="label">Reclamações</p>
+          </button>
+        </a>
 
-      <div class="header-actions" role="region" aria-label="Controles do painel">
-        <!-- <div class="range">
+        <a href="../dash-marketing-company/dash-marketing-company.html">
+          <button class="menu-btn">
+            <i class="bx bx-line-chart"></i>
+            <p class="label">Desempenho Interno</p>
+          </button>
+        </a>
+
+        <a href="../dash-benchmark/dash-benchmark.html">
+          <button class="menu-btn">
+            <i class="bx bx-line-chart"></i>
+            <p class="label">Benchmark</p>
+          </button>
+        </a>
+      </nav>
+
+      <footer class="footer-sidebar">
+        <div class="footer-actions">
+          <a href="../../login/login.html">
+            <button class="menu-btn">
+              <i class="bx bx-log-out"></i>
+              <p class="label">Sair</p>
+            </button>
+          </a>
+        </div>
+      </footer>
+    </aside>
+
+    <!-- Conteúdo principal -->
+    <main class="main-content">
+      <header
+        class="header"
+        role="banner"
+        aria-label="Barra superior do painel"
+      >
+        <div class="header-left">
+          <h1 class="page-title">Home - Gol Linhas Aéreas</h1>
+          <p class="subtitle">
+            Visão geral das reclamações, eficiência e tendências
+          </p>
+        </div>
+
+        <div
+          class="header-actions"
+          role="region"
+          aria-label="Controles do painel"
+        >
+          <!-- <div class="range">
           <label for="period" class="sr-only">Período</label>
           <select id="period" name="period" aria-label="Selecionar período">
             <option>Últimos 30 dias</option>
@@ -95,143 +112,201 @@
             <option>Últimos 12 meses</option>
           </select>
         </div> -->
-      </div>
-    </header>
-
-    <!-- KPIs -->
-    <section class="stats">
-      <div class="card">
-        <img src="../../../assets/dasboard/star.png" alt="Ícone estrela" class="kpi-img">
-        <div>
-          <strong>4,03/5</strong>
-          <p>Nota média dos consumidores (30d)</p>
         </div>
-      </div>
+      </header>
 
-      <div class="card">
-        <img src="../../../assets/dasboard/clock.png" alt="Ícone relógio" class="kpi-img">
-        <div>
-          <strong>15h 33min</strong>
-          <p>Tempo médio de resolução</p>
+      <!-- KPIs -->
+      <section class="stats">
+        <div class="card">
+          <img
+            src="../../../assets/dasboard/star.png"
+            alt="Ícone estrela"
+            class="kpi-img"
+          />
+          <div>
+            <strong>4,03/5</strong>
+            <p>Nota média dos consumidores (30d)</p>
+          </div>
         </div>
-      </div>
 
-      <div class="card">
-        <img src="../../../assets/dasboard/check.png" alt="Ícone check" class="kpi-img">
-        <div>
-          <strong>77,97%</strong>
-          <p>Taxa de solução dos chamados</p>
+        <div class="card">
+          <img
+            src="../../../assets/dasboard/clock.png"
+            alt="Ícone relógio"
+            class="kpi-img"
+          />
+          <div>
+            <strong>15h 33min</strong>
+            <p>Tempo médio de resolução</p>
+          </div>
         </div>
-      </div>
 
-      <div class="card">
-        <img src="../../../assets/dasboard/call.png" alt="Ícone usuário" class="kpi-img">
-        <div>
-          <strong>17138</strong>
-          <p>Total de chamados abertos (30d)</p>
+        <div class="card">
+          <img
+            src="../../../assets/dasboard/check.png"
+            alt="Ícone check"
+            class="kpi-img"
+          />
+          <div>
+            <strong>77,97%</strong>
+            <p>Taxa de solução dos chamados</p>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Gráficos  -->
-    <section class="charts">
-      <div class="chart">
-        <h3>Comparativo Mensal da Nota média</h3>
-        <canvas id="graficoNota"></canvas>
-      </div>
+        <div class="card">
+          <img
+            src="../../../assets/dasboard/call.png"
+            alt="Ícone usuário"
+            class="kpi-img"
+          />
+          <div>
+            <strong>17138</strong>
+            <p>Total de chamados abertos (30d)</p>
+          </div>
+        </div>
+      </section>
 
-      <div class="chart">
-        <h3>Estados com mais reclamações vs Nota média</h3>
-        <canvas id="graficoEstados"></canvas>
-      </div>
-    </section>
-  </main>
+      <!-- Gráficos  -->
+      <section class="charts">
+        <div class="chart">
+          <h3>Comparativo Mensal da Nota média</h3>
+          <canvas id="graficoNota"></canvas>
+        </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-    // Gráfico 1 - Nota média mensal
-    const ctx1 = document.getElementById('graficoNota').getContext('2d');
-    new Chart(ctx1, {
-      type: 'line',
-      data: {
-        labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Set', 'Out', 'Nov', 'Dez'],
-        datasets: [{
-          label: 'Nota média',
-          data: [3.46, 3.63, 3.86, 4.13, 4.31, 4.35, 4.41, 4.39, 4.37, 4.33, 3.87, 3.38],
-          borderColor: '#3158A4',
-          backgroundColor: 'rgba(49, 88, 164, 0.2)',
-          tension: 0.4,
-          fill: true,
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: { display: false }
-        },
-        scales: {
-          y: { beginAtZero: false, min: 0, max: 5 }
-        }
+        <div class="chart">
+          <h3>Estados com mais reclamações vs Nota média</h3>
+          <canvas id="graficoEstados"></canvas>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      function carregarVisaoGeral() {
+        const nomeEmpresaBruto = JSON.parse(
+          sessionStorage.getItem("data_user")
+        );
+
+        const nomeEmpresaServer = nomeEmpresaBruto.nomeEmpresa;
+
+        fetch(
+          `/visaoGeral/dadosDashVisaoGeral?nomeEmpresaServer=${encodeURIComponent(
+            nomeEmpresaServer
+          )}`
+        )
+          .then((resposta) => {
+            if (!resposta.ok) {
+              throw new Error("Erro ao buscar dados da visão geral");
+            }
+            return resposta.json();
+          })
+          .then((dados) => {
+            console.log(dados);
+          })
+          .catch((erro) => {
+            console.error("❌ Erro no fetch:", erro);
+          });
       }
-    });
 
-    const ctx2 = document.getElementById('graficoEstados').getContext('2d');
-    new Chart(ctx2, {
-      data: {
-        labels: ['SP', 'MG', 'RJ', 'DF', 'PR'],
-        datasets: [
-          {
-            label: 'Nota',
-            data: [3.98, 3.84, 4.06, 4.14, 3.90],
-            type: 'line',
-            borderColor: '#F47C36',
-            backgroundColor: '#F47C36',
-            borderWidth: 2,
-            tension: 0.3,
-            yAxisID: 'y1',
-          },
-          {
-            label: 'Qtd',
-            data: [2910, 2090, 1713, 1597, 1183],
-            type: 'bar',
-            backgroundColor: '#155978',
-            borderRadius: 4,
-            yAxisID: 'y',
-          }
-        ]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          title: {
-            display: false,
-            text: 'Estados com mais reclamações vs Nota média',
-            font: { size: 16 }
-          },
-          legend: {
-            position: 'bottom'
-          }
+      // Gráfico 1 - Nota média mensal
+      const ctx1 = document.getElementById("graficoNota").getContext("2d");
+      new Chart(ctx1, {
+        type: "line",
+        data: {
+          labels: [
+            "Jan",
+            "Fev",
+            "Mar",
+            "Abr",
+            "Mai",
+            "Jun",
+            "Jul",
+            "Set",
+            "Out",
+            "Nov",
+            "Dez",
+          ],
+          datasets: [
+            {
+              label: "Nota média",
+              data: [
+                3.46, 3.63, 3.86, 4.13, 4.31, 4.35, 4.41, 4.39, 4.37, 4.33,
+                3.87, 3.38,
+              ],
+              borderColor: "#3158A4",
+              backgroundColor: "rgba(49, 88, 164, 0.2)",
+              tension: 0.4,
+              fill: true,
+            },
+          ],
         },
-        scales: {
-          y: {
-            beginAtZero: true,
-            title: { display: false },
-            position: 'left',
-            ticks: { stepSize: 1000 }
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
           },
-          y1: {
-            beginAtZero: false,
-            min: 0,
-            max: 5,
-            position: 'right',
-            grid: { drawOnChartArea: false },
-            ticks: { stepSize: 0.5 }
-          }
-        }
-      }
-    });
-  </script>
-  <script src="../../../script/assets-aplicacao/sidebar.js"></script>
-</body>
+          scales: {
+            y: { beginAtZero: false, min: 0, max: 5 },
+          },
+        },
+      });
 
+      const ctx2 = document.getElementById("graficoEstados").getContext("2d");
+      new Chart(ctx2, {
+        data: {
+          labels: ["SP", "MG", "RJ", "DF", "PR"],
+          datasets: [
+            {
+              label: "Nota",
+              data: [3.98, 3.84, 4.06, 4.14, 3.9],
+              type: "line",
+              borderColor: "#F47C36",
+              backgroundColor: "#F47C36",
+              borderWidth: 2,
+              tension: 0.3,
+              yAxisID: "y1",
+            },
+            {
+              label: "Qtd",
+              data: [2910, 2090, 1713, 1597, 1183],
+              type: "bar",
+              backgroundColor: "#155978",
+              borderRadius: 4,
+              yAxisID: "y",
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            title: {
+              display: false,
+              text: "Estados com mais reclamações vs Nota média",
+              font: { size: 16 },
+            },
+            legend: {
+              position: "bottom",
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: { display: false },
+              position: "left",
+              ticks: { stepSize: 1000 },
+            },
+            y1: {
+              beginAtZero: false,
+              min: 0,
+              max: 5,
+              position: "right",
+              grid: { drawOnChartArea: false },
+              ticks: { stepSize: 0.5 },
+            },
+          },
+        },
+      });
+    </script>
+    <script src="../../../script/assets-aplicacao/sidebar.js"></script>
+  </body>
 </html>
