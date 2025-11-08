@@ -116,9 +116,7 @@
         .then((resposta) => {
           if (resposta.ok) {
             resposta.json().then((json) => {
-              sessionStorage.EMAIL_USUARIO = json.email;
-              sessionStorage.NOME_USUARIO = json.nome;
-              sessionStorage.ID_USUARIO = json.idCadastro;
+              sessionStorage.setItem("data_user",JSON.stringify(json))
 
               showAlert("success", "Login efetuado com sucesso! Seja Bem Vindo de Volta!");
               setTimeout(() => {

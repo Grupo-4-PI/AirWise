@@ -54,10 +54,18 @@ function buscarEmailPorId(email) {
   return database.executar(instrucaoSql);
 }
 
+function buscarEmpresa(idEmpresa) {
+  var instrucaoSql = `SELECT * FROM empresa WHERE idEmpresa = '${idEmpresa}'`;
+
+  console.log("Executando a instrução SQL: \n" + instrucaoSql);
+  return database.executar(instrucaoSql);
+}
+
 module.exports = {
   autenticar,
   cadastrar,
   buscarEmailPorId,
   atualizarStatusChave,
-  buscarChave
+  buscarChave,
+  buscarEmpresa
 };
