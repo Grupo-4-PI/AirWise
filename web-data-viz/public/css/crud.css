@@ -43,35 +43,53 @@ body {
   width: 130px;
 }
 
-/* Usuário */
+/* Container geral do usuário */
 .user-info {
-  text-align: center;
-  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 25px;
 }
 
+/* Ícone do usuário */
 .user-avatar {
   width: 75px;
   height: 75px;
-  border-radius: 50%;
+  border-radius: 15px; /* cantos arredondados, mas não circulares */
   background-color: #e8f4ff;
-  padding: 8px;
-  object-fit: cover;
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 3px solid rgba(255, 255, 255, 0.4);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
 }
 
-.user-info h3 {
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Texto do usuário */
+.user-details h3 {
   font-size: 16px;
   font-weight: 600;
-  margin-top: 8px;
   color: #ffffff;
+  margin-bottom: 4px;
 }
 
-.user-info p {
+.user-details p {
   font-size: 13px;
-  opacity: 0.9;
   color: #f0f0f0;
+  opacity: 0.9;
+  margin: 0;
 }
+
+
 
 /* Menu */
 .menu {
