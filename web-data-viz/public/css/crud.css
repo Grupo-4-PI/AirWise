@@ -31,6 +31,7 @@ body {
   height: 100%;
   box-shadow: 3px 0 8px rgba(0, 0, 0, 0.15);
 }
+
 /* Logo centralizada */
 .logo {
   display: flex;
@@ -43,27 +44,28 @@ body {
   width: 130px;
 }
 
+
 /* Container geral do usuário */
 .user-info {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
+  gap: 10px;
   margin-top: 25px;
+  padding-left: 25px; /* mesmo alinhamento dos textos do menu */
 }
 
 /* Ícone do usuário */
 .user-avatar {
-  width: 75px;
-  height: 75px;
-  border-radius: 15px; /* cantos arredondados, mas não circulares */
+  width: 55px; /* menor */
+  height: 55px;
+  border-radius: 12px;
   background-color: #e8f4ff;
-  padding: 6px;
+  padding: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   overflow: hidden;
 }
 
@@ -76,19 +78,18 @@ body {
 
 /* Texto do usuário */
 .user-details h3 {
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 600;
   color: #ffffff;
-  margin-bottom: 4px;
+  margin-bottom: 3px;
 }
 
 .user-details p {
-  font-size: 13px;
+  font-size: 12px;
   color: #f0f0f0;
   opacity: 0.9;
   margin: 0;
 }
-
 
 
 /* Menu */
@@ -115,7 +116,8 @@ body {
   border-radius: 8px;
   transform: translateX(4px);
 }
-/* Sair */
+
+/* Botão Sair */
 .logout {
   display: flex;
   align-items: center;
@@ -133,46 +135,6 @@ body {
   opacity: 1;
 }
 
-
-/* Menu */
-.menu {
-  display: flex;
-  flex-direction: column;
-  margin-top: 30px;
-}
-
-.menu a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: white;
-  padding: 12px 25px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-
-.menu a.active,
-.menu a:hover {
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 8px;
-}
-
-/* Sair */
-.logout {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: white;
-  text-decoration: none;
-  padding: 12px 25px;
-  margin-top: auto;
-  opacity: 0.9;
-}
-
-.logout:hover {
-  opacity: 1;
-}
-
 /* Conteúdo principal */
 .content {
   margin-left: 260px;
@@ -181,6 +143,7 @@ body {
   overflow-y: auto;
 }
 
+/* Topbar interna */
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -188,6 +151,7 @@ body {
   margin-bottom: 25px;
 }
 
+/* Botões */
 .btn-primary {
   background: #0077b6;
   color: white;
@@ -206,7 +170,7 @@ body {
 .user-table {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
   overflow: hidden;
 }
 
@@ -244,7 +208,8 @@ td:last-child {
 /* Modal */
 .modal {
   position: fixed;
-  top: 0; left: 0;
+  top: 0; 
+  left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.4);
