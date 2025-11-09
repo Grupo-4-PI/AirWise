@@ -12,7 +12,7 @@ body {
   color: #333;
 }
 
-/* SIDEBAR */
+/* CONTAINER DA SIDEBAR */
 .sidebar {
   width: 260px;
   background: linear-gradient(
@@ -27,36 +27,37 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
   position: fixed;
   height: 100%;
   box-shadow: 3px 0 8px rgba(0, 0, 0, 0.15);
+  padding-top: 25px;
 }
 
-/* Logo centralizada */
+/* LOGO */
 .logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 25px;
+  width: 100%;
 }
 
 .logo img {
   width: 130px;
 }
 
-
-/* Container geral do usuário */
+/* BLOCO DO USUÁRIO */
 .user-info {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-top: 25px;
-  padding-left: 25px; /* mesmo alinhamento dos textos do menu */
+  padding-left: 25px;
 }
 
-/* Ícone do usuário */
+/* ÍCONE DO USUÁRIO */
 .user-avatar {
-  width: 55px; /* menor */
+  width: 55px;
   height: 55px;
   border-radius: 12px;
   background-color: #e8f4ff;
@@ -76,7 +77,7 @@ body {
   border-radius: 10px;
 }
 
-/* Texto do usuário */
+/* TEXTO DO USUÁRIO */
 .user-details h3 {
   font-size: 15px;
   font-weight: 600;
@@ -91,15 +92,18 @@ body {
   margin: 0;
 }
 
-
-/* Menu */
+/* MENU CENTRALIZADO */
 .menu {
   display: flex;
   flex-direction: column;
-  margin-top: 30px;
+  align-items: flex-start;
   width: 100%;
+  gap: 5px;
+  margin-top: 70px; /* mais espaço após o usuário */
+  margin-bottom: auto; /* empurra o botão "Sair" para o fim */
 }
 
+/* LINKS DO MENU */
 .menu a {
   display: flex;
   align-items: center;
@@ -117,7 +121,7 @@ body {
   transform: translateX(4px);
 }
 
-/* Botão Sair */
+/* BOTÃO SAIR */
 .logout {
   display: flex;
   align-items: center;
@@ -125,6 +129,7 @@ body {
   color: white;
   text-decoration: none;
   padding: 12px 25px;
+  margin-top: auto;
   margin-bottom: 20px;
   opacity: 0.9;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -135,7 +140,7 @@ body {
   opacity: 1;
 }
 
-/* Conteúdo principal */
+/* CONTEÚDO PRINCIPAL */
 .content {
   margin-left: 260px;
   flex: 1;
@@ -143,7 +148,7 @@ body {
   overflow-y: auto;
 }
 
-/* Topbar interna */
+/* TOPBAR */
 .topbar {
   display: flex;
   justify-content: space-between;
@@ -151,7 +156,7 @@ body {
   margin-bottom: 25px;
 }
 
-/* Botões */
+/* BOTÕES */
 .btn-primary {
   background: #0077b6;
   color: white;
@@ -166,7 +171,7 @@ body {
   background: #005f8a;
 }
 
-/* Tabela */
+/* TABELA */
 .user-table {
   background: #fff;
   border-radius: 12px;
@@ -205,7 +210,7 @@ td:last-child {
 .action-btn.edit { color: #0077b6; }
 .action-btn.delete { color: #e74c3c; }
 
-/* Modal */
+/* MODAL */
 .modal {
   position: fixed;
   top: 0; 
@@ -254,7 +259,7 @@ td:last-child {
   cursor: pointer;
 }
 
-/* Responsividade */
+/* RESPONSIVIDADE */
 @media (max-width: 768px) {
   .sidebar {
     position: relative;
