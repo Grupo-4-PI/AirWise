@@ -114,12 +114,30 @@ body {
   transition: background 0.3s, transform 0.2s;
 }
 
-.menu a.active,
-.menu a:hover {
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 8px;
-  transform: translateX(4px);
+.menu a.active {
+  background: linear-gradient(135deg, #249ce4, #289ce4);
+  border-radius: 6px;
+  padding: 10px 22px;
+  font-weight: 600;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
+
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.menu a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+
 
 /* BOTÃO SAIR */
 .logout {
