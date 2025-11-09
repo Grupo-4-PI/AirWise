@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel AirWise</title>
+  <link rel="stylesheet" href="../../css/crud.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo">
+      <img src="../../assets/logotipo/logotipo-airwise-pad-white.png" alt="Logo" />
+    
+    </div>
+
+    <div class="user-info">
+      <img src="https://i.pravatar.cc/80?img=68" alt="Usuário" class="user-avatar" />
+      <div>
+        <h3>Vinícius</h3>
+        <p>Administrador</p>
+      </div>
+    </div>
+
+    <nav class="menu">
+      <a href="#" class="active">
+        <i data-lucide="home"></i>
+        <span>Home</span>
+      </a>
+      <a href="#">
+        <i data-lucide="alert-triangle"></i>
+        <span>Reclamações</span>
+      </a>
+      <a href="#">
+        <i data-lucide="bar-chart-2"></i>
+        <span>Desempenho Interno</span>
+      </a>
+      <a href="#">
+        <i data-lucide="activity"></i>
+        <span>Benchmark</span>
+      </a>
+      <a href="#">
+        <i data-lucide="activity"></i>
+        <span>Gestão</span>
+      </a>
+    </nav>
+
+    <a href="#" class="logout">
+      <i data-lucide="log-out"></i>
+      <span>Sair</span>
+    </a>
+  </aside>
+
+  <main class="content">
+    <header class="topbar">
+      <h1>Gestão de Usuários</h1>
+      <button id="addUserBtn" class="btn-primary">+ Adicionar Usuário</button>
+    </header>
+
+    <section class="user-table">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome Completo</th>
+            <th>Cargo</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="userList">
+          <!-- Linhas dinâmicas -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Adicionar Usuário</h3>
+      <form id="userForm">
+        <input type="text" id="name" placeholder="Nome completo" required />
+        <input type="text" id="role" placeholder="Cargo" required />
+        <div class="actions">
+          <button type="submit" class="btn-primary">Salvar</button>
+          <button type="button" id="cancelBtn" class="btn-secondary">Cancelar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
