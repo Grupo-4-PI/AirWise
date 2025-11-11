@@ -13,7 +13,7 @@ function autenticar(req, res) {
       .autenticar(email, senha)
       .then(function (resultadoAutenticar) {
         console.log(`\nResultados encontrados: ${resultadoAutenticar.length}`);
-        console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); // transforma JSON em String
+        console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); 
 
         if (resultadoAutenticar.length == 1) {
           console.log(resultadoAutenticar);
@@ -32,6 +32,7 @@ function autenticar(req, res) {
                     email: resultadoAutenticar[0].email,
                     nome: resultadoAutenticar[0].nome,
                     cargo: resultadoAutenticar[0].cargo,
+                    perfil: resultadoAutenticar[0].fkPerfil,
                     idEmpresa: idEmpresa,
                     nomeEmpresa: nomeEmpresa
                   });

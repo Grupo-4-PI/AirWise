@@ -9,7 +9,8 @@
   <link rel="stylesheet" href="../../../css/aplicacao/dash-geral.css" />
 </head>
 
-<body onload="carregarVisaoGeral()">
+<!-- onload="carregarVisaoGeral()" -->
+<body>
   <!-- Menu lateral -->
   <aside class="sidebar" aria-label="Barra lateral de navegação">
     <header class="sidebar-top">
@@ -157,6 +158,7 @@
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../../../script/assets-aplicacao/validarAcesso.js"></script>
   <script>
     function carregarVisaoGeral() {
       const nomeEmpresaBruto = JSON.parse(
