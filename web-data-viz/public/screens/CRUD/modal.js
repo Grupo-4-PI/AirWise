@@ -1,12 +1,11 @@
-function abrirModal(id) {
-    document.getElementById(id).classList.remove('hidden');
+function abrirModal(modal, idUsuario) {
+    document.getElementById(modal).classList.remove('hidden');
 }
 
-function fecharModal(id) {
-    document.getElementById(id).classList.add('hidden');
+function fecharModal(modal) {
+    document.getElementById(modal).classList.add('hidden');
 }
 
 // Exemplo de uso:
-// abrirModal('modalAddProfissional');
 // abrirModal('modalEditProfissional');
-abrirModal('modalDeleteProfissional');
+// abrirModal('modalDeleteProfissional');

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel AirWise</title>
+  <link rel="stylesheet" href="../../css/aplicacao/assets/main-dash.css">
+  <link rel="stylesheet" href="../../css/aplicacao/crud-user/gestao_usuarios.css" />
+  <link rel="stylesheet" href="../../css/aplicacao/crud-user/modais.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+  <!-- <aside class="sidebar">
+    <div class="sidebar-inner">
+      <div class="logo">
+        <img src="../../assets/logotipo/logotipo-airwise-pad-white.png" alt="Logo" />
+      </div>
+
+      <div class="brand">
+        <div class="user-info">
+          <div class="user-avatar">
+            <img
+              src="https://images.vexels.com/media/users/3/137047/isolated/preview/5831a17a290077c646a48c4db78a81bb-icone-azul-do-perfil-de-usuario.png"
+              alt="Usuário" />
+          </div>
+          <div class="user-details">
+            <h3>Vinícius</h3>
+            <p>Administrador</p>
+          </div>
+        </div>
+      </div>
+
+      <nav class="menu">
+        <a href="../dashboard/dash-geral/dash-main.html">
+          <i data-lucide="home"></i>
+          <span>Home</span>
+        </a>
+        <a href="../dashboard/dash-reclamacoes/dash-reclamacoes.html">
+          <i data-lucide="alert-triangle"></i>
+          <span>Reclamações</span>
+        </a>
+        <a href="#">
+          <i data-lucide="bar-chart-2"></i>
+          <span>Desempenho Interno</span>
+        </a>
+        <a href="../dashboard/dash-benchmark/dash-benchmark.html">
+          <i data-lucide="activity"></i>
+          <span>Benchmark</span>
+        </a>
+        <a href="../CRUD/gestao_usuario.html" class="active">
+          <i data-lucide="users"></i>
+          <span>Gestão de Usuários</span>
+        </a>
+      </nav>
+
+    </div>
+
+    <a href="../institucional/index.html" class="logout">
+      <i data-lucide="log-out"></i>
+      <span>Sair</span>
+    </a>
+  </aside> -->
+
+  <aside class="sidebar" aria-label="Barra lateral de navegação">
+    <header class="sidebar-top">
+      <div class="container-header-company">
+        <button class="toggle-btn" aria-label="Alternar menu" title="Alternar menu">
+          <i class='bx  bx-menu'></i>
+        </button>
+
+        <div class="container-logotipo">
+          <img src="../../assets/logotipo/logotipo-airwise-pad-white.png" alt="">
+        </div>
+      </div>
+
+      <div class="brand">
+        <div class="brand-avatar">
+          <img
+            src="https://images.vexels.com/media/users/3/137047/isolated/preview/5831a17a290077c646a48c4db78a81bb-icone-azul-do-perfil-de-usuario.png"
+            alt="">
+        </div>
+        <div class="brand-text">
+          <h3>Vinicius</h3>
+          <p>Administrador</p>
+        </div>
+      </div>
+    </header>
+
+    <nav class="menu" role="navigation" aria-label="Menu principal">
+      <a href="../dashboard/dash-geral/dash-main.html">
+        <button class="menu-btn" aria-pressed="true">
+          <i class="bx bx-home"></i>
+          <p class="label">Home</p>
+        </button>
+      </a>
+
+      <a href="../dashboard/dash-reclamacoes/dash-reclamacoes.html">
+        <button class="menu-btn" aria-pressed="false">
+          <i class="bx bx-error"></i>
+          <p class="label">Reclamações</p>
+        </button>
+      </a>
+
+      <a href="../dashboard/dash-marketing-company/dash-marketing-company.html">
+        <button class="menu-btn">
+          <i class="bx bx-line-chart"></i>
+          <p class="label">Desempenho Interno</p>
+        </button>
+      </a>
+
+      <a href="../dashboard/dash-benchmark/dash-benchmark.html">
+        <button class="menu-btn">
+          <i class="bx bx-line-chart"></i>
+          <p class="label">Benchmark</p>
+        </button>
+      </a>
+
+      <a href="../../CRUD/gestao_usuario.html">
+        <button class="menu-btn active">
+          <i class='bx  bx-user' style='color:#ffffff'></i>
+          <p class="label">Gestão de Usuários</p>
+        </button>
+      </a>
+    </nav>
+
+    <footer class="footer-sidebar">
+      <div class="footer-actions">
+        <a href="../../login/login.html">
+          <button class="menu-btn">
+            <i class="bx bx-log-out"></i>
+            <p class="label">Sair</p>
+          </button>
+        </a>
+      </div>
+    </footer>
+  </aside>
+
+  <main class="content">
+    <header class="header" role="banner" aria-label="Barra superior do painel">
+      <div class="header-left">
+        <h1 class="page-title">Painel de Reclamações — Gol Linhas Aéreas</h1>
+        <p class="subtitle">Visão geral das reclamações, eficiência e tendências</p>
+      </div>
+
+      <div class="header-actions" role="region" aria-label="Controles do painel">
+        <button class="btn-primary" onclick="abrirModal('modalAddProfissional')">+ Adicionar Funcionário</button>
+      </div>
+    </header>
+
+    <section class="user-table">
+      <table>
+        <thead>
+          <tr>
+            <th style="width: 27%;">Nome Completo</th>
+            <th>Cargo</th>
+            <th>Perfil</th>
+            <th style="width: 200px;">Status</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <thead class="filters">
+          <td><input type="text" placeholder="Nome:"></td>
+          <td><input type="text" placeholder="Nome:"></td>
+          <td><input type="text" placeholder="Nome:"></td>
+          <td>
+            <select name="" id="options-status">
+              <option value="Todos">Todos</option>
+              <option value="Ativo">Ativo</option>
+              <option value="Inativo">Inativo</option>
+            </select>
+          </td>
+        </thead>
+        <tbody id="userList">
+          <tr>
+            <td>Lucas</td>
+            <td>Analista</td>
+            <td>MKT - Senior</td>
+            <td>Ativo</td>
+            <td class="methods-crud">
+              <span class="action-btn edit" onclick="abrirModal('modalEditProfissional')">
+                <i class='bx bx-edit'></i>
+              </span>
+              <span class="action-btn delete" onclick="abrirModal('modalDeleteProfissional')">
+                <i class='bx bx-trash'></i>
+              </span>
+            </td>
+          </tr>
+
+          <tr>
+            <td>Lucas</td>
+            <td>Analista</td>
+            <td>MKT - Senior</td>
+            <td>Ativo</td>
+            <td class="methods-crud">
+              <span class="action-btn edit">
+                <i class='bx bx-edit'></i>
+              </span>
+              <span class="action-btn delete">
+                <i class='bx bx-trash'></i>
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- MODAIS -->
+    <!-- MODAL: Adicionar Profissional -->
+    <div id="modalAddProfissional" class="modal hidden">
+      <div class="container">
+        <div class="form-box">
+          <h2>Adicionar Profissional</h2>
+          <form id="formAddProfissional">
+            <div>
+              <label for="nome_add">Nome completo</label>
+              <input type="text" id="nome_add" placeholder="Digite o nome completo" required />
+            </div>
+
+            <div>
+              <label for="cpf_add">CPF</label>
+              <input type="text" id="cpf_add" placeholder="Digite o CPF" required />
+            </div>
+
+            <div>
+              <label for="email_add">E-mail</label>
+              <input type="email" id="email_add" placeholder="Digite o e-mail" required />
+            </div>
+
+            <div>
+              <label for="cargo_add">Cargo</label>
+              <select id="cargo_add" required>
+                <option value="" disabled selected>Selecione o cargo</option>
+                <option value="Administrador">Administrador</option>
+                <option value="Técnico">Técnico</option>
+                <option value="Analista">Analista</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="senha_add">Senha Padrão:</label>
+              <input type="text" id="senha_add" placeholder="" value="AIRCORP23GOL" required disabled />
+            </div>
+
+            <div>
+              <label for="empresa_add">ID da Empresa</label>
+              <input type="text" id="empresa_add" placeholder="Digite o ID da empresa" required />
+            </div>
+
+            <button type="submit" class="btn-azul">Salvar</button>
+            <button type="button" class="btn-cinza" onclick="fecharModal('modalAddProfissional')">Cancelar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- MODAL: Editar Profissional -->
+    <div id="modalEditProfissional" class="modal hidden">
+      <div class="container">
+        <div class="form-box">
+          <h2>Editar Profissional</h2>
+          <form id="formEditProfissional">
+            <input type="hidden" id="id_edit" />
+
+            <div>
+              <label for="nome_edit">Nome completo</label>
+              <input type="text" id="nome_edit" placeholder="Digite o nome completo" required />
+            </div>
+
+            <div>
+              <label for="cpf_add">CPF</label>
+              <input type="text" id="cpf_edit" placeholder="Digite o CPF" required />
+            </div>
+
+            <div>
+              <label for="email_edit">E-mail</label>
+              <input type="email" id="email_edit" placeholder="Digite o e-mail" required />
+            </div>
+
+            <div>
+              <label for="cargo_edit">Cargo</label>
+              <select id="cargo_edit" required>
+                <option value="Administrador">Administrador</option>
+                <option value="Técnico">Técnico</option>
+                <option value="Analista">Analista</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn-azul">Salvar Alterações</button>
+            <button type="button" class="btn-cinza" onclick="fecharModal('modalEditProfissional')">Cancelar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- MODAL: Deletar Profissional -->
+    <div id="modalDeleteProfissional" class="modal hidden">
+      <div class="container">
+        <div class="form-box">
+          <h2>Excluir Profissional</h2>
+          <form id="formDeleteProfissional">
+            <p style="grid-column: span 2; text-align: center; color: #444;">
+              Tem certeza que deseja excluir este profissional?<br />
+              Esta ação não poderá ser desfeita.
+            </p>
+
+            <button type="button" class="btn-vermelho" id="confirmDeleteBtn">Sim, excluir</button>
+            <button type="button" class="btn-cinza" onclick="fecharModal('modalDeleteProfissional')">Cancelar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="./modal.js"></script>
+  <script src="../../script/assets-aplicacao/sidebar.js"></script>
+
+  <!-- <script>
+    lucide.createIcons();
+  </script> -->
+</body>
+
+</html>
