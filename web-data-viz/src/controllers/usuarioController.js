@@ -32,7 +32,7 @@ function autenticar(req, res) {
                     email: resultadoAutenticar[0].email,
                     nome: resultadoAutenticar[0].nome,
                     cargo: resultadoAutenticar[0].cargo,
-                    perfil: resultadoAutenticar[0].fkPerfil,
+                    perfilAcesso: resultadoAutenticar[0].fkTipoAcesso,
                     idEmpresa: idEmpresa,
                     nomeEmpresa: nomeEmpresa
                   });
