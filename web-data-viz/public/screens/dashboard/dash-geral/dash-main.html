@@ -10,7 +10,8 @@
 </head>
 
 <!-- onload="carregarVisaoGeral()" -->
-<body>
+
+<body onload="carregarVisaoGeral()">
   <!-- Menu lateral -->
   <aside class="sidebar" aria-label="Barra lateral de navegação">
     <header class="sidebar-top">
@@ -31,8 +32,8 @@
             alt="" />
         </div>
         <div class="brand-text">
-          <h3>Vinicius</h3>
-          <p>Administrador</p>
+          <h3 id="nome_usuario"></h3>
+          <p id="cargo_usuario"></p>
         </div>
       </div>
     </header>
@@ -113,7 +114,7 @@
       <div class="card">
         <img src="../../../assets/dasboard/star.png" alt="Ícone estrela" class="kpi-img" />
         <div>
-          <strong>4,03/5</strong>
+          <strong id="kpi_nota">4,03/5</strong>
           <p>Nota média dos consumidores (30d)</p>
         </div>
       </div>
@@ -121,7 +122,7 @@
       <div class="card">
         <img src="../../../assets/dasboard/clock.png" alt="Ícone relógio" class="kpi-img" />
         <div>
-          <strong>15h 33min</strong>
+          <strong id="tempo_resposta">15h 33min</strong>
           <p>Tempo médio de resolução</p>
         </div>
       </div>
@@ -129,7 +130,7 @@
       <div class="card">
         <img src="../../../assets/dasboard/check.png" alt="Ícone check" class="kpi-img" />
         <div>
-          <strong>77,97%</strong>
+          <strong id="taxa_solucao">77,97%</strong>
           <p>Taxa de solução dos chamados</p>
         </div>
       </div>
@@ -137,7 +138,7 @@
       <div class="card">
         <img src="../../../assets/dasboard/call.png" alt="Ícone usuário" class="kpi-img" />
         <div>
-          <strong>17138</strong>
+          <strong id="total_chamados">17138</strong>
           <p>Total de chamados abertos (30d)</p>
         </div>
       </div>
@@ -180,7 +181,35 @@
         })
         .then((dados) => {
           const { kpis, grafico1, grafico2 } = dados;
-          console.log(grafico1)
+          const nota_consumidores = document.getElementById('kpi_nota');
+          const tempo_medio_resposta = document.getElementById('tempo_resposta');
+          const taxa_solucao_chamados = document.getElementById('taxa_solucao');
+          const total_chamados_abertos = document.getElementById('total_chamados');
+
+          nota_consumidores.textContent = kpis[0].media_nota_consumidor + "/5";
+          tempo_medio_resposta.textContent = kpis[0].media_tempo_resposta + "Horas";
+          taxa_solucao_chamados.textContent = kpis[0].total_respondidas;
+          total_chamados_abertos.textContent = kpis[0].total_reclamacoes;
+
+          const arrayGrafico1 = [];
+          const arrayGrafico2reclamacoes = [];
+          const arrayGrafico2nota = [];
+          const arrayGrafico2uf = [];
+
+for (let G1 = 0; G1 < grafico1.length; G1++) {
+  arrayGrafico1.push(grafico1[G1].media_nota)
+}
+
+for (let G2 = 0; G2 < grafico2.length; G2++) {
+ arrayGrafico2reclamacoes.push(grafico2[G2].total);
+ arrayGrafico2nota.push(grafico2[G2].media_nota);
+ arrayGrafico2uf.push(grafico2[G2].uf);
+}
+
+grafico1NotaMedia(arrayGrafico1);
+
+grafico2Estados(arrayGrafico2uf, arrayGrafico2nota, arrayGrafico2reclamacoes);
+
         })
         .catch((erro) => {
           console.error("❌ Erro no fetch:", erro);
@@ -188,103 +217,120 @@
     }
 
     // Gráfico 1 - Nota média mensal
-    const ctx1 = document.getElementById("graficoNota").getContext("2d");
-    new Chart(ctx1, {
-      type: "line",
-      data: {
-        labels: [
-          "Jan",
-          "Fev",
-          "Mar",
-          "Abr",
-          "Mai",
-          "Jun",
-          "Jul",
-          "Set",
-          "Out",
-          "Nov",
-          "Dez",
-        ],
-        datasets: [
-          {
-            label: "Nota média",
-            data: [
-              3.46, 3.63, 3.86, 4.13, 4.31, 4.35, 4.41, 4.39, 4.37, 4.33,
-              3.87, 3.38,
-            ],
-            borderColor: "#3158A4",
-            backgroundColor: "rgba(49, 88, 164, 0.2)",
-            tension: 0.4,
-            fill: true,
-          },
-        ],
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: { display: false },
-        },
-        scales: {
-          y: { beginAtZero: false, min: 0, max: 5 },
-        },
-      },
-    });
 
-    const ctx2 = document.getElementById("graficoEstados").getContext("2d");
-    new Chart(ctx2, {
-      data: {
-        labels: ["SP", "MG", "RJ", "DF", "PR"],
-        datasets: [
-          {
-            label: "Nota",
-            data: [3.98, 3.84, 4.06, 4.14, 3.9],
-            type: "line",
-            borderColor: "#F47C36",
-            backgroundColor: "#F47C36",
-            borderWidth: 2,
-            tension: 0.3,
-            yAxisID: "y1",
+    function grafico1NotaMedia(dados) {
+      // Gráfico 1 - Nota média mensal
+      const ctx1 = document.getElementById("graficoNota").getContext("2d");
+      new Chart(ctx1, {
+        type: "line",
+        data: {
+          labels: [
+            "Jan",
+            "Fev",
+            "Mar",
+            "Abr",
+            "Mai",
+            "Jun",
+            "Jul",
+            "Set",
+            "Out",
+            "Nov",
+            "Dez",
+          ],
+          datasets: [
+            {
+              label: "Nota média",
+              data: dados,
+              borderColor: "#3158A4",
+              backgroundColor: "rgba(49, 88, 164, 0.2)",
+              tension: 0.4,
+              fill: true,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: { display: false },
           },
-          {
-            label: "Qtd",
-            data: [2910, 2090, 1713, 1597, 1183],
-            type: "bar",
-            backgroundColor: "#155978",
-            borderRadius: 4,
-            yAxisID: "y",
-          },
-        ],
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          title: {
-            display: false,
-            text: "Estados com mais reclamações vs Nota média",
-            font: { size: 16 },
-          },
-          legend: {
-            position: "bottom",
+          scales: {
+            y: { beginAtZero: false, min: 0, max: 5 },
           },
         },
-        scales: {
-          y: {
-            beginAtZero: true,
-            title: { display: false },
-            position: "left",
-            ticks: { stepSize: 1000 },
+      });
+    }
+
+    function grafico2Estados(uf , media_nota, total) {
+      const ctx2 = document.getElementById("graficoEstados").getContext("2d");
+      new Chart(ctx2, {
+        data: {
+          labels: uf,
+          datasets: [
+            {
+              label: "Nota",
+              data: media_nota,
+              type: "line",
+              borderColor: "#F47C36",
+              backgroundColor: "#F47C36",
+              borderWidth: 2,
+              tension: 0.3,
+              yAxisID: "y1",
+            },
+            {
+              label: "Qtd",
+              data: total,
+              type: "bar",
+              backgroundColor: "#155978",
+              borderRadius: 4,
+              yAxisID: "y",
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            title: {
+              display: false,
+              text: "Estados com mais reclamações vs Nota média",
+              font: { size: 16 },
+            },
+            legend: {
+              position: "bottom",
+            },
           },
-          y1: {
-            beginAtZero: false,
-            min: 0,
-            max: 5,
-            position: "right",
-            grid: { drawOnChartArea: false },
-            ticks: { stepSize: 0.5 },
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: { display: false },
+              position: "left",
+              ticks: { stepSize: 1000 },
+            },
+            y1: {
+              beginAtZero: false,
+              min: 0,
+              max: 5,
+              position: "right",
+              grid: { drawOnChartArea: false },
+              ticks: { stepSize: 0.5 },
+            },
           },
         },
-      },
-    });
+      });
+    }
+
+
+// Nome Usuario e cargo
+
+    const nome = document.getElementById('nome_usuario');
+    const cargo = document.getElementById('cargo_usuario');
+    const dados_usuario = JSON.parse(sessionStorage.getItem("data_user"))
+
+    nome.textContent = dados_usuario.nome;
+
+    cargo.textContent = dados_usuario.cargo;
+
+// ------------------------------------------------------------------------
+
   </script>
   <script src="../../../script/assets-aplicacao/sidebar.js"></script>
 </body>
