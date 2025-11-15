@@ -1,3 +1,32 @@
+function carregarDesempenhoInterno() {
+      const idEmpresaBruto = JSON.parse(
+        sessionStorage.getItem("data_user")
+      );
+
+      const idEmpresaServer = idEmpresaBruto.idEmpresa;
+
+      fetch(
+        `/desempenhoInterno/DadosDesempenhoInterno?idEmpresaServer=${encodeURIComponent(
+          idEmpresaServer
+        )}`
+      )
+        .then((resposta) => {
+          if (!resposta.ok) {
+            throw new Error("Erro ao buscar dados da visão geral");
+          }
+          return resposta.json();
+        })
+        .then((dados) => {
+        //   const { kpis, grafico1, grafico2 } = dados;
+          console.log(dados)
+        })
+        .catch((erro) => {
+          console.error("❌ Erro no fetch:", erro);
+        });
+    }
+
+carregarDesempenhoInterno();
+
 const map = L.map('map', {
     center: [-15.78, -47.93],
     zoom: 1,
